@@ -66,3 +66,55 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
 }
+
+/* Hero light-curtain haze: soft white blobs drifting over the left side */
+.hero-haze {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 35%, transparent 70%);
+  mask-image: linear-gradient(to right, #000 0%, #000 35%, transparent 70%);
+}
+.hero-haze i {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+  filter: blur(50px);
+  will-change: transform, opacity;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.hero-haze i:nth-child(1) {
+  width: 70vw; height: 40vw; left: -15vw; top: 10%;
+  animation-name: haze-a; animation-duration: 18s;
+}
+.hero-haze i:nth-child(2) {
+  width: 50vw; height: 60vw; left: -10vw; top: -20%;
+  animation-name: haze-b; animation-duration: 24s;
+}
+.hero-haze i:nth-child(3) {
+  width: 60vw; height: 25vw; left: 0; top: 45%;
+  animation-name: haze-c; animation-duration: 14s;
+}
+@keyframes haze-a {
+  from { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  to { transform: translate(8vw, -3vw) scale(1.15); opacity: 0.9; }
+}
+@keyframes haze-b {
+  from { transform: translate(0, 0) rotate(0); opacity: 0.4; }
+  to { transform: translate(6vw, 5vw) rotate(12deg); opacity: 0.75; }
+}
+@keyframes haze-c {
+  from { transform: translate(-4vw, 0); opacity: 0.5; }
+  to { transform: translate(10vw, -2vw); opacity: 0.85; }
+}
+@media (max-width: 767px) {
+  .hero-haze { opacity: 0.55; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-haze i { animation: none; opacity: 0.6; }
+}

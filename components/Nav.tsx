@@ -53,7 +53,7 @@ export default function Nav({ ready }: { ready: boolean }) {
         transition={{ duration: 0.8, ease: EASE }}
       >
         <div
-          className={`mx-auto flex h-[68px] max-w-[1441px] items-center justify-between px-[34px] transition-[background,backdrop-filter] duration-500 ${
+          className={`mx-auto flex h-[68px] max-w-[1441px] items-center justify-between px-[34px] xl:px-[58px] transition-[background,backdrop-filter] duration-500 ${
             solid ? "bg-white/55 backdrop-blur-xl" : ""
           }`}
         >
@@ -62,14 +62,14 @@ export default function Nav({ ready }: { ready: boolean }) {
             <img src={img(IMG.logo, 400)} alt="Bandlik" className="h-[28px] w-auto" />
           </a>
 
-          <nav className="hidden items-center gap-9 lg:flex">
+          <nav className="ml-[18px] hidden flex-1 items-center justify-between lg:flex xl:ml-[28px] xl:pr-[10px]">
             {NAV.map((n, i) => (
               <a
                 key={n.label}
                 href={n.href}
                 onClick={(e) => go(e, n.href, i)}
-                className={`group relative text-[18px] font-semibold leading-[22px] transition-colors duration-500 hover:text-blue ${
-                  active === i ? "text-blue" : "text-ink/60"
+                className={`group relative text-[clamp(14px,1.15vw,22px)] font-semibold leading-[1.2] transition-colors duration-500 hover:text-blue ${
+                  active === i ? "text-blue" : "text-ink/40"
                 }`}
               >
                 <span className="relative inline-block overflow-hidden align-top">
@@ -95,12 +95,6 @@ export default function Nav({ ready }: { ready: boolean }) {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href="#contact"
-              className="hidden h-[34px] items-center rounded-full bg-card px-5 text-[17px] sm:flex"
-            >
-              Kirish
-            </a>
             <button
               aria-label="Menu"
               onClick={() => setOpen((o) => !o)}

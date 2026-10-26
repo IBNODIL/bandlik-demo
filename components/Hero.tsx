@@ -17,57 +17,55 @@ export default function Hero({ ready }: { ready: boolean }) {
   return (
     <section ref={ref} id="top" className="relative h-[100svh] min-h-[640px] overflow-visible">
       <div className="absolute inset-0 overflow-hidden">
-        {/* blurred pre-load layer */}
         <motion.div
           className="absolute inset-0 -top-[8%] h-[112%] w-full"
-          initial={{ opacity: 1 }}
-          animate={ready ? { opacity: 0 } : {}}
-          transition={{ duration: 1.4, ease: EASE, delay: 0.2 }}
-          style={{ y: imgY }}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={img(IMG.globe, 1600)} alt="" className="h-full w-full object-cover object-bottom blur-2xl" />
-        </motion.div>
-
-        <motion.div
-          className="absolute inset-0 -top-[8%] h-[112%] w-full"
-          initial={{ scale: 1.18, opacity: 0, filter: "blur(18px)" }}
-          animate={ready ? { scale: 1, opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{ duration: 1.8, ease: EASE }}
+          initial={{ scale: 1.16 }}
+          animate={ready ? { scale: 1 } : {}}
+          transition={{ duration: 3.6, ease: [0.16, 1, 0.3, 1] }}
           style={{ y: imgY }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={img(IMG.hero, 2400)}
             alt="Ishchilar va xalqaro imkoniyatlar"
-            className="h-full w-full object-cover object-[50%_80%]"
+            className="h-full w-full object-cover object-center"
           />
         </motion.div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/55 to-transparent" />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[28%] backdrop-blur-[10px]"
+          style={{ maskImage: "linear-gradient(to top, black 10%, transparent)", WebkitMaskImage: "linear-gradient(to top, black 10%, transparent)" }}
+        />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#3c3f46]/80 via-[#3c3f46]/35 to-transparent" />
+      </div>
+
+      <div className="hero-haze" aria-hidden>
+        <i />
+        <i />
+        <i />
       </div>
 
       <motion.div
-        className="absolute bottom-[40px] left-[34px] right-[34px] flex items-end justify-between"
+        className="absolute z-[2] bottom-[40px] left-[34px] right-[34px] xl:left-[42px] flex items-end justify-between"
         style={{ y: textY, opacity: textO }}
       >
         <motion.p
-          className="max-w-[340px] text-[18px] leading-[24px] text-ink"
+          className="max-w-[400px] text-[clamp(18px,1.6vw,26px)] font-semibold leading-[1.16] text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={ready ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, ease: EASE, delay: 0.9 }}
+          transition={{ duration: 1, ease: EASE, delay: 0.3 }}
         >
           Xorijiy ish beruvchilar uchun ishchi topish va nomzodlar uchun tekshirilgan vakansiyalar bilan tanishish imkoniyati.
         </motion.p>
         <motion.a
           href="#about"
           aria-label="Pastga"
-          className="grid size-[31px] place-items-center"
+          className="mr-[4px] grid size-[40px] place-items-center"
           initial={{ opacity: 0 }}
-          animate={ready ? { opacity: 1, y: [0, 8, 0] } : {}}
-          transition={{ opacity: { delay: 1.2 }, y: { duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 1.4 } }}
+          animate={ready ? { opacity: 1, y: [0, 12, 0, 6, 0] } : {}}
+          transition={{ opacity: { delay: 0.6 }, y: { duration: 1.6, repeat: Infinity, repeatDelay: 0.6, ease: "easeInOut", delay: 1.4 } }}
         >
           <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
-            <path d="M10 2v19M3 14l7 7 7-7" stroke="#090909" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M10 2v19M3 14l7 7 7-7" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </motion.a>
       </motion.div>

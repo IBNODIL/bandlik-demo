@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence } from "motion/react";
 import { useCallback, useState } from "react";
 import About from "@/components/About";
 import Benefits from "@/components/Benefits";
@@ -26,7 +25,7 @@ export default function Page() {
     <>
       <SmoothScroll locked={!ready} />
       <Cursor />
-      <AnimatePresence>{!ready && <Loader onDone={done} />}</AnimatePresence>
+      <Loader onOpen={done} />
       <Nav ready={ready} />
       <main>
         <Hero ready={ready} />

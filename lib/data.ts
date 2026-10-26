@@ -22,6 +22,7 @@ export const NAV = [
   { label: "Ish qidiruvchilar uchun", href: "#vacancies" },
   { label: "Vakansiyalar", href: "#vacancies" },
   { label: "Aloqa", href: "#contact" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export const FOOTER_NAV = ["Asosiy", "Biz haqimizda", "Ish beruvchilarga", "Xizmatlar", "Vakansiyalar", "Aloqa"];
