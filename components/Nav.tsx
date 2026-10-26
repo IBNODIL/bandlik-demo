@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IMG, NAV, img } from "@/lib/data";
 import { ArrowRight, EASE } from "./ui";
 
@@ -11,6 +11,32 @@ export default function Nav({ ready }: { ready: boolean }) {
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
+
+  const go = (e: React.MouseEvent, href: string, i: number) => {
+    e.preventDefault();
+    setActive(i);
+    setOpen(false);
+    const l = (window as unknown as { __lenis?: { scrollTo: (t: string | number, o?: object) => void } }).__lenis;
+    l?.scrollTo(href === "#top" ? 0 : href, { duration: 1.6, easing: (t: number) => 1 - Math.pow(1 - t, 4) });
+  };
+
+  // highlight the link whose section is currently in view
+  useEffect(() => {
+    const ids = [...new Set(NAV.map((n) => n.href.slice(1)))];
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) setActive(NAV.findIndex((n) => n.href === "#" + en.target.id));
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+    return () => io.disconnect();
+  }, []);
 
   useMotionValueEvent(scrollY, "change", (v) => {
     const prev = scrollY.getPrevious() ?? 0;
@@ -41,15 +67,29 @@ export default function Nav({ ready }: { ready: boolean }) {
               <a
                 key={n.label}
                 href={n.href}
-                onClick={() => setActive(i)}
-                className={`relative text-[18px] font-semibold leading-[22px] transition-colors duration-300 hover:text-blue ${
+                onClick={(e) => go(e, n.href, i)}
+                className={`group relative text-[18px] font-semibold leading-[22px] transition-colors duration-500 hover:text-blue ${
                   active === i ? "text-blue" : "text-ink/60"
                 }`}
               >
-                {n.label}
+                <span className="relative inline-block overflow-hidden align-top">
+                  <span className="block transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:-translate-y-full">
+                    {n.label}
+                  </span>
+                  <span className="absolute left-0 top-full block whitespace-nowrap transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:-translate-y-full">
+                    {n.label}
+                  </span>
+                </span>
                 <sup className="ml-[1px] align-super text-[10px] font-medium opacity-70">
                   {String(i + 1).padStart(2, "0")}
                 </sup>
+                {active === i && (
+                  <motion.span
+                    layoutId="nav-dot"
+                    className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-blue"
+                    transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                  />
+                )}
               </a>
             ))}
           </nav>
@@ -79,7 +119,7 @@ export default function Nav({ ready }: { ready: boolean }) {
         transition={{ duration: 0.7, ease: EASE }}
       >
         {NAV.map((n) => (
-          <a key={n.label} href={n.href} onClick={() => setOpen(false)} className="flex items-center justify-between text-[34px] font-semibold tracking-tight">
+          <a key={n.label} href={n.href} onClick={(e) => go(e, n.href, NAV.indexOf(n))} className="flex items-center justify-between text-[34px] font-semibold tracking-tight">
             {n.label}
             <ArrowRight />
           </a>
