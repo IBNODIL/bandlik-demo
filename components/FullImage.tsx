@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { img } from "@/lib/data";
 import StepEdge from "./StepEdge";
 
-/** Full-bleed image with parallax; the stepped white edge rises over it as it scrolls away. */
+/** Full-bleed image with parallax; it darkens and the stepped white edge rises over it as it scrolls away. */
 export default function FullImage({ id, alt }: { id: string; alt: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
@@ -13,6 +13,7 @@ export default function FullImage({ id, alt }: { id: string; alt: string }) {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1.15, 1.02]);
   const edge = useScroll({ target: ref, offset: ["start start", "end start"] });
   const p = useSpring(edge.scrollYProgress, { stiffness: 120, damping: 24, mass: 0.4 });
+  const dim = useTransform(p, [0.05, 0.9], [0, 0.65]);
   return (
     <div ref={ref} className="relative z-10 h-[100svh] min-h-[560px] bg-card">
       <div className="absolute inset-0 overflow-hidden">
@@ -20,6 +21,7 @@ export default function FullImage({ id, alt }: { id: string; alt: string }) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={img(id, 2400)} alt={alt} className="h-full w-full object-cover" />
         </motion.div>
+        <motion.div className="pointer-events-none absolute inset-0 bg-[#090b12]" style={{ opacity: dim }} />
       </div>
       <StepEdge progress={p} />
     </div>

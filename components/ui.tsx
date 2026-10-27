@@ -13,7 +13,7 @@ export function ArrowRight({ className = "" }: { className?: string }) {
   );
 }
 
-/** Pill button: on hover the blue circle expands to fill the pill and the label turns white. */
+/** Pill button: on hover the blue circle stretches across the pill, the arrow slides out and a new one slides in from the left, and the label rolls up to a white copy. */
 export function PillButton({
   children,
   href = "#contact",
@@ -32,12 +32,22 @@ export function PillButton({
         dark ? "bg-ink text-paper" : "bg-card text-ink"
       } ${className}`}
     >
-      <span className="absolute left-[5px] top-1/2 h-10 w-10 -translate-y-1/2 rounded-full bg-blue transition-[width] duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:w-[calc(100%-10px)]" />
-      <span className="absolute left-[5px] top-1/2 grid size-10 -translate-y-1/2 place-items-center text-white">
-        <ArrowRight />
+      <span className="absolute left-[5px] top-1/2 h-10 w-10 -translate-y-1/2 rounded-full bg-blue transition-[width] duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:w-[calc(100%-10px)] group-hover:delay-[180ms]" />
+      <span className="absolute left-[5px] top-1/2 size-10 -translate-y-1/2 overflow-hidden rounded-full text-white">
+        <span className="absolute inset-0 grid place-items-center transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:translate-x-[160%] group-hover:delay-[180ms]">
+          <ArrowRight />
+        </span>
+        <span className="absolute inset-0 grid -translate-x-[160%] place-items-center transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:translate-x-0 group-hover:delay-[280ms]">
+          <ArrowRight />
+        </span>
       </span>
-      <span className="relative whitespace-nowrap text-[17px] leading-5 transition-colors duration-500 group-hover:text-white">
-        {children}
+      <span className="relative block h-5 overflow-hidden whitespace-nowrap text-[17px] leading-5">
+        <span className="block transition-transform duration-300 ease-[cubic-bezier(.76,0,.24,1)] group-hover:-translate-y-full">
+          {children}
+        </span>
+        <span className="absolute left-0 top-full block text-white transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:-translate-y-full group-hover:delay-[260ms]">
+          {children}
+        </span>
       </span>
     </a>
   );

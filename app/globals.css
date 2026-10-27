@@ -118,3 +118,9 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .hero-haze i { animation: none; opacity: 0.6; }
 }
+
+@keyframes arrow-squish {
+  0% { transform: scaleX(1); }
+  35% { transform: scaleX(0.25); }
+  100% { transform: scaleX(1); }
+}

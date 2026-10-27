@@ -3,6 +3,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 import { IMG, img } from "@/lib/data";
+import FilmCanvas from "./FilmCanvas";
 import StepEdge from "./StepEdge";
 import { EASE } from "./ui";
 
@@ -30,18 +31,14 @@ export default function Hero({ ready }: { ready: boolean }) {
             alt="Ishchilar va xalqaro imkoniyatlar"
             className="h-full w-full object-cover object-center"
           />
+          <FilmCanvas src={img(IMG.hero, 2400)} />
         </motion.div>
+
         <div
           className="pointer-events-none absolute inset-x-0 bottom-0 h-[28%] backdrop-blur-[10px]"
           style={{ maskImage: "linear-gradient(to top, black 10%, transparent)", WebkitMaskImage: "linear-gradient(to top, black 10%, transparent)" }}
         />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#3c3f46]/80 via-[#3c3f46]/35 to-transparent" />
-      </div>
-
-      <div className="hero-haze" aria-hidden>
-        <i />
-        <i />
-        <i />
       </div>
 
       <motion.div

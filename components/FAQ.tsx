@@ -8,7 +8,7 @@ import { EASE, FadeUp, Label, PlusRule } from "./ui";
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faq" className="relative z-20 bg-white pt-[40px]">
+    <section id="faq" className="relative z-20 bg-white pt-[clamp(70px,6vw,120px)]">
       <PlusRule />
       <div className="mx-auto grid max-w-[1441px] gap-8 px-[38px] pb-[110px] pt-[28px] lg:grid-cols-[382px_1fr]">
         <div className="lg:sticky lg:top-[100px] lg:self-start">

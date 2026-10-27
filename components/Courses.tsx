@@ -1,5 +1,6 @@
 "use client";
 
+import BgShade from "./BgShade";
 import { COURSE, IMG, img } from "@/lib/data";
 import { FadeUp, Label, Marquee, PillButton, PlusRule, SplitReveal } from "./ui";
 
@@ -37,7 +38,8 @@ function CourseCard() {
 export default function Courses() {
   const cards = Array.from({ length: 5 });
   return (
-    <section className="relative z-20 bg-white pt-[40px]">
+    <section className="relative z-20 overflow-hidden bg-white pt-[clamp(70px,6vw,120px)]">
+      <BgShade />
       <PlusRule />
       <div className="mx-auto max-w-[1441px] px-[38px] pt-[28px]">
         <div className="flex justify-between">

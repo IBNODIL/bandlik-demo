@@ -1,14 +1,11 @@
 "use client";
 
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { IMG, NAV, img } from "@/lib/data";
 import { ArrowRight, EASE } from "./ui";
 
 export default function Nav({ ready }: { ready: boolean }) {
-  const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
-  const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
 
@@ -38,23 +35,18 @@ export default function Nav({ ready }: { ready: boolean }) {
     return () => io.disconnect();
   }, []);
 
-  useMotionValueEvent(scrollY, "change", (v) => {
-    const prev = scrollY.getPrevious() ?? 0;
-    setHidden(v > prev && v > 200);
-    setSolid(v > 40);
-  });
 
   return (
     <>
       <motion.header
-        className="fixed inset-x-0 top-0 z-50"
+        className="absolute inset-x-0 top-0 z-50"
         initial={{ y: -80, opacity: 0 }}
-        animate={ready ? { y: hidden ? -90 : 0, opacity: 1 } : {}}
+        animate={ready ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.8, ease: EASE }}
       >
         <div
           className={`mx-auto flex h-[68px] max-w-[1441px] items-center justify-between px-[34px] xl:px-[58px] transition-[background,backdrop-filter] duration-500 ${
-            solid ? "bg-white/55 backdrop-blur-xl" : ""
+            ""
           }`}
         >
           <a href="#top" className="flex items-center">
