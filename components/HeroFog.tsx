@@ -26,18 +26,31 @@ export default function HeroFog() {
   const isDesktop = useMediaQuery("(min-width: 1440px)");
   const reduceMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
+  const [el, setEl] = useState<HTMLDivElement | null>(null);
+  const [visible, setVisible] = useState(true);
+
+  // Pause the WebGL loop whenever the hero is scrolled out of view.
+  useEffect(() => {
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, [el]);
+
   if (!isDesktop || reduceMotion) return null;
 
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-70 mix-blend-screen">
+    <div ref={setEl} aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-70 mix-blend-screen">
       <UnicornScene
         projectId={PROJECT_ID}
         sdkUrl={SDK_URL}
         width="100%"
         height="100%"
-        scale={1}
+        // the smoke is soft, so a half-resolution 30fps render is visually the same and ~8x cheaper
+        scale={0.5}
         dpi={1}
-        fps={60}
+        fps={30}
+        paused={!visible}
       />
     </div>
   );

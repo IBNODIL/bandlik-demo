@@ -11,10 +11,9 @@ function Step({ i, p }: { i: number; p: MotionValue<number> }) {
   return (
     <motion.div
       className="absolute top-0 bg-white"
-      style={{ left: `${i * 20}%`, width: "20%", height: MAX_RISE + 120, y }}
-    >
-      {i === 3 && <span className="absolute left-0 top-0 h-full w-px bg-ink/70" />}
-    </motion.div>
+      // 1px overlap so no hairline seam can show between neighbouring blocks
+      style={{ left: `${i * 20}%`, width: "calc(20% + 1px)", height: MAX_RISE + 120, y }}
+    />
   );
 }
 
