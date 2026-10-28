@@ -3,7 +3,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 import { IMG, img } from "@/lib/data";
-import FogCanvas from "./FogCanvas";
+import HeroFog from "./HeroFog";
 import StepEdge from "./StepEdge";
 import { EASE } from "./ui";
 
@@ -31,15 +31,23 @@ export default function Hero({ ready }: { ready: boolean }) {
             alt="Ishchilar va xalqaro imkoniyatlar"
             className="h-full w-full object-cover object-center"
           />
-          {/* Like the original, the fog only exists on the desktop (>=1440px) layout. */}
-          <FogCanvas className="pointer-events-none absolute inset-0 hidden h-full w-full opacity-75 mix-blend-screen min-[1440px]:block" />
+          {/* Unicorn Studio fog, desktop only (see HeroFog) */}
+          <HeroFog />
         </motion.div>
 
         <div
           className="pointer-events-none absolute inset-x-0 bottom-0 h-[28%] backdrop-blur-[10px]"
           style={{ maskImage: "linear-gradient(to top, black 10%, transparent)", WebkitMaskImage: "linear-gradient(to top, black 10%, transparent)" }}
         />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#3c3f46]/80 via-[#3c3f46]/35 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[44%] bg-gradient-to-t from-[#2b2e35]/95 via-[#3c3f46]/55 to-transparent" />
+        {/* deeper bottom corners */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[55%]"
+          style={{
+            background:
+              "radial-gradient(ellipse 55% 90% at 0% 100%, rgba(30,32,38,0.75), transparent 70%), radial-gradient(ellipse 45% 80% at 100% 100%, rgba(30,32,38,0.6), transparent 70%)",
+          }}
+        />
       </div>
 
       <motion.div
