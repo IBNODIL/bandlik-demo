@@ -3,7 +3,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 import { IMG, img } from "@/lib/data";
-import FilmCanvas from "./FilmCanvas";
+import FogCanvas from "./FogCanvas";
 import StepEdge from "./StepEdge";
 import { EASE } from "./ui";
 
@@ -31,7 +31,8 @@ export default function Hero({ ready }: { ready: boolean }) {
             alt="Ishchilar va xalqaro imkoniyatlar"
             className="h-full w-full object-cover object-center"
           />
-          <FilmCanvas src={img(IMG.hero, 2400)} />
+          {/* Like the original, the fog only exists on the desktop (>=1440px) layout. */}
+          <FogCanvas className="pointer-events-none absolute inset-0 hidden h-full w-full opacity-75 mix-blend-screen min-[1440px]:block" />
         </motion.div>
 
         <div
