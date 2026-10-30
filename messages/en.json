@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Bandlik",
+    "description": "International employment platform: worker requests for employers, verified vacancies abroad for candidates, and preparation courses."
+  },
+  "common": {
+    "menu": "Menu",
+    "language": "Language",
+    "requestWorkers": "Request workers",
+    "contactUs": "Get in touch",
+    "details": "Details",
+    "share": "Share"
+  },
+  "nav": [
+    "Home",
+    "About us",
+    "For employers",
+    "Services",
+    "For job seekers",
+    "Vacancies",
+    "Contact",
+    "FAQ"
+  ],
+  "footerNav": [
+    "Home",
+    "About us",
+    "For employers",
+    "Services",
+    "Vacancies",
+    "Contact"
+  ],
+  "hero": {
+    "alt": "Workers and international opportunities",
+    "text": "Find workers for foreign employers, and explore verified vacancies for candidates.",
+    "scrollDown": "Scroll down"
+  },
+  "about": {
+    "label": "For employers",
+    "heading": "Define the profession, number of workers, language level and working conditions. Send your worker request through the Bandlik platform.",
+    "info": [
+      {
+        "title": "Define your staffing needs",
+        "body": "Tell us about your company, the profession needed, number of workers, language level and working conditions."
+      },
+      {
+        "title": "Learn how the process works",
+        "body": "See the hiring stages, responsible parties and average timelines on the Services page."
+      }
+    ],
+    "photoAlts": [
+      "Construction worker",
+      "Chef",
+      "Warehouse worker"
+    ]
+  },
+  "process": {
+    "label": "From request to placement",
+    "intro": "Follow the process step by step, from the employer's need to the worker's placement.",
+    "steps": [
+      {
+        "title": "Submit a worker request",
+        "text": "The employer specifies the profession needed, number of workers and working conditions."
+      },
+      {
+        "title": "Clarify requirements",
+        "text": "The employer's requirements and the criteria for candidates are agreed."
+      },
+      {
+        "title": "Select candidates",
+        "text": "Suitable candidates are reviewed based on the agreed requirements."
+      },
+      {
+        "title": "Prepare documents",
+        "text": "The documents required for employment and the related procedures are coordinated."
+      },
+      {
+        "title": "Prepare for departure",
+        "text": "Necessary formalities and preparations are completed in line with the agreed working conditions."
+      }
+    ]
+  },
+  "fullImages": {
+    "man": "A young man who set off abroad",
+    "woman": "A young woman who set off abroad"
+  },
+  "vacancies": {
+    "label": "JOB OPPORTUNITIES",
+    "heading": "Latest vacancies",
+    "intro": "Explore available jobs abroad and find the opportunity that suits you.",
+    "cta": "View all vacancies",
+    "card": {
+      "salary": "Net take-home salary:",
+      "type": "Employment type:",
+      "deadline": "Application deadline:",
+      "hired": "Hired:",
+      "applied": "Applicants:"
+    }
+  },
+  "benefits": {
+    "label": "PLATFORM FEATURES",
+    "tagline": "A path of its own for every user",
+    "speedTitle": "It takes 5.1 Minutes to launch your site.",
+    "speedText": "Lightning-fast delivery without compromising quality",
+    "allKicker": "FROM 0 TO 100 IN ONE SMALL STEP",
+    "allTitle": "All in one\nplatform",
+    "supportKicker": "FULL TIME SUPPORT",
+    "supportText": "I have a custom application for 24/6 support and you will get update anytime.",
+    "chatAlt": "Chat"
+  },
+  "courses": {
+    "label": "Preparation courses",
+    "heading": "Get ready to work abroad.",
+    "intro": "Explore language and vocational preparation courses and gain new knowledge and skills.",
+    "cta": "All courses"
+  },
+  "faq": {
+    "label": "FAQ — frequently asked questions",
+    "items": [
+      {
+        "q": "What services does Bandlik.uz offer?",
+        "a": "The platform helps employers find workers for the profession they need, and helps candidates apply for verified vacancies abroad and take preparation courses."
+      },
+      {
+        "q": "How do I submit a worker request?",
+        "a": "Click the “Request workers” button and specify the profession, number of workers, language level and working conditions. We will review your request and get in touch with you."
+      },
+      {
+        "q": "How much do the services cost?",
+        "a": "The price depends on the size of the request and the working conditions. A responsible specialist will tell you the exact price after you submit a request."
+      },
+      {
+        "q": "Are the vacancies verified?",
+        "a": "Yes, every vacancy on the platform is checked in advance for the employer and the working conditions."
+      },
+      {
+        "q": "What vacancies are available?",
+        "a": "There are jobs abroad in cooking, construction, warehousing, manufacturing and many other fields. The full list is in the “Vacancies” section."
+      },
+      {
+        "q": "How do I apply for a vacancy?",
+        "a": "Choose the vacancy you want, click the “Details” button and submit an application with the required documents."
+      },
+      {
+        "q": "How do I sign up for language and vocational courses?",
+        "a": "Choose a suitable course in the “Preparation courses” section and register. Information about the lessons will be sent to you."
+      },
+      {
+        "q": "How can I join as a partner?",
+        "a": "Write or call us through the “Contact” section. We will discuss the terms of cooperation together."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "CONTACT",
+    "heading": "Get in touch",
+    "intro": "Do you have questions or suggestions? Send us a message and we will get back to you.",
+    "phone": "Contact by phone",
+    "telegram": "Reach us on Telegram",
+    "formTitle": "Send us your message",
+    "name": "Your name *",
+    "phoneField": "Your phone number *",
+    "message": "Your message *",
+    "send": "Send message →",
+    "sent": "Sent ✓"
+  },
+  "footer": {
+    "heading": "Creating new\n*opportunities* together",
+    "tagline": "International employment opportunities for employers and candidates",
+    "mobileApp": "Download the mobile app",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "backToTop": "Back to top"
+  },
+  "content": {
+    "job": {
+      "title": "Chef",
+      "place": "Bratislava, Slovakia",
+      "salaryLocal": "(≈ 23,500,000 UZS)",
+      "type": "Full-time • 6–12 months"
+    },
+    "course": {
+      "tag": "Interview preparation",
+      "title": "Basic German conversation and grammar",
+      "price": "240,000 UZS",
+      "hours": "40 hours",
+      "lessons": "20 lessons"
+    }
+  },
+  "legal": {
+    "back": "Back to home",
+    "updated": "Last updated:",
+    "date": "30.10.2026",
+    "privacy": {
+      "title": "Privacy policy",
+      "intro": "Bandlik.uz takes the protection of users’ personal data seriously. This policy explains how data is collected, used and stored.",
+      "sections": [
+        {
+          "h": "What data we collect",
+          "p": "When you submit a request, an application or a message, you give us details such as your name, phone number, message and the documents needed for an application. Technical data, such as browser type and language, may also be collected automatically when you use the site."
+        },
+        {
+          "h": "How we use your data",
+          "p": "Your data is used only to review your request or application, to contact you, to improve the platform and to meet legal requirements."
+        },
+        {
+          "h": "Sharing data",
+          "p": "Data is shared with employers and partners only to the extent needed to process your request or application, and with your knowledge. We do not sell personal data."
+        },
+        {
+          "h": "Storage and security",
+          "p": "Data is stored for as long as needed for these purposes and is protected against unauthorized access by technical and organizational measures."
+        },
+        {
+          "h": "Your rights and contact",
+          "p": "You may ask to see, correct or delete your data at any time. Write or call us through the “Contact” section of this website."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of use",
+      "intro": "By using the Bandlik.uz platform you agree to the following terms.",
+      "sections": [
+        {
+          "h": "About the service",
+          "p": "Bandlik.uz is a platform that connects employers with candidates and offers preparation courses. The platform itself is not an employer."
+        },
+        {
+          "h": "Using the platform",
+          "p": "You agree to provide accurate information, not to misuse the platform and not to submit other people’s data without their consent."
+        },
+        {
+          "h": "Vacancies and information",
+          "p": "Vacancies, salaries and working conditions are shown as provided by employers and checked in advance. Details may change, so confirm the final terms before signing an agreement."
+        },
+        {
+          "h": "Liability",
+          "p": "We make reasonable efforts to keep the platform available and accurate, but we do not guarantee uninterrupted operation or any particular hiring result."
+        },
+        {
+          "h": "Changes and contact",
+          "p": "These terms may be updated from time to time; the current version is always on this page. For questions, use the “Contact” section."
+        }
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist or has been moved.",
+    "home": "Back to home"
+  }
+}

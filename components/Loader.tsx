@@ -13,6 +13,12 @@ export default function Loader({ onOpen }: { onOpen: () => void }) {
   const [gone, setGone] = useState(false);
 
   useEffect(() => {
+    // right after a language switch the intro is skipped (flag set in the root layout)
+    if (document.documentElement.hasAttribute("data-no-intro")) {
+      queueMicrotask(() => setGone(true));
+      onOpen();
+      return;
+    }
     const c = animate(p, 100, {
       duration: 1.4,
       ease: [0.65, 0, 0.35, 1],
@@ -28,7 +34,7 @@ export default function Loader({ onOpen }: { onOpen: () => void }) {
   if (gone) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[80]">
+    <div data-loader className="pointer-events-none fixed inset-0 z-[80]">
       <div className="absolute inset-0 flex">
         {Array.from({ length: COLS }).map((_, i) => (
           <div key={i} className="relative h-full flex-1">

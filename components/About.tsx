@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { CLIENTS, IMG, img } from "@/lib/data";
 import BgShade from "./BgShade";
+import { useI18n } from "./I18nProvider";
 import { FadeUp, Label, Marquee, PillButton, PlusRule, SplitReveal } from "./ui";
 
 function Info({ title, body }: { title: string; body: string }) {
@@ -37,6 +38,8 @@ function PhotoCard({ id, alt, i }: { id: string; alt: string; i: number }) {
 }
 
 export default function About() {
+  const { dict } = useI18n();
+  const t = dict.about;
   return (
     <section id="about" className="relative z-20 bg-white">
       <BgShade />
@@ -45,28 +48,29 @@ export default function About() {
 
       <div className="relative w-full px-[38px] pt-[28px] lg:px-[2.6vw]">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[26.4vw_1fr]">
-          <Label className="pt-[10px]">Ish beruvchilar uchun</Label>
+          <Label className="pt-[10px]">{t.label}</Label>
           <div className="lg:pr-[40px]">
             <SplitReveal
               as="p"
               className="text-[34px] font-semibold leading-[1.02] tracking-[-0.04em] text-[#1e1e1e] sm:text-[48px] lg:text-[clamp(48px,3.45vw,72px)]"
               indent={156}
-              text="Kerakli kasb, ishchilar soni, til darajasi va mehnat shartlarini belgilang. Bandlik platformasi orqali ishchi so‘rovingizni yuboring."
+              text={t.heading}
             />
             <FadeUp delay={0.2} className="mt-12">
-              <PillButton>Ishchi so&apos;rash</PillButton>
+              <PillButton>{dict.common.requestWorkers}</PillButton>
             </FadeUp>
             <div className="mt-[56px] grid gap-x-[5.6vw] md:grid-cols-2">
-              <Info title="Ishchi ehtiyojini belgilang" body="Kompaniya, kerakli kasb, ishchilar soni, til darajasi va ish shartlari haqida ma’lumot bering." />
-              <Info title="Ish jarayoni bilan tanishing" body="Xizmatlar sahifasida ishga yollash bosqichlari, mas’ul tomonlar va o‘rtacha muddatlarni ko‘ring." />
+              {t.info.map((it) => (
+                <Info key={it.title} title={it.title} body={it.body} />
+              ))}
             </div>
           </div>
         </div>
 
         <div className="mt-[clamp(70px,5.8vw,112px)] grid grid-cols-1 gap-[18px] lg:gap-[1.3vw] md:grid-cols-3">
-          <PhotoCard id={IMG.worker} alt="Qurilish ishchisi" i={0} />
-          <PhotoCard id={IMG.chef} alt="Oshpaz" i={1} />
-          <PhotoCard id={IMG.warehouse} alt="Ombor xodimi" i={2} />
+          <PhotoCard id={IMG.worker} alt={t.photoAlts[0]} i={0} />
+          <PhotoCard id={IMG.chef} alt={t.photoAlts[1]} i={1} />
+          <PhotoCard id={IMG.warehouse} alt={t.photoAlts[2]} i={2} />
         </div>
       </div>
 

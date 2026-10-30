@@ -4,10 +4,12 @@ import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 import { IMG, img } from "@/lib/data";
 import HeroFog from "./HeroFog";
+import { useI18n } from "./I18nProvider";
 import StepEdge from "./StepEdge";
 import { EASE } from "./ui";
 
 export default function Hero({ ready }: { ready: boolean }) {
+  const { dict } = useI18n();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const p = useSpring(scrollYProgress, { stiffness: 120, damping: 24, mass: 0.4 });
@@ -28,7 +30,7 @@ export default function Hero({ ready }: { ready: boolean }) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={img(IMG.hero, 2400)}
-            alt="Ishchilar va xalqaro imkoniyatlar"
+            alt={dict.hero.alt}
             className="h-full w-full object-cover object-center"
           />
           {/* Unicorn Studio fog, desktop only (see HeroFog) */}
@@ -60,11 +62,11 @@ export default function Hero({ ready }: { ready: boolean }) {
           animate={ready ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: EASE, delay: 0.3 }}
         >
-          Xorijiy ish beruvchilar uchun ishchi topish va nomzodlar uchun tekshirilgan vakansiyalar bilan tanishish imkoniyati.
+          {dict.hero.text}
         </motion.p>
         <motion.a
           href="#about"
-          aria-label="Pastga"
+          aria-label={dict.hero.scrollDown}
           className="mr-[4px] grid size-[40px] place-items-center"
           initial={{ opacity: 0 }}
           animate={ready ? { opacity: 1, y: [0, 12, 0, 6, 0] } : {}}

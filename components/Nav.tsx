@@ -2,10 +2,14 @@
 
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { IMG, NAV, img } from "@/lib/data";
+import { IMG, NAV_HREFS, img } from "@/lib/data";
+import { useI18n } from "./I18nProvider";
+import LangSwitcher from "./LangSwitcher";
 import { ArrowRight, EASE } from "./ui";
 
 export default function Nav({ ready }: { ready: boolean }) {
+  const { dict } = useI18n();
+  const NAV = dict.nav.map((label, i) => ({ label, href: NAV_HREFS[i] }));
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
 
@@ -19,11 +23,11 @@ export default function Nav({ ready }: { ready: boolean }) {
 
   // highlight the link whose section is currently in view
   useEffect(() => {
-    const ids = [...new Set(NAV.map((n) => n.href.slice(1)))];
+    const ids = [...new Set(NAV_HREFS.map((h) => h.slice(1)))];
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((en) => {
-          if (en.isIntersecting) setActive(NAV.findIndex((n) => n.href === "#" + en.target.id));
+          if (en.isIntersecting) setActive(NAV_HREFS.indexOf("#" + en.target.id));
         });
       },
       { rootMargin: "-45% 0px -50% 0px" },
@@ -87,8 +91,9 @@ export default function Nav({ ready }: { ready: boolean }) {
           </nav>
 
           <div className="flex items-center gap-3">
+            <LangSwitcher />
             <button
-              aria-label="Menu"
+              aria-label={dict.common.menu}
               onClick={() => setOpen((o) => !o)}
               className="grid size-9 place-items-center lg:hidden"
             >

@@ -10,6 +10,8 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import FullImage from "@/components/FullImage";
 import Hero from "@/components/Hero";
+import { useI18n } from "@/components/I18nProvider";
+import LangSuggest from "@/components/LangSuggest";
 import Loader from "@/components/Loader";
 import Nav from "@/components/Nav";
 import Process from "@/components/Process";
@@ -17,7 +19,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Vacancies from "@/components/Vacancies";
 import { IMG } from "@/lib/data";
 
-export default function Page() {
+export default function Home() {
+  const { dict } = useI18n();
   const [ready, setReady] = useState(false);
   const done = useCallback(() => setReady(true), []);
 
@@ -31,15 +34,16 @@ export default function Page() {
         <Hero ready={ready} />
         <About />
         <Process />
-        <FullImage id={IMG.man} alt="Xorijga yo‘l olgan yigit" />
+        <FullImage id={IMG.man} alt={dict.fullImages.man} />
         <Vacancies />
-        <FullImage id={IMG.woman} alt="Xorijga yo‘l olgan qiz" />
+        <FullImage id={IMG.woman} alt={dict.fullImages.woman} />
         <Benefits />
         <Courses />
         <FAQ />
         <Contact />
       </main>
       <Footer />
+      <LangSuggest ready={ready} />
     </>
   );
 }

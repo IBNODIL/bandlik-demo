@@ -1,7 +1,8 @@
 "use client";
 
 import BgShade from "./BgShade";
-import { COURSE, IMG, img } from "@/lib/data";
+import { IMG, img } from "@/lib/data";
+import { useI18n } from "./I18nProvider";
 import { FadeUp, Label, Marquee, PillButton, PlusRule, SplitReveal } from "./ui";
 
 function Chip({ children }: { children: React.ReactNode }) {
@@ -14,6 +15,7 @@ function Chip({ children }: { children: React.ReactNode }) {
 }
 
 function CourseCard() {
+  const COURSE = useI18n().dict.content.course;
   return (
     <article className="group mr-[14px] w-[286px] shrink-0">
       <div className="aspect-[686/386] overflow-hidden rounded-lg">
@@ -36,6 +38,7 @@ function CourseCard() {
 }
 
 export default function Courses() {
+  const t = useI18n().dict.courses;
   const cards = Array.from({ length: 5 });
   return (
     <section className="relative z-20 overflow-hidden bg-white pt-[clamp(70px,6vw,120px)]">
@@ -43,21 +46,19 @@ export default function Courses() {
       <PlusRule />
       <div className="mx-auto max-w-[1441px] px-[38px] pt-[28px]">
         <div className="flex justify-between">
-          <Label>Tayyorlov kurslari</Label>
+          <Label>{t.label}</Label>
           <span className="text-[18px] text-[#29292b]">©2026</span>
         </div>
         <div className="mt-[60px] flex flex-col items-center text-center">
           <SplitReveal
             className="max-w-[1000px] text-[clamp(48px,7.6vw,110px)] font-semibold leading-[0.9] tracking-[-0.03em] text-[#1e1e1e]"
-            text="Xorijda ishlashga tayyorlaning."
+            text={t.heading}
           />
           <FadeUp delay={0.15}>
-            <p className="mt-6 max-w-[520px] text-[16px] leading-6 text-soft">
-              Til va kasb bo‘yicha tayyorlov kurslari bilan tanishing, yangi bilim va ko‘nikmalarni egallang.
-            </p>
+            <p className="mt-6 max-w-[520px] text-[16px] leading-6 text-soft">{t.intro}</p>
           </FadeUp>
           <FadeUp delay={0.25} className="mt-8">
-            <PillButton href="#">Barcha kurslar</PillButton>
+            <PillButton href="#">{t.cta}</PillButton>
           </FadeUp>
         </div>
       </div>

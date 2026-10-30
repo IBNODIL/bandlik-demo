@@ -2,6 +2,8 @@
 
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
+import Rich from "./Rich";
+import { useI18n } from "./I18nProvider";
 import { Label, PlusRule } from "./ui";
 
 const cardCls = "relative aspect-[584/750] min-h-[460px] overflow-hidden rounded-xl";
@@ -18,6 +20,8 @@ function Corner({ right = false }: { right?: boolean }) {
 }
 
 export default function Benefits() {
+  const { dict } = useI18n();
+  const t = dict.benefits;
   // scroll-linked entrance: cards rise into line at different rates, inner images drift into place
   const grid = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: grid, offset: ["start 98%", "start 30%"] });
@@ -33,8 +37,8 @@ export default function Benefits() {
       <PlusRule />
       <div className="w-full px-[38px] pb-[clamp(90px,6vw,120px)] pt-[28px] lg:px-[2.6vw]">
         <div className="flex flex-col justify-between gap-3 sm:flex-row">
-          <Label>PLATFORMA IMKONIYATLARI</Label>
-          <span className="text-[clamp(16px,1.15vw,22px)] text-ink">Har bir foydalanuvchi uchun o‘z yo‘li</span>
+          <Label>{t.label}</Label>
+          <span className="text-[clamp(16px,1.15vw,22px)] text-ink">{t.tagline}</span>
         </div>
 
         <div ref={grid} className="mt-[clamp(40px,6vw,115px)] grid gap-[14px] lg:grid-cols-3 lg:gap-[1.3vw]">
@@ -49,11 +53,9 @@ export default function Benefits() {
             <Corner />
             <div className="absolute inset-x-0 top-[clamp(24px,5.4%,60px)] px-6 text-center">
               <p className="text-[clamp(16px,1.15vw,22px)] font-semibold leading-tight tracking-[-0.02em]">
-                It takes 5.1 Minutes to launch your site.
+                {t.speedTitle}
               </p>
-              <p className="mt-1 text-[clamp(13px,0.95vw,18px)] text-mute">
-                Lightning-fast delivery without compromising quality
-              </p>
+              <p className="mt-1 text-[clamp(13px,0.95vw,18px)] text-mute">{t.speedText}</p>
             </div>
             <motion.div
               className="absolute left-1/2 top-[51%] grid size-[clamp(64px,4.7vw,90px)] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-blue text-white"
@@ -67,7 +69,7 @@ export default function Benefits() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/wfveBp4CC208LYbfJecE1rZL50.avif"
-              alt="Viper"
+              alt=""
               className="absolute bottom-[12%] left-1/2 w-[26%] -translate-x-1/2"
             />
           </motion.div>
@@ -79,12 +81,10 @@ export default function Benefits() {
           >
             <div className="h-full rounded-t-[4px] bg-[#f6f6f6] px-6 pt-[clamp(20px,3.4%,34px)] text-center">
               <p className="text-[clamp(11px,0.75vw,14px)] font-semibold tracking-[-0.01em] text-[#29292b]">
-                FROM 0 TO 100 IN ONE SMALL STEP
+                {t.allKicker}
               </p>
               <h3 className="mt-3 text-[clamp(44px,3.45vw,68px)] font-semibold leading-[0.9] tracking-[-0.045em]">
-                All in one
-                <br />
-                platform
+                <Rich text={t.allTitle} />
               </h3>
             </div>
           </motion.div>
@@ -93,7 +93,7 @@ export default function Benefits() {
           <motion.div style={{ y: y3, opacity: fade }} className={`${cardCls} bg-[#101010] text-white`}>
             <Corner right />
             <div className="px-[5%] pt-[clamp(20px,3.6%,34px)]">
-              <p className="text-[clamp(11px,0.75vw,14px)] font-semibold tracking-[-0.01em]">FULL TIME SUPPORT</p>
+              <p className="text-[clamp(11px,0.75vw,14px)] font-semibold tracking-[-0.01em]">{t.supportKicker}</p>
               <p className="mt-2 text-[clamp(44px,3.5vw,68px)] font-semibold leading-none tracking-[-0.04em]">24/6</p>
               <p className="mt-3 flex gap-[6px] text-blue">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -103,12 +103,12 @@ export default function Benefits() {
                 ))}
               </p>
               <p className="mt-3 max-w-[92%] text-[clamp(14px,1.05vw,20px)] leading-snug tracking-[-0.02em] text-white/90">
-                I have a custom application for 24/6 support and you will get update anytime.
+                {t.supportText}
               </p>
             </div>
             <motion.img
               src="/uGcQ6mHB0wiF8ZtXK6bQKyhvo8o.avif"
-              alt="Chat"
+              alt={t.chatAlt}
               style={{ y: phoneY, x: "-50%" }}
               className="absolute bottom-0 left-1/2 w-[66%]"
             />

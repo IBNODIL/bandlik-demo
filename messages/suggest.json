@@ -1,0 +1,27 @@
+{
+  "uz": {
+    "text": "Saytni özbek tilida körişni xohlaysizmi?",
+    "accept": "Özbekçaga ötiş",
+    "dismiss": "Yöq, rahmat"
+  },
+  "en": {
+    "text": "Would you like to view the site in English?",
+    "accept": "Switch to English",
+    "dismiss": "No, thanks"
+  },
+  "ru": {
+    "text": "Хотите открыть сайт на русском языке?",
+    "accept": "Перейти на русский",
+    "dismiss": "Нет, спасибо"
+  },
+  "de": {
+    "text": "Möchten Sie die Website auf Deutsch ansehen?",
+    "accept": "Auf Deutsch wechseln",
+    "dismiss": "Nein, danke"
+  },
+  "tr": {
+    "text": "Siteyi Türkçe görüntülemek ister misiniz?",
+    "accept": "Türkçe’ye geç",
+    "dismiss": "Hayır, teşekkürler"
+  }
+}

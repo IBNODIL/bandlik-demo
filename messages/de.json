@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Bandlik",
+    "description": "Internationale Beschäftigungsplattform: Arbeitskräfteanfragen für Arbeitgeber, geprüfte Stellenangebote im Ausland für Kandidaten und Vorbereitungskurse."
+  },
+  "common": {
+    "menu": "Menü",
+    "language": "Sprache",
+    "requestWorkers": "Arbeitskräfte anfragen",
+    "contactUs": "Kontaktieren Sie uns",
+    "details": "Details",
+    "share": "Teilen"
+  },
+  "nav": [
+    "Startseite",
+    "Über uns",
+    "Für Arbeitgeber",
+    "Leistungen",
+    "Für Jobsuchende",
+    "Stellenangebote",
+    "Kontakt",
+    "FAQ"
+  ],
+  "footerNav": [
+    "Start",
+    "Über uns",
+    "Für Arbeitgeber",
+    "Leistungen",
+    "Stellenangebote",
+    "Kontakt"
+  ],
+  "hero": {
+    "alt": "Arbeitskräfte und internationale Chancen",
+    "text": "Arbeitskräfte für ausländische Arbeitgeber finden und geprüfte Stellenangebote für Kandidaten entdecken.",
+    "scrollDown": "Nach unten"
+  },
+  "about": {
+    "label": "Für Arbeitgeber",
+    "heading": "Legen Sie Beruf, Anzahl der Arbeitskräfte, Sprachniveau und Arbeitsbedingungen fest. Senden Sie Ihre Anfrage über die Bandlik-Plattform.",
+    "info": [
+      {
+        "title": "Personalbedarf festlegen",
+        "body": "Geben Sie Angaben zu Unternehmen, gesuchtem Beruf, Anzahl der Arbeitskräfte, Sprachniveau und Arbeitsbedingungen an."
+      },
+      {
+        "title": "Den Ablauf kennenlernen",
+        "body": "Auf der Seite „Leistungen“ finden Sie die Einstellungsphasen, Verantwortlichen und durchschnittlichen Fristen."
+      }
+    ],
+    "photoAlts": [
+      "Bauarbeiter",
+      "Koch",
+      "Lagermitarbeiter"
+    ]
+  },
+  "process": {
+    "label": "Von der Anfrage bis zur Vermittlung",
+    "intro": "Verfolgen Sie den Prozess Schritt für Schritt – vom Bedarf des Arbeitgebers bis zur Vermittlung.",
+    "steps": [
+      {
+        "title": "Anfrage senden",
+        "text": "Der Arbeitgeber gibt den gesuchten Beruf, die Anzahl der Arbeitskräfte und die Arbeitsbedingungen an."
+      },
+      {
+        "title": "Anforderungen klären",
+        "text": "Die Anforderungen des Arbeitgebers und die Kriterien für Kandidaten werden abgestimmt."
+      },
+      {
+        "title": "Kandidaten auswählen",
+        "text": "Geeignete Kandidaten werden anhand der festgelegten Anforderungen geprüft."
+      },
+      {
+        "title": "Dokumente vorbereiten",
+        "text": "Die für die Beschäftigung erforderlichen Dokumente und Verfahren werden koordiniert."
+      },
+      {
+        "title": "Reisevorbereitung",
+        "text": "Entsprechend den vereinbarten Arbeitsbedingungen werden die nötigen Formalitäten und Vorbereitungen erledigt."
+      }
+    ]
+  },
+  "fullImages": {
+    "man": "Ein junger Mann, der ins Ausland aufbricht",
+    "woman": "Eine junge Frau, die ins Ausland aufbricht"
+  },
+  "vacancies": {
+    "label": "JOBMÖGLICHKEITEN",
+    "heading": "Neueste Stellenangebote",
+    "intro": "Entdecken Sie freie Stellen im Ausland und finden Sie die passende Chance.",
+    "cta": "Alle Stellenangebote ansehen",
+    "card": {
+      "salary": "Nettogehalt:",
+      "type": "Beschäftigungsart:",
+      "deadline": "Bewerbungsfrist:",
+      "hired": "Eingestellt:",
+      "applied": "Bewerber:"
+    }
+  },
+  "benefits": {
+    "label": "PLATTFORM-FUNKTIONEN",
+    "tagline": "Für jeden Nutzer der passende Weg",
+    "speedTitle": "Der Start Ihrer Website dauert 5,1 Minuten.",
+    "speedText": "Blitzschnelle Lieferung ohne Qualitätseinbußen",
+    "allKicker": "VON 0 AUF 100 IN EINEM KLEINEN SCHRITT",
+    "allTitle": "Alles in einer\nPlattform",
+    "supportKicker": "VOLLZEIT-SUPPORT",
+    "supportText": "Ich habe eine eigene Anwendung für 24/6-Support, und Sie erhalten jederzeit Updates.",
+    "chatAlt": "Chat"
+  },
+  "courses": {
+    "label": "Vorbereitungskurse",
+    "heading": "Bereiten Sie sich auf die Arbeit im Ausland vor.",
+    "intro": "Entdecken Sie Sprach- und Berufsvorbereitungskurse und erwerben Sie neues Wissen und neue Fähigkeiten.",
+    "cta": "Alle Kurse"
+  },
+  "faq": {
+    "label": "FAQ — häufig gestellte Fragen",
+    "items": [
+      {
+        "q": "Welche Leistungen bietet Bandlik.uz an?",
+        "a": "Die Plattform unterstützt Arbeitgeber bei der Suche nach Arbeitskräften für den gewünschten Beruf und Kandidaten bei der Bewerbung auf geprüfte Stellen im Ausland sowie bei Vorbereitungskursen."
+      },
+      {
+        "q": "Wie sende ich eine Arbeitskräfteanfrage?",
+        "a": "Klicken Sie auf „Arbeitskräfte anfragen“ und geben Sie Beruf, Anzahl der Arbeitskräfte, Sprachniveau und Arbeitsbedingungen an. Wir prüfen Ihre Anfrage und melden uns bei Ihnen."
+      },
+      {
+        "q": "Was kosten die Leistungen?",
+        "a": "Der Preis richtet sich nach dem Umfang der Anfrage und den Arbeitsbedingungen. Den genauen Preis nennt Ihnen nach Ihrer Anfrage ein zuständiger Spezialist."
+      },
+      {
+        "q": "Werden die Stellenangebote geprüft?",
+        "a": "Ja, jedes Stellenangebot auf der Plattform wird vorab hinsichtlich Arbeitgeber und Arbeitsbedingungen überprüft."
+      },
+      {
+        "q": "Welche Stellenangebote gibt es?",
+        "a": "Es gibt Stellen im Ausland in der Gastronomie, im Bau, im Lager, in der Produktion und in vielen weiteren Bereichen. Die vollständige Liste finden Sie im Bereich „Stellenangebote“."
+      },
+      {
+        "q": "Wie bewerbe ich mich auf eine Stelle?",
+        "a": "Wählen Sie die gewünschte Stelle, klicken Sie auf „Details“ und reichen Sie Ihre Bewerbung mit den erforderlichen Unterlagen ein."
+      },
+      {
+        "q": "Wie melde ich mich für Sprach- und Berufskurse an?",
+        "a": "Wählen Sie im Bereich „Vorbereitungskurse“ einen passenden Kurs und registrieren Sie sich. Informationen zu den Unterrichtsstunden werden Ihnen zugesandt."
+      },
+      {
+        "q": "Wie kann ich Partner werden?",
+        "a": "Schreiben Sie uns oder rufen Sie uns über den Bereich „Kontakt“ an. Die Bedingungen der Zusammenarbeit besprechen wir gemeinsam."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "KONTAKT",
+    "heading": "Kontaktieren Sie uns",
+    "intro": "Haben Sie Fragen oder Vorschläge? Senden Sie uns eine Nachricht, wir melden uns bei Ihnen.",
+    "phone": "Kontakt per Telefon",
+    "telegram": "Anfrage über Telegram",
+    "formTitle": "Senden Sie uns Ihre Nachricht",
+    "name": "Ihr Name *",
+    "phoneField": "Ihre Telefonnummer *",
+    "message": "Ihre Nachricht *",
+    "send": "Nachricht senden →",
+    "sent": "Gesendet ✓"
+  },
+  "footer": {
+    "heading": "Gemeinsam neue\n*Chancen* schaffen",
+    "tagline": "Internationale Beschäftigungsmöglichkeiten für Arbeitgeber und Kandidaten",
+    "mobileApp": "Laden Sie die App herunter",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "backToTop": "Nach oben"
+  },
+  "content": {
+    "job": {
+      "title": "Koch",
+      "place": "Bratislava, Slowakei",
+      "salaryLocal": "(≈ 23.500.000 UZS)",
+      "type": "Vollzeit • 6–12 Monate"
+    },
+    "course": {
+      "tag": "Vorbereitung auf das Gespräch",
+      "title": "Grundlegende Konversation und Grammatik auf Deutsch",
+      "price": "240.000 UZS",
+      "hours": "40 Stunden",
+      "lessons": "20 Lektionen"
+    }
+  },
+  "legal": {
+    "back": "Zur Startseite",
+    "updated": "Zuletzt aktualisiert:",
+    "date": "30.10.2026",
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "intro": "Bandlik.uz nimmt den Schutz der personenbezogenen Daten seiner Nutzer ernst. Diese Erklärung beschreibt, wie Daten erhoben, verwendet und gespeichert werden.",
+      "sections": [
+        {
+          "h": "Welche Daten wir erheben",
+          "p": "Wenn Sie eine Anfrage, eine Bewerbung oder eine Nachricht senden, teilen Sie uns Angaben wie Ihren Namen, Ihre Telefonnummer, Ihre Nachricht und die für eine Bewerbung nötigen Unterlagen mit. Bei der Nutzung der Website können außerdem technische Daten, etwa Browsertyp und Sprache, automatisch erfasst werden."
+        },
+        {
+          "h": "Wie wir Ihre Daten verwenden",
+          "p": "Ihre Daten werden ausschließlich verwendet, um Ihre Anfrage oder Bewerbung zu prüfen, Sie zu kontaktieren, die Plattform zu verbessern und gesetzliche Anforderungen zu erfüllen."
+        },
+        {
+          "h": "Weitergabe von Daten",
+          "p": "Daten werden nur in dem Umfang an Arbeitgeber und Partner weitergegeben, der zur Bearbeitung Ihrer Anfrage oder Bewerbung nötig ist, und mit Ihrem Wissen. Wir verkaufen keine personenbezogenen Daten."
+        },
+        {
+          "h": "Speicherung und Sicherheit",
+          "p": "Daten werden so lange gespeichert, wie es für diese Zwecke erforderlich ist, und durch technische und organisatorische Maßnahmen vor unbefugtem Zugriff geschützt."
+        },
+        {
+          "h": "Ihre Rechte und Kontakt",
+          "p": "Sie können jederzeit Auskunft über Ihre Daten sowie deren Berichtigung oder Löschung verlangen. Schreiben Sie uns oder rufen Sie uns über den Bereich „Kontakt“ dieser Website an."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "intro": "Mit der Nutzung der Plattform Bandlik.uz erklären Sie sich mit den folgenden Bedingungen einverstanden.",
+      "sections": [
+        {
+          "h": "Über den Dienst",
+          "p": "Bandlik.uz ist eine Plattform, die Arbeitgeber mit Kandidaten zusammenbringt und Vorbereitungskurse anbietet. Die Plattform selbst ist kein Arbeitgeber."
+        },
+        {
+          "h": "Nutzung der Plattform",
+          "p": "Sie verpflichten sich, korrekte Angaben zu machen, die Plattform nicht zu missbrauchen und keine Daten anderer Personen ohne deren Einwilligung zu übermitteln."
+        },
+        {
+          "h": "Stellenangebote und Informationen",
+          "p": "Stellenangebote, Gehälter und Arbeitsbedingungen werden so angezeigt, wie sie von den Arbeitgebern angegeben und vorab geprüft wurden. Einzelheiten können sich ändern; klären Sie daher die endgültigen Bedingungen, bevor Sie einen Vertrag unterschreiben."
+        },
+        {
+          "h": "Haftung",
+          "p": "Wir bemühen uns in angemessener Weise um eine verfügbare und korrekte Plattform, garantieren jedoch weder einen unterbrechungsfreien Betrieb noch ein bestimmtes Vermittlungsergebnis."
+        },
+        {
+          "h": "Änderungen und Kontakt",
+          "p": "Diese Bedingungen können von Zeit zu Zeit aktualisiert werden; die aktuelle Fassung finden Sie stets auf dieser Seite. Bei Fragen nutzen Sie den Bereich „Kontakt“."
+        }
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "text": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "home": "Zur Startseite"
+  }
+}

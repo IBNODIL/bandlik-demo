@@ -2,6 +2,7 @@
 
 import { JOB } from "@/lib/data";
 import BgShade from "./BgShade";
+import { useI18n } from "./I18nProvider";
 import { FadeUp, Label, Marquee, PillButton, PlusRule, SplitReveal } from "./ui";
 
 function Flag() {
@@ -38,13 +39,16 @@ function Row({ icon, label, value, sub }: { icon: string; label: string; value?:
 }
 
 export function JobCard() {
+  const { dict } = useI18n();
+  const job = dict.content.job;
+  const card = dict.vacancies.card;
   return (
     <article className="mr-[28px] w-[286px] shrink-0 rounded-2xl bg-white p-[14px] shadow-[0_2px_18px_rgba(9,9,9,0.08)] ring-1 ring-ink/[0.04] transition-transform duration-500 hover:-translate-y-1">
       <div className="flex items-start gap-3">
         <Flag />
         <div className="min-w-0 flex-1 font-gilroy">
-          <h3 className="text-[16px] font-semibold leading-[22px] text-ink">{JOB.title}</h3>
-          <p className="text-[14px] font-medium leading-5 text-blue">{JOB.place}</p>
+          <h3 className="text-[16px] font-semibold leading-[22px] text-ink">{job.title}</h3>
+          <p className="text-[14px] font-medium leading-5 text-blue">{job.place}</p>
         </div>
         <div className="flex items-center gap-1 text-[12px] text-soft">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -54,18 +58,18 @@ export function JobCard() {
         </div>
       </div>
       <div className="mt-4 space-y-[10px]">
-        <Row icon="$" label="Qo'lga olinadigan maosh (Netto):" value={JOB.salary} sub={JOB.salaryUzs} />
-        <Row icon="◷" label="Ish turi:" value={JOB.type} />
-        <Row icon="▣" label="Ishga topshirish muddati:" value={JOB.deadline} />
-        <Row icon="☺" label="Ishga qabul qilinganlar:" value={JOB.hired} />
-        <Row icon="✎" label="Vakansiyaga topshirganlar" value={JOB.applied} />
+        <Row icon="$" label={card.salary} value={JOB.salary} sub={job.salaryLocal} />
+        <Row icon="◷" label={card.type} value={job.type} />
+        <Row icon="▣" label={card.deadline} value={JOB.deadline} />
+        <Row icon="☺" label={card.hired} value={JOB.hired} />
+        <Row icon="✎" label={card.applied} value={JOB.applied} />
       </div>
       <div className="mt-5 flex items-center justify-between gap-2">
         <PillButton href="#vacancies" className="!h-[50px] flex-1 !pr-5">
-          Batafsil
+          {dict.common.details}
         </PillButton>
         <button
-          aria-label="Ulashish"
+          aria-label={dict.common.share}
           className="grid size-[44px] shrink-0 place-items-center rounded-full bg-blue text-white transition-transform duration-500 hover:scale-110"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -78,6 +82,8 @@ export function JobCard() {
 }
 
 export default function Vacancies() {
+  const { dict } = useI18n();
+  const t = dict.vacancies;
   const cards = Array.from({ length: 5 });
   return (
     <section id="vacancies" className="relative z-20 overflow-hidden bg-white pt-[clamp(70px,6vw,120px)]">
@@ -85,21 +91,19 @@ export default function Vacancies() {
       <PlusRule />
       <div className="mx-auto max-w-[1441px] px-[38px] pt-[28px]">
         <div className="flex justify-between">
-          <Label>ISH IMKONIYATLARI</Label>
+          <Label>{t.label}</Label>
           <span className="text-[18px] text-[#29292b]">©2026</span>
         </div>
         <div className="mt-[60px] flex flex-col items-center text-center">
           <SplitReveal
             className="text-[clamp(48px,7.6vw,110px)] font-semibold leading-[0.9] tracking-[-0.03em] text-[#1e1e1e]"
-            text="So‘nggi vakansiyalar"
+            text={t.heading}
           />
           <FadeUp delay={0.15}>
-            <p className="mt-6 text-[18px] leading-6 text-soft">
-              Xorijdagi mavjud ish o‘rinlari bilan tanishing va o‘zingizga mos imkoniyatni toping.
-            </p>
+            <p className="mt-6 text-[18px] leading-6 text-soft">{t.intro}</p>
           </FadeUp>
           <FadeUp delay={0.25} className="mt-8">
-            <PillButton href="#vacancies">Barcha vakansiyalarni ko‘rish</PillButton>
+            <PillButton href="#vacancies">{t.cta}</PillButton>
           </FadeUp>
         </div>
       </div>

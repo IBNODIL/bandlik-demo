@@ -1,25 +1,27 @@
 "use client";
 
 import { motion } from "motion/react";
-import { STEPS } from "@/lib/data";
+import { useI18n } from "./I18nProvider";
 import { EASE, FadeUp, Label, PlusRule } from "./ui";
 
 export default function Process() {
+  const { dict } = useI18n();
+  const STEPS = dict.process.steps;
   return (
     <section id="process" className="relative z-20 bg-white pb-[clamp(60px,6vw,120px)] pt-[clamp(90px,8vw,150px)]">
       <PlusRule />
       <div className="mx-auto max-w-[1441px] px-[38px] pt-[28px]">
         <div className="flex flex-col justify-between gap-4 sm:flex-row">
-          <Label>So‘rovdan ishga joylashishgacha</Label>
+          <Label>{dict.process.label}</Label>
           <FadeUp>
             <p className="max-w-[400px] text-right text-[18px] leading-[24px] text-ink sm:max-w-[330px]">
-              Ish beruvchining ehtiyojidan boshlab ishga joylashishgacha bo‘lgan jarayonni ketma-ket kuzating.
+              {dict.process.intro}
             </p>
           </FadeUp>
         </div>
 
         <div className="mt-[60px] grid gap-[14px] sm:grid-cols-2 lg:grid-cols-5">
-          {STEPS.map(([t, d], i) => (
+          {STEPS.map(({ title: t, text: d }, i) => (
             <motion.article
               key={t}
               className="group flex min-h-[250px] flex-col justify-between rounded-xl bg-card p-[22px] transition-colors duration-500 hover:bg-[#eceae7]"

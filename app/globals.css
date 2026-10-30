@@ -124,3 +124,16 @@ body {
   35% { transform: scaleX(0.25); }
   100% { transform: scaleX(1); }
 }
+
+/* language switch: no loader intro */
+html[data-no-intro] [data-loader] {
+  display: none !important;
+}
+
+/* long German / Russian / Turkish words must wrap instead of overflowing */
+html:lang(de),
+html:lang(ru),
+html:lang(tr) {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
