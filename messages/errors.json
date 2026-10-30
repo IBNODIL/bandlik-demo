@@ -1,0 +1,37 @@
+{
+  "uz": {
+    "label": "Xatolik",
+    "title": "Xatolik yuz berdi",
+    "text": "Serverda nosozlik yuz berdi. Iltimos, birozdan söng qayta urinib köring.",
+    "retry": "Qayta uriniş",
+    "home": "Boş sahifaga qaytiş"
+  },
+  "en": {
+    "label": "Error",
+    "title": "Something went wrong",
+    "text": "A server error occurred. Please try again in a moment.",
+    "retry": "Try again",
+    "home": "Back to home"
+  },
+  "ru": {
+    "label": "Ошибка",
+    "title": "Что-то пошло не так",
+    "text": "Произошла ошибка на сервере. Пожалуйста, повторите попытку чуть позже.",
+    "retry": "Повторить",
+    "home": "На главную"
+  },
+  "de": {
+    "label": "Fehler",
+    "title": "Etwas ist schiefgelaufen",
+    "text": "Auf dem Server ist ein Fehler aufgetreten. Bitte versuchen Sie es in Kürze erneut.",
+    "retry": "Erneut versuchen",
+    "home": "Zur Startseite"
+  },
+  "tr": {
+    "label": "Hata",
+    "title": "Bir şeyler ters gitti",
+    "text": "Sunucuda bir hata oluştu. Lütfen biraz sonra tekrar deneyin.",
+    "retry": "Tekrar dene",
+    "home": "Ana sayfaya dön"
+  }
+}
