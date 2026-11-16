@@ -177,7 +177,7 @@ export default function Vacancies({
       <BgShade flip />
       <PlusRule className={inset ? "!mx-[clamp(20px,5.2vw,75px)]" : undefined} />
       <div className={`mx-auto max-w-[1920px] pt-[28px] ${gutter}`}>
-        <SectionHead label={label ?? (heading ? t.label : t.pageLabel)} noteEnd={inset} />
+        <SectionHead label={label ?? (heading ? t.label : t.pageLabel)} noteEnd={inset || !heading} />
         {heading && (
           <div className="mt-[60px] flex flex-col items-center text-center">
             <SplitReveal

@@ -14,7 +14,7 @@ export default function ServiceCards() {
     <section className="relative z-20 bg-white pt-[clamp(70px,6vw,120px)]">
       <PlusRule />
       <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,6vw,120px)] pt-[28px]">
-        <SectionHead label={t.label} />
+        <SectionHead label={t.label} noteEnd />
         <ul className="mt-[50px] grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((s, i) => (
             <motion.li
