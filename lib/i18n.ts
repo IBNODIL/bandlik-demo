@@ -24,3 +24,13 @@ export function matchBrowserLocale(languages: readonly string[]): Locale | null 
   }
   return null;
 }
+
+/** Turns a language-neutral link ("/", "/about", "/#faq") into a URL of the given language. */
+export const localizedHref = (lang: Locale, link: string) =>
+  link === "/" ? `/${lang}` : link.startsWith("/#") ? `/${lang}${link.slice(1)}` : `/${lang}${link}`;
+
+/** Whether a localized pathname ("/uz/about") is the page of a language-neutral link ("/about"). */
+export const isCurrentPage = (pathname: string, link: string) => {
+  const rest = pathname.replace(/^\/[^/]+/, "") || "/";
+  return link === "/" ? rest === "/" : rest === link || rest.startsWith(`${link}/`);
+};

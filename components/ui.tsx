@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, type Variants } from "motion/react";
-import type { ReactNode } from "react";
+import Link from "next/link";
+import { Fragment, type ReactNode } from "react";
 
 export const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -13,27 +14,28 @@ export function ArrowRight({ className = "" }: { className?: string }) {
   );
 }
 
-/** Pill button: on hover the blue circle stretches across the pill, the arrow slides out and a new one slides in from the left, and the label rolls up to a white copy. */
+/** Pill button: on hover the blue circle stretches across the pill, the arrow slides out and a new one slides in from the left, and the label rolls up to a white copy. Internal links ("/uz/...") navigate client-side. */
 export function PillButton({
   children,
   href = "#contact",
   dark = false,
   className = "",
+  type,
 }: {
   children: ReactNode;
   href?: string;
   dark?: boolean;
   className?: string;
+  /** render a <button> instead of a link */
+  type?: "button" | "submit";
 }) {
-  return (
-    <a
-      href={href}
-      className={`group relative inline-flex h-[50px] items-center overflow-hidden rounded-full pl-[62px] pr-6 ring-1 ring-ink/[0.04] ${
-        dark ? "bg-ink text-paper" : "bg-card text-ink"
-      } ${className}`}
-    >
-      <span className="absolute left-[5px] top-1/2 h-10 w-10 -translate-y-1/2 rounded-full bg-blue transition-[width] duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:w-[calc(100%-10px)] group-hover:delay-[180ms]" />
-      <span className="absolute left-[5px] top-1/2 size-10 -translate-y-1/2 overflow-hidden rounded-full text-white">
+  const cls = `group relative inline-flex h-[54px] items-center overflow-hidden rounded-full pl-[66px] pr-6 ring-1 ring-ink/[0.04] ${
+    dark ? "bg-ink text-paper" : "bg-card text-ink"
+  } ${className}`;
+  const inner = (
+    <>
+      <span className="absolute left-[5px] top-1/2 h-11 w-11 -translate-y-1/2 rounded-full bg-blue transition-[width] duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:w-[calc(100%-10px)] group-hover:delay-[180ms]" />
+      <span className="absolute left-[5px] top-1/2 size-11 -translate-y-1/2 overflow-hidden rounded-full text-white">
         <span className="absolute inset-0 grid place-items-center transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:translate-x-[160%] group-hover:delay-[180ms]">
           <ArrowRight />
         </span>
@@ -49,7 +51,20 @@ export function PillButton({
           {children}
         </span>
       </span>
-    </a>
+    </>
+  );
+  if (type) return <button type={type} className={cls}>{inner}</button>;
+  if (href.startsWith("/")) return <Link href={href} className={cls}>{inner}</Link>;
+  return <a href={href} className={cls}>{inner}</a>;
+}
+
+/** Section caption row: blue-square label on the left, "©2026" (or another note) on the right. */
+export function SectionHead({ label, note = "©2026", noteEnd = false, className = "" }: { label: ReactNode; note?: ReactNode; /** push the note to the far right edge */ noteEnd?: boolean; className?: string }) {
+  return (
+    <div className={`flex flex-col justify-between gap-3 sm:flex-row sm:items-start ${className}`}>
+      <Label>{label}</Label>
+      <span className={`text-[18px] leading-[26px] text-[#29292b] ${noteEnd ? "sm:text-right" : "sm:w-[31%] sm:text-left"}`}>{note}</span>
+    </div>
   );
 }
 
@@ -97,16 +112,15 @@ export function SplitReveal({
     >
       {indent > 0 && <span className="hidden lg:inline-block" style={{ width: indent }} />}
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] align-top">
-          <motion.span
-            custom={i}
-            variants={wordV}
-            className={`inline-block ${blueWords.includes(w) ? "text-blue" : ""}`}
-          >
-            {w}
-            {i < words.length - 1 ? " " : ""}
-          </motion.span>
-        </span>
+        <Fragment key={i}>
+          <span className="inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] align-top">
+            <motion.span custom={i} variants={wordV} className={`inline-block ${blueWords.includes(w) ? "text-blue" : ""}`}>
+              {w}
+            </motion.span>
+          </span>
+          {/* the space sits outside the inline-blocks, where it is not collapsed */}
+          {i < words.length - 1 && " "}
+        </Fragment>
       ))}
     </M>
   );

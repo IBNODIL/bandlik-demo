@@ -23,12 +23,12 @@ export default function LegalPage({ kind }: { kind: "privacy" | "terms" }) {
         </p>
         <p className="mt-10 text-[18px] leading-[1.5] text-mute">{t.intro}</p>
         <ol className="mt-12 border-t border-ink/[0.07]">
-          {t.sections.map((s, i) => (
-            <li key={s.h} className="grid gap-3 border-b border-ink/[0.07] py-8 sm:grid-cols-[56px_1fr]">
+          {Object.entries(t.sections).map(([key, s], i) => (
+            <li key={key} className="grid gap-3 border-b border-ink/[0.07] py-8 sm:grid-cols-[56px_1fr]">
               <span className="font-mono text-[13px] text-ink/40">{String(i + 1).padStart(2, "0")}</span>
               <div>
-                <h2 className="text-[20px] font-semibold leading-[1.25] text-ink">{s.h}</h2>
-                <p className="mt-3 text-[16px] leading-[1.6] text-mute">{s.p}</p>
+                <h2 className="text-[20px] font-semibold leading-[1.25] text-ink">{s.title}</h2>
+                <p className="mt-3 text-[16px] leading-[1.6] text-mute">{s.text}</p>
               </div>
             </li>
           ))}

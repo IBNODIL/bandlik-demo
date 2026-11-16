@@ -7,8 +7,12 @@
   --color-card: #f5f4f3;
   --color-mute: #63615e;
   --color-soft: #7f7f80;
-  --font-display: var(--font-display), sans-serif;
+  --color-night: #0f0f0f;
+  --color-slate: #667085;
+  --color-mist: #f2f4f7;
+  --font-display: "Inter Display", var(--font-inter), sans-serif;
   --font-sans: var(--font-inter), sans-serif;
+  --font-mona: "Mona Sans", "Inter Display", var(--font-inter), sans-serif;
   --font-gilroy: var(--font-gilroy), sans-serif;
 }
 
@@ -29,7 +33,7 @@ html {
 body {
   background: #fff;
   color: #090909;
-  font-family: var(--font-display), sans-serif;
+  font-family: "Inter Display", var(--font-inter), sans-serif;
   font-weight: 500;
   letter-spacing: -0.1px;
   overflow-x: clip;

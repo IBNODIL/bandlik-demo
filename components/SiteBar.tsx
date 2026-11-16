@@ -1,6 +1,6 @@
 "use client";
 
-import { IMG, img } from "@/lib/data";
+import { MEDIA } from "@/lib/data";
 import { useI18n } from "./I18nProvider";
 import LangSwitcher from "./LangSwitcher";
 
@@ -11,7 +11,7 @@ export default function SiteBar() {
     <header className="mx-auto flex h-[68px] max-w-[1441px] items-center justify-between px-[34px] xl:px-[58px]">
       <a href={`/${lang}`} className="flex items-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={img(IMG.logo, 400)} alt="Bandlik" className="h-[28px] w-auto" />
+        <img src={MEDIA.logo} alt="Bandlik" className="h-[28px] w-auto" />
       </a>
       <LangSwitcher />
     </header>

@@ -1,107 +1,101 @@
 "use client";
 
-import { motion } from "motion/react";
-import { IMG, img } from "@/lib/data";
+import Link from "next/link";
+import type { ReactNode } from "react";
+import { CONTACT } from "@/lib/data";
+import { localizedHref } from "@/lib/i18n";
 import { useI18n } from "./I18nProvider";
-import Rich from "./Rich";
-import { ArrowRight, EASE, FadeUp, PillButton } from "./ui";
 
-const storeBtn =
-  "rounded-xl bg-ink px-5 py-4 text-[18px] leading-none text-paper transition-colors duration-300 hover:bg-blue";
+/** Footer link: grey label that rolls up to a light copy on hover. */
+function RollLink({ href, children }: { href: string; children: ReactNode }) {
+  const inner = (
+    <span className="relative block overflow-hidden">
+      <span className="block transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:-translate-y-full">{children}</span>
+      <span aria-hidden className="absolute left-0 top-full block text-[#f2f2f2] transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:-translate-y-full">
+        {children}
+      </span>
+    </span>
+  );
+  const cls = "group block w-fit text-[16px] leading-[22.4px] text-[#b5b5b5]";
+  return href.startsWith("/") ? (
+    <Link href={href} className={cls}>
+      {inner}
+    </Link>
+  ) : (
+    <a href={href} className={cls}>
+      {inner}
+    </a>
+  );
+}
 
+function Column({ title, children }: { title: string; children: ReactNode }) {
+  return (
+    <div>
+      <h3 className="max-w-[170px] text-[20px] font-medium leading-[24px] tracking-[-0.04em] text-[#f2f2f2]">{title}</h3>
+      <ul className="mt-4 space-y-[9.6px]">{children}</ul>
+    </div>
+  );
+}
+
+/**
+ * Dark footer as on the Framer site (measured at 1440px): brand and blurb on the left, three link columns,
+ * a giant faint "Bandlik" wordmark across the full width, a thin divider and the centered copyright.
+ */
 export default function Footer() {
   const { lang, dict } = useI18n();
   const t = dict.footer;
+  const to = (link: string) => localizedHref(lang, link);
   return (
-    <footer className="relative z-20 bg-white px-[20px] pb-[20px]">
-      <div className="mx-auto max-w-[1861px] overflow-hidden rounded-2xl bg-[#f7f6f5]">
-        <div className="aspect-[1672/941] max-h-[620px] w-full overflow-hidden">
-          <motion.div
-            className="h-full w-full"
-            initial={{ scale: 1.08 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.6, ease: EASE }}
+    <footer className="relative z-20 overflow-hidden bg-night font-mona text-[#f2f2f2]">
+      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pb-10 pt-10">
+        {/* 652 | 208 | 263 | 162 with 20px gaps = the Framer column starts at 712 / 940 / 1223 */}
+        <div className="grid gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-[652fr_208fr_263fr_162fr]">
+          <div className="sm:col-span-3 lg:col-span-1">
+            <p className="text-[32px] font-medium leading-[1.2] tracking-[-0.04em]">Bandlik</p>
+            <p className="mt-6 max-w-[652px] text-[clamp(17px,1.4vw,20px)] font-medium leading-[1.6]">{t.about}</p>
+          </div>
+          <Column title={t.platform}>
+            <li><RollLink href={to("/")}>{t.links.home}</RollLink></li>
+            <li><RollLink href={to("/about")}>{t.links.about}</RollLink></li>
+            <li><RollLink href={to("/services")}>{t.links.services}</RollLink></li>
+            <li><RollLink href={to("/vacancies")}>{t.links.vacancies}</RollLink></li>
+          </Column>
+          <Column title={t.users}>
+            <li><RollLink href={to("/job-seekers")}>{t.links.candidates}</RollLink></li>
+            <li><RollLink href={to("/employers")}>{t.links.employers}</RollLink></li>
+            <li><RollLink href={to("/contact")}>{t.links.agencies}</RollLink></li>
+            <li><RollLink href={to("/#faq")}>{t.links.faq}</RollLink></li>
+          </Column>
+          <Column title={t.contact}>
+            <li><RollLink href={`mailto:${CONTACT.email}`}>{CONTACT.email}</RollLink></li>
+            <li><RollLink href={CONTACT.phoneHref}>{CONTACT.phone}</RollLink></li>
+            <li className="whitespace-nowrap text-[16px] leading-[22.4px] text-[#b5b5b5]">{t.city}</li>
+          </Column>
+        </div>
+
+        {/*
+          Giant faint wordmark: the same fit-to-width text as Framer (Mona Sans 600 in a 1054×260 box, baseline at
+          240.5), starting right under the tallest link column. lengthAdjust="spacing" only nudges letter gaps
+          if a fallback font is wider; the letter shapes are never stretched.
+        */}
+        <svg viewBox="0 0 1054 260" className="mt-8 w-full select-none lg:mt-[2px]" aria-hidden>
+          <text
+            x="0"
+            y="240.5"
+            textLength="1049"
+            lengthAdjust="spacing"
+            fontSize="289"
+            fontWeight="600"
+            letterSpacing="-2.89"
+            fill="rgba(242,242,242,0.08)"
+            style={{ fontFamily: '"Mona Sans", "Inter Display", sans-serif' }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={img(IMG.globe, 2400)} alt="" className="h-full w-full object-cover object-bottom" />
-          </motion.div>
-        </div>
+            Bandlik
+          </text>
+        </svg>
 
-        <div className="grid gap-12 px-[75px] pb-[60px] pt-[70px] max-lg:px-[28px] lg:grid-cols-2">
-          <FadeUp>
-            <h2 className="text-[clamp(38px,4.2vw,64px)] font-semibold leading-[1.02] tracking-[-0.035em] text-[#29292b]">
-              <Rich text={t.heading} />
-            </h2>
-            <p className="mt-8 max-w-[480px] text-[19px] leading-[27px] text-mute">{t.tagline}</p>
-            <div className="mt-8">
-              <PillButton>{dict.common.requestWorkers}</PillButton>
-            </div>
-          </FadeUp>
-          <ul className="lg:ml-auto lg:w-[600px]">
-            {dict.footerNav.map((n, i) => (
-              <li key={n} className="border-t border-ink/10 last:border-b">
-                <a href="#top" className="group flex items-center justify-between py-[16px] text-[24px] leading-[28px] text-[#29292b]">
-                  <span>
-                    <span className="mr-1 font-mono text-[14px] text-mute">{String(i + 1).padStart(2, "0")} /</span>
-                    <span className="inline-block transition-transform duration-500 group-hover:translate-x-2 group-hover:text-blue">
-                      {n}
-                    </span>
-                  </span>
-                  <ArrowRight className="size-5 transition-transform duration-500 group-hover:translate-x-1" />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mx-[43px] border-t border-ink/10 max-lg:mx-[28px]" />
-
-        <div className="grid items-center gap-10 px-[43px] py-[40px] max-lg:px-[28px] lg:grid-cols-[minmax(0,1fr)_minmax(0,565px)]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/X4ZdeaFXjb47NQvdoDpFKYE9yg.avif" alt="Bandlik" className="w-full max-w-[1150px] object-contain" />
-
-          <div className="relative h-[325px] overflow-hidden rounded-2xl bg-[#6b7aa8]">
-            <video
-              className="absolute inset-0 h-full w-full object-cover"
-              src="/ZxMUyWvzXfOYftOqklzEwzhxyQ.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent" />
-            <p className="absolute left-7 top-6 max-w-[300px] text-[40px] font-semibold leading-[1.15] tracking-[-0.03em] text-[#1e1e1e]">
-              {t.mobileApp}
-            </p>
-            <div className="absolute bottom-0 left-0 flex gap-3 p-5">
-              <a href="#" className={storeBtn}>
-                App store
-              </a>
-              <a href="#" className={storeBtn}>
-                Googel Play
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="mx-[43px] border-t border-ink/10 max-lg:mx-[28px]" />
-
-        <div className="flex flex-wrap items-center justify-between gap-3 px-[43px] py-7 text-[22px] text-[#29292b] max-lg:px-[28px] max-lg:text-[16px]">
-          <span>© Bandlik.uz</span>
-          <div className="flex flex-wrap items-center gap-x-10 gap-y-3">
-            <span className="flex gap-6 text-[14px] text-ink/40">
-              <a href={`/${lang}/privacy`} className="transition-colors hover:text-blue">{t.privacy}</a>
-              <a href={`/${lang}/terms`} className="transition-colors hover:text-blue">{t.terms}</a>
-            </span>
-            <button
-              onClick={() => (window as unknown as { __lenis?: { scrollTo: (n: number) => void } }).__lenis?.scrollTo(0)}
-              className="transition-colors hover:text-blue"
-            >
-              {t.backToTop}
-            </button>
-          </div>
-        </div>
+        <div className="mt-4 h-px bg-[#2a2a2a]" />
+        <p className="mt-[14px] text-center text-[16px] leading-[22.4px] text-[#737373]">{t.copyright}</p>
       </div>
     </footer>
   );

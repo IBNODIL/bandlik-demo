@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight, Manrope } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import I18nProvider from "@/components/I18nProvider";
 import { getDictionary } from "@/lib/dictionaries";
 import { hasLocale, locales } from "@/lib/i18n";
+import "../fonts.css";
 import "../globals.css";
 
 // cyrillic is needed for Russian; the browser downloads it only when those glyphs are on the page
 const inter = Inter({ variable: "--font-inter", subsets: ["latin", "latin-ext", "cyrillic"] });
-const display = Inter_Tight({
-  variable: "--font-display",
-  subsets: ["latin", "latin-ext", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
-});
+// card text (the Framer cards ask for Gilroy, which is not licensed here; Manrope is the closest free match)
 const gilroy = Manrope({
   variable: "--font-gilroy",
   subsets: ["latin", "latin-ext", "cyrillic"],
@@ -30,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dict = await getDictionary(lang);
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://bandlik.uz"),
-    title: dict.meta.title,
+    title: { default: dict.meta.title, template: `%s — ${dict.meta.title}` },
     description: dict.meta.description,
     alternates: {
       canonical: `/${lang}`,
@@ -48,7 +45,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang} className={`${inter.variable} ${display.variable} ${gilroy.variable}`} suppressHydrationWarning>
+    <html lang={lang} className={`${inter.variable} ${gilroy.variable}`} suppressHydrationWarning>
       <body>
         <Script id="no-intro" strategy="beforeInteractive">
           {NO_INTRO}

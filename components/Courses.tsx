@@ -1,78 +1,105 @@
 "use client";
 
+import { motion } from "motion/react";
+import Image from "next/image";
+import { getCourses } from "@/lib/api/client";
+import type { Course } from "@/lib/api/types";
+import { useResource } from "@/lib/api/use-resource";
+import { MEDIA } from "@/lib/data";
+import { fill, formatNumber } from "@/lib/format";
+import { localizedHref } from "@/lib/i18n";
 import BgShade from "./BgShade";
-import { IMG, img } from "@/lib/data";
 import { useI18n } from "./I18nProvider";
-import { FadeUp, Label, Marquee, PillButton, PlusRule, SplitReveal } from "./ui";
+import ResourceState from "./ResourceState";
+import { EASE, FadeUp, PillButton, PlusRule, SectionHead, SplitReveal } from "./ui";
 
-function Chip({ children }: { children: React.ReactNode }) {
+function Meta({ icon, children, blue = false }: { icon: string; children: React.ReactNode; blue?: boolean }) {
   return (
-    <span className="flex items-center gap-[6px] rounded-full bg-card px-3 py-[5px] font-sans text-[11px] text-ink">
-      <span className="size-[9px] rounded-[2px] bg-blue" />
+    <span className={`flex items-center gap-[7px] whitespace-nowrap ${blue ? "text-blue" : "text-slate"}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={`/framer/icons/${icon}.svg`} alt="" className="size-[18px]" />
       {children}
     </span>
   );
 }
 
-function CourseCard() {
-  const COURSE = useI18n().dict.content.course;
+function CourseCard({ course, i }: { course: Course; i: number }) {
+  const { lang, dict } = useI18n();
+  const t = dict.courses;
+  const title = course.title[lang];
   return (
-    <article className="group mr-[14px] w-[286px] shrink-0">
-      <div className="aspect-[686/386] overflow-hidden rounded-lg">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={img(IMG.course, 800)}
-          alt={COURSE.tag}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+    <motion.article
+      className="group overflow-hidden rounded-[12px] bg-white ring-1 ring-ink/[0.05] transition-shadow duration-500 hover:shadow-[0_10px_30px_rgba(9,9,9,0.08)]"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-6% 0px" }}
+      transition={{ duration: 0.9, ease: EASE, delay: (i % 5) * 0.06 }}
+    >
+      <div className="relative aspect-[253/150] overflow-hidden">
+        <Image
+          src={course.imageUrl ?? MEDIA.course}
+          alt=""
+          fill
+          sizes="(min-width: 1280px) 20vw, (min-width: 640px) 33vw, 100vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
+        {course.status !== "open" && (
+          <span className="absolute left-3 top-3 rounded-full bg-white px-3 py-[3px] font-sans text-[12px] font-semibold text-ink shadow-[0_2px_10px_rgba(9,9,9,0.12)]">
+            {t.status[course.status]}
+          </span>
+        )}
       </div>
-      <h3 className="mt-4 font-gilroy text-[14px] font-semibold">{COURSE.tag}</h3>
-      <p className="mt-1 font-sans text-[12px] text-mute">{COURSE.title}</p>
-      <div className="mt-3 flex gap-2">
-        <Chip>{COURSE.price}</Chip>
-        <Chip>{COURSE.hours}</Chip>
-        <Chip>{COURSE.lessons}</Chip>
+      <div className="px-[14px] pb-4 pt-[14px] font-gilroy font-medium">
+        <h3 className="text-[16px] font-semibold leading-[22px] text-[#0c111d]">{t.category[course.category]}</h3>
+        <p title={title} className="mt-[2px] truncate text-[14px] leading-5 text-slate">
+          {title}
+        </p>
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-[14px] leading-5">
+          <Meta icon="cash-blue" blue>
+            {course.priceUzs === 0 ? t.free : fill(t.price, { amount: formatNumber(lang, course.priceUzs) })}
+          </Meta>
+          <Meta icon="clock-course">{fill(t.hours, { count: formatNumber(lang, course.hours) })}</Meta>
+          <Meta icon="play-circle">{fill(t.lessons, { count: formatNumber(lang, course.lessons) })}</Meta>
+        </div>
       </div>
-    </article>
+    </motion.article>
   );
 }
 
-export default function Courses() {
-  const t = useI18n().dict.courses;
-  const cards = Array.from({ length: 5 });
+export default function Courses({ limit = 10 }: { limit?: number }) {
+  const { lang, dict } = useI18n();
+  const t = dict.courses;
+  const res = useResource(getCourses);
+  const items = res.status === "ready" ? res.data.slice(0, limit) : [];
   return (
-    <section className="relative z-20 overflow-hidden bg-white pt-[clamp(70px,6vw,120px)]">
+    <section id="courses" className="relative z-20 overflow-hidden bg-white pt-[clamp(70px,6vw,120px)]">
       <BgShade />
       <PlusRule />
-      <div className="mx-auto max-w-[1441px] px-[38px] pt-[28px]">
-        <div className="flex justify-between">
-          <Label>{t.label}</Label>
-          <span className="text-[18px] text-[#29292b]">©2026</span>
-        </div>
-        <div className="mt-[60px] flex flex-col items-center text-center">
+      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pt-[28px]">
+        <SectionHead label={t.label} />
+        <div className="mt-[50px] flex flex-col items-center text-center">
           <SplitReveal
-            className="max-w-[1000px] text-[clamp(48px,7.6vw,110px)] font-semibold leading-[0.9] tracking-[-0.03em] text-[#1e1e1e]"
+            className="max-w-[1000px] text-[clamp(48px,7.6vw,110px)] font-semibold leading-[0.82] tracking-[-0.03em] text-[#1e1e1e]"
             text={t.heading}
           />
           <FadeUp delay={0.15}>
-            <p className="mt-6 max-w-[520px] text-[16px] leading-6 text-soft">{t.intro}</p>
+            <p className="mt-[30px] max-w-[800px] text-[18px] leading-6 text-soft">{t.intro}</p>
           </FadeUp>
-          <FadeUp delay={0.25} className="mt-8">
-            <PillButton href="#">{t.cta}</PillButton>
+          <FadeUp delay={0.25} className="mt-[30px]">
+            <PillButton href={localizedHref(lang, "/services")}>{t.cta}</PillButton>
           </FadeUp>
         </div>
       </div>
-      <div className="mt-[50px] space-y-[28px] pb-[90px]">
-        <Marquee duration={80}>
-          {cards.map((_, i) => (
-            <CourseCard key={i} />
-          ))}
-        </Marquee>
-        <Marquee duration={90} reverse>
-          {cards.map((_, i) => (
-            <CourseCard key={i} />
-          ))}
-        </Marquee>
+      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,6vw,110px)] pt-[50px]">
+        {res.status !== "ready" || items.length === 0 ? (
+          <ResourceState state={res.status === "ready" ? "empty" : res.status} onRetry={res.status === "error" ? res.reload : () => {}} />
+        ) : (
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+            {items.map((c, i) => (
+              <CourseCard key={c.id} course={c} i={i} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import { EASE, FadeUp, Label, PlusRule } from "./ui";
 
 export default function Process() {
   const { dict } = useI18n();
-  const STEPS = dict.process.steps;
+  const STEPS = Object.entries(dict.process.steps);
   return (
     <section id="process" className="relative z-20 bg-white pb-[clamp(60px,6vw,120px)] pt-[clamp(90px,8vw,150px)]">
       <PlusRule />
@@ -21,9 +21,9 @@ export default function Process() {
         </div>
 
         <div className="mt-[60px] grid gap-[14px] sm:grid-cols-2 lg:grid-cols-5">
-          {STEPS.map(({ title: t, text: d }, i) => (
+          {STEPS.map(([key, { title: t, text: d }], i) => (
             <motion.article
-              key={t}
+              key={key}
               className="group flex min-h-[250px] flex-col justify-between rounded-xl bg-card p-[22px] transition-colors duration-500 hover:bg-[#eceae7]"
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}

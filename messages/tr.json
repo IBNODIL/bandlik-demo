@@ -9,75 +9,116 @@
     "requestWorkers": "Çalışan talep et",
     "contactUs": "Bizimle iletişime geçin",
     "details": "Ayrıntılar",
-    "share": "Paylaş"
+    "share": "Paylaş",
+    "loading": "Yükleniyor…",
+    "empty": "Henüz bir şey yok",
+    "error": "Veriler yüklenemedi",
+    "retry": "Tekrar dene",
+    "login": "Giriş",
+    "lookingForJob": "İş arıyorum",
+    "needWorkers": "İşçi arıyorum",
+    "agency": "Ajansım",
+    "scrollDown": "Aşağı"
   },
-  "nav": [
-    "Ana sayfa",
-    "Hakkımızda",
-    "İşverenler için",
-    "Hizmetler",
-    "İş arayanlar için",
-    "İş ilanları",
-    "İletişim",
-    "SSS"
-  ],
-  "footerNav": [
-    "Ana sayfa",
-    "Hakkımızda",
-    "İşverenler için",
-    "Hizmetler",
-    "İş ilanları",
-    "İletişim"
-  ],
+  "nav": {
+    "home": {
+      "title": "Ana sayfa",
+      "link": "/"
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "link": "/about"
+    },
+    "employers": {
+      "title": "İşverenlere",
+      "link": "/employers"
+    },
+    "jobSeekers": {
+      "title": "İş arayanlara",
+      "link": "/job-seekers"
+    },
+    "services": {
+      "title": "Hizmetler",
+      "link": "/services"
+    },
+    "vacancies": {
+      "title": "İş ilanları",
+      "link": "/vacancies"
+    },
+    "contact": {
+      "title": "İletişim",
+      "link": "/contact"
+    }
+  },
   "hero": {
-    "alt": "Çalışanlar ve uluslararası fırsatlar",
-    "text": "Yabancı işverenler için çalışan bulma ve adaylar için doğrulanmış iş ilanlarını keşfetme fırsatı.",
+    "title": "Yurt dışında çalışmak — güvenli ve güvenilir yoldan",
+    "text": "Lisanslı istihdam ajansları aracılığıyla yurt dışında iyi bir iş bulun. İşe yerleştirme sürecini şeffaf biçimde takip edin ve yasal olarak çalışmaya başlayın.",
+    "alt": "Yurt dışına giden işçiler ve uçak",
     "scrollDown": "Aşağı kaydır"
   },
   "about": {
     "label": "İşverenler için",
     "heading": "Gerekli meslek, çalışan sayısı, dil seviyesi ve çalışma koşullarını belirleyin. Çalışan talebinizi Bandlik platformu üzerinden gönderin.",
-    "info": [
-      {
+    "info": {
+      "needs": {
         "title": "Çalışan ihtiyacınızı belirleyin",
         "body": "Şirket, gerekli meslek, çalışan sayısı, dil seviyesi ve çalışma koşulları hakkında bilgi verin."
       },
-      {
+      "process": {
         "title": "Süreci tanıyın",
         "body": "Hizmetler sayfasında işe alım aşamalarını, sorumlu tarafları ve ortalama süreleri görün."
       }
-    ],
-    "photoAlts": [
-      "İnşaat işçisi",
-      "Aşçı",
-      "Depo çalışanı"
-    ]
+    },
+    "photoAlt": {
+      "worker": "İnşaat işçisi",
+      "chef": "Aşçı",
+      "warehouse": "Depo çalışanı"
+    }
   },
+  "stats": {
+    "partners": {
+      "label": "Ortak ajans",
+      "text": "Platformdaki özel istihdam ajansları"
+    },
+    "vacancies": {
+      "label": "Aktif ilan",
+      "text": "Şu anda açık ilanlar"
+    },
+    "countries": {
+      "label": "Ülke",
+      "text": "İş teklifi bulunan ülkeler"
+    },
+    "placed": {
+      "label": "İşe yerleşen",
+      "text": "Yerleşmesi onaylanan adaylar"
+    }
+  },
+  "clients": "Ortak şirketler",
   "process": {
     "label": "Talepten işe yerleşmeye kadar",
     "intro": "İşverenin ihtiyacından işe yerleşmeye kadar süreci adım adım takip edin.",
-    "steps": [
-      {
+    "steps": {
+      "request": {
         "title": "Çalışan talebini gönderme",
         "text": "İşveren gerekli mesleği, çalışan sayısını ve çalışma koşullarını belirtir."
       },
-      {
+      "requirements": {
         "title": "Gereksinimlerin netleştirilmesi",
         "text": "İşverenin talepleri ve adaylara yönelik kriterler üzerinde anlaşılır."
       },
-      {
+      "candidates": {
         "title": "Adayların seçilmesi",
         "text": "Belirlenen gereksinimlere göre uygun adaylar değerlendirilir."
       },
-      {
+      "documents": {
         "title": "Belgelerin hazırlanması",
         "text": "İşe yerleşme için gerekli belgeler ve ilgili süreçler koordine edilir."
       },
-      {
+      "departure": {
         "title": "Yolculuğa hazırlık",
         "text": "Kararlaştırılan çalışma koşullarına uygun olarak gerekli resmi işlemler ve hazırlıklar yapılır."
       }
-    ]
+    }
   },
   "fullImages": {
     "man": "Yurt dışına yola çıkan genç adam",
@@ -87,103 +128,324 @@
     "label": "İŞ FIRSATLARI",
     "heading": "Son ilanlar",
     "intro": "Yurt dışındaki mevcut iş imkanlarını inceleyin ve size uygun fırsatı bulun.",
-    "cta": "Tüm ilanları görüntüle",
+    "cta": "Tüm ilanları gör",
     "card": {
       "salary": "Net maaş:",
       "type": "Çalışma türü:",
       "deadline": "Son başvuru tarihi:",
       "hired": "İşe alınanlar:",
       "applied": "Başvuranlar:"
-    }
+    },
+    "type": {
+      "fullTime": "Tam zamanlı",
+      "partTime": "Yarı zamanlı",
+      "seasonal": "Mevsimlik",
+      "contract": "Sözleşmeli"
+    },
+    "duration": {
+      "range": "{min}–{max} ay",
+      "fixed": "{count} ay",
+      "open": "Süresiz"
+    },
+    "status": {
+      "closingSoon": "Yakında kapanıyor",
+      "filled": "Doldu"
+    },
+    "salaryLocal": "(≈ {amount} UZS)",
+    "pageLabel": "Son ilanlar"
   },
-  "benefits": {
-    "label": "PLATFORM ÖZELLİKLERİ",
-    "tagline": "Her kullanıcı için kendi yolu",
-    "speedTitle": "Sitenizi yayına almak 5,1 dakika sürer.",
-    "speedText": "Kaliteden ödün vermeden yıldırım hızında teslimat",
-    "allKicker": "TEK KÜÇÜK ADIMDA 0'DAN 100'E",
-    "allTitle": "Hepsi bir\narada platform",
-    "supportKicker": "TAM ZAMANLI DESTEK",
-    "supportText": "24/6 destek için özel bir uygulamam var ve güncellemeleri her zaman alacaksınız.",
-    "chatAlt": "Sohbet"
+  "app": {
+    "label": "PLATFORM OLANAKLARI",
+    "tagline": "Her kullanıcıya kendi yolu",
+    "title": "Yeni fırsatlar — bir adım daha yakın.",
+    "text": "Yurt dışındaki ilanları bulun, profilinizi yönetin ve işe yerleştirme sürecini mobil uygulamada takip edin.",
+    "qr": "{store} için QR kod",
+    "phoneAlt": "Bandlik mobil uygulaması"
   },
   "courses": {
     "label": "Hazırlık kursları",
     "heading": "Yurt dışında çalışmaya hazırlanın.",
     "intro": "Dil ve meslek hazırlık kurslarını inceleyin, yeni bilgi ve beceriler edinin.",
-    "cta": "Tüm kurslar"
+    "cta": "Tüm kurslar",
+    "category": {
+      "interviewPrep": "Mülakata hazırlık",
+      "language": "Dil kursu",
+      "vocational": "Mesleki eğitim",
+      "documents": "Belgeler"
+    },
+    "free": "Ücretsiz",
+    "price": "{amount} UZS",
+    "hours": "{count} saat",
+    "lessons": "{count} ders",
+    "status": {
+      "almostFull": "Neredeyse dolu",
+      "full": "Dolu"
+    }
   },
   "faq": {
     "label": "SSS — sık sorulan sorular",
-    "items": [
-      {
-        "q": "Bandlik.uz hangi hizmetleri sunuyor?",
-        "a": "Platform, işverenlerin ihtiyaç duydukları meslekte çalışan bulmasına, adayların ise yurt dışındaki doğrulanmış ilanlara başvurmasına ve hazırlık kurslarına katılmasına yardımcı olur."
+    "items": {
+      "services": {
+        "question": "Bandlik.uz hangi hizmetleri sunuyor?",
+        "answer": "Platform, işverenlerin ihtiyaç duydukları meslekte çalışan bulmasına, adayların ise yurt dışındaki doğrulanmış ilanlara başvurmasına ve hazırlık kurslarına katılmasına yardımcı olur."
       },
-      {
-        "q": "Çalışan talebini nasıl gönderirim?",
-        "a": "“Çalışan talep et” düğmesine tıklayın ve meslek, çalışan sayısı, dil seviyesi ile çalışma koşullarını belirtin. Talebiniz incelenecek ve sizinle iletişime geçeceğiz."
+      "request": {
+        "question": "Çalışan talebini nasıl gönderirim?",
+        "answer": "“Çalışan talep et” düğmesine tıklayın ve meslek, çalışan sayısı, dil seviyesi ile çalışma koşullarını belirtin. Talebiniz incelenecek ve sizinle iletişime geçeceğiz."
       },
-      {
-        "q": "Hizmetlerin ücreti nedir?",
-        "a": "Ücret, talebin kapsamına ve çalışma koşullarına göre belirlenir. Kesin ücreti, talep gönderdikten sonra sorumlu uzman bildirecektir."
+      "price": {
+        "question": "Hizmetlerin ücreti nedir?",
+        "answer": "Ücret, talebin kapsamına ve çalışma koşullarına göre belirlenir. Kesin ücreti, talep gönderdikten sonra sorumlu uzman bildirecektir."
       },
-      {
-        "q": "İlanlar doğrulanıyor mu?",
-        "a": "Evet, platformdaki her ilan işveren ve çalışma koşulları açısından önceden kontrol edilir."
+      "verified": {
+        "question": "İlanlar doğrulanıyor mu?",
+        "answer": "Evet, platformdaki her ilan işveren ve çalışma koşulları açısından önceden kontrol edilir."
       },
-      {
-        "q": "Hangi ilanlar mevcut?",
-        "a": "Aşçılık, inşaat, depo, üretim ve diğer birçok alanda yurt dışında iş imkanları var. Tam liste “İş ilanları” bölümündedir."
+      "available": {
+        "question": "Hangi ilanlar mevcut?",
+        "answer": "Aşçılık, inşaat, depo, üretim ve diğer birçok alanda yurt dışında iş imkanları var. Tam liste “İş ilanları” bölümündedir."
       },
-      {
-        "q": "İlana nasıl başvururum?",
-        "a": "İstediğiniz ilanı seçin, “Ayrıntılar” düğmesine tıklayın ve gerekli belgelerle başvurunuzu yapın."
+      "apply": {
+        "question": "İlana nasıl başvururum?",
+        "answer": "İstediğiniz ilanı seçin, “Ayrıntılar” düğmesine tıklayın ve gerekli belgelerle başvurunuzu yapın."
       },
-      {
-        "q": "Dil ve meslek kurslarına nasıl kaydolurum?",
-        "a": "“Hazırlık kursları” bölümünden uygun bir kurs seçip kayıt olun. Dersler hakkında bilgi size gönderilecektir."
+      "courses": {
+        "question": "Dil ve meslek kurslarına nasıl kaydolurum?",
+        "answer": "“Hazırlık kursları” bölümünden uygun bir kurs seçip kayıt olun. Dersler hakkında bilgi size gönderilecektir."
       },
-      {
-        "q": "İş ortağı olarak nasıl katılabilirim?",
-        "a": "“İletişim” bölümü aracılığıyla bize yazın veya bizi arayın. İş birliği koşullarını birlikte görüşürüz."
+      "partner": {
+        "question": "İş ortağı olarak nasıl katılabilirim?",
+        "answer": "“İletişim” bölümü aracılığıyla bize yazın veya bizi arayın. İş birliği koşullarını birlikte görüşürüz."
       }
-    ]
+    }
   },
   "contact": {
     "badge": "İLETİŞİM",
-    "heading": "Bizimle iletişime geçin",
-    "intro": "Sorularınız veya önerileriniz mi var? Mesajınızı gönderin, sizinle iletişime geçeceğiz.",
-    "phone": "Telefonla iletişim",
-    "telegram": "Telegram üzerinden başvuru",
-    "formTitle": "Mesajınızı gönderin",
-    "name": "Adınız *",
-    "phoneField": "Telefon numaranız *",
-    "message": "Mesajınız *",
-    "send": "Mesajı gönder →",
-    "sent": "Gönderildi ✓"
+    "heading": "Bize ulaşın",
+    "intro": "Sorularınız veya önerileriniz mi var? Bize ulaşın.",
+    "byPhone": "Telefonla iletişim",
+    "byTelegram": "Telegram'dan yazın",
+    "form": {
+      "title": "Şirket bilgileri",
+      "company": "Ticari unvan",
+      "tin": "Vergi no (STIR)",
+      "address": "Adres",
+      "phone": "Telefon numaranız *",
+      "send": "Mesajı gönder →",
+      "sent": "Gönderildi ✓"
+    },
+    "map": "Haritada Taşkent",
+    "openMap": "Haritada aç"
+  },
+  "cta": {
+    "title": "Yurt dışındaki fırsatlarınıza bugün başlayın",
+    "text": "Size uygun yolu seçin ve bir sonraki adımı atın."
   },
   "footer": {
-    "heading": "Birlikte yeni\n*fırsatlar* yaratıyoruz",
-    "tagline": "İşverenler ve adaylar için uluslararası istihdam fırsatları",
-    "mobileApp": "Mobil uygulamayı indirin",
+    "about": "Yurt dışında işe yerleştirme süreçlerini dijital ortamda kolay ve şeffaf hâle getiren platform.",
+    "platform": "Platform",
+    "users": "Kullanıcılar için",
+    "contact": "İletişim",
+    "links": {
+      "home": "Ana sayfa",
+      "about": "Hakkımızda",
+      "services": "Hizmetler",
+      "vacancies": "İş ilanları",
+      "candidates": "Adaylar için",
+      "employers": "İşverenler için",
+      "agencies": "Ajanslar için",
+      "faq": "SSS"
+    },
+    "city": "Taşkent, Özbekistan",
+    "copyright": "© 2026 Özel İstihdam Ajansı Ltd. Şti. Tüm hakları saklıdır.",
     "privacy": "Gizlilik politikası",
     "terms": "Kullanım koşulları",
     "backToTop": "Başa dön"
   },
-  "content": {
-    "job": {
-      "title": "Aşçı",
-      "place": "Bratislava, Slovakya",
-      "salaryLocal": "(≈ 23.500.000 UZS)",
-      "type": "Tam zamanlı • 6–12 ay"
+  "journey": {
+    "label": "Süreç",
+    "badge": "5 adımda",
+    "title": "Yurt dışında işe yerleşme nasıl işler?",
+    "text": "İlan seçiminden işe başlamaya kadar süreci adım adım takip edin. Lisanslı özel istihdam ajansları adayların yerleştirilmesini koordine eder.",
+    "imageAlt": "Yerleştirme sürecini takip eden bir aday"
+  },
+  "pages": {
+    "about": {
+      "hero": {
+        "title": "Hakkımızda",
+        "text": "Bandlik.uz; adaylar, işverenler ve lisanslı özel istihdam ajansları arasındaki iş birliğini dijital ortamda koordine eden bir platformdur.",
+        "alt": "Binaların önünde Bandlik bayrağı"
+      },
+      "approach": {
+        "label": "Yaklaşımımız",
+        "kicker": "Lisanslı ajanslarla güvenilir iş birliği",
+        "text": "Platform; ilanlar, belgeler ve başvurularla ilgili süreçlerin dijital ortamda koordine edilmesine yardımcı olur. Yurt dışında işe yerleştirmeyi ise gerekli lisansa sahip özel istihdam ajansları yapar.",
+        "alt": "Bandlik platformu ofisi"
+      },
+      "problem": {
+        "label": "Sorun",
+        "title": "Yurt dışında işe yerleşirken güven ve şeffaflık önemlidir.",
+        "text": "Yurt dışında iş arayanlar yasa dışı aracılar, sahte ilanlar ve önceden belirtilmemiş masraflarla karşılaşabilir. Bu da süreçte güvensizlik ve yanlış anlamalara yol açar.",
+        "altA": "Pasaport ve uçak",
+        "altB": "Çevrimiçi başvuru"
+      },
+      "solution": {
+        "label": "Çözümümüz",
+        "title": "İstihdam süreçlerini tek bir dijital platformda birleştiriyoruz.",
+        "text": "Platform; ilanları incelemeyi, aday bilgilerini yönetmeyi, belge akışını koordine etmeyi ve işe yerleştirme sürecini takip etmeyi sağlar. Böylece tüm taraflar için daha anlaşılır ve şeffaf bir dijital ortam oluşur.",
+        "alt": "Yolculuğa hazır bavullar ve belgeler"
+      },
+      "mission": {
+        "label": "Hedefimiz",
+        "title": "Yurt dışı istihdamını tek bir dijital ortamda koordine ediyoruz.",
+        "text": "Bandlik.uz; adaylar, işverenler ve lisanslı özel istihdam ajansları arasındaki iş birliğini kolaylaştırır. Platform ilanları incelemeyi, aday bilgilerini yönetmeyi, belgeleri koordine etmeyi ve yerleştirme süreçlerini takip etmeyi sağlar.",
+        "alt": "Bandlik platformu"
+      }
     },
-    "course": {
-      "tag": "Mülakata hazırlık",
-      "title": "Almanca temel konuşma ve dilbilgisi",
-      "price": "240.000 UZS",
-      "hours": "40 saat",
-      "lessons": "20 ders"
+    "employers": {
+      "hero": {
+        "title": "Doğrulanmış işçiler — lisanslı ajanslar aracılığıyla.",
+        "text": "Şirketinizin ihtiyaç duyduğu nitelik ve deneyime sahip işçileri bulun. Talep bırakın, koordinatörümüz 24 saat içinde sizinle iletişime geçsin.",
+        "alt": "İşverenlerle toplantı"
+      },
+      "workflow": {
+        "label": "İşverenler için",
+        "title": "Talepten işçilerin gelişine",
+        "text": "Her adımda sorumlunun kim olduğu ve sırada ne olduğu bellidir: siz gereksinimleri belirlersiniz, gerisini lisanslı ajanslar koordine eder.",
+        "steps": {
+          "request": {
+            "title": "Talep bırakın",
+            "text": "Meslek, işçi sayısı, dil seviyesi, maaş ve konaklama koşullarını belirtin."
+          },
+          "match": {
+            "title": "Aday seçimi",
+            "text": "Lisanslı ajanslar gereksinimlerinize uyan adayları seçer ve niteliklerini doğrular."
+          },
+          "interview": {
+            "title": "Çevrimiçi mülakat",
+            "text": "Seçilen adaylarla çevrimiçi mülakat yapın ve son kararı verin."
+          },
+          "arrival": {
+            "title": "Belgeler ve varış",
+            "text": "Sözleşme, vize ve seyahat belgeleri koordine edilir, işçiler kararlaştırılan tarihte gelir."
+          }
+        }
+      },
+      "partners": {
+        "label": "Ortaklarımız",
+        "title": "Güvenilir ortaklık — sağlam bir sistem.",
+        "text": "İstihdam süreçlerini geliştirmek için bankalar ve ilgili kuruluşlarla iş birliği yapıyoruz.",
+        "highlights": [
+          "Finansal ortaklar",
+          "Hizmet sağlayıcılar",
+          "Dijital istihdam ekosistemi"
+        ],
+        "rows": {
+          "banks": {
+            "title": "Bankalar",
+            "text": "Maaş ödemeleri ve uluslararası transferler için ortak bankalar."
+          },
+          "insurance": {
+            "title": "Sigorta şirketleri",
+            "text": "Yurt dışında çalışma süresince sağlık ve kaza sigortası."
+          },
+          "documents": {
+            "title": "Tercüme ve noter büroları",
+            "text": "Belgelerin tercümesi ve noter onayı hizmetleri."
+          },
+          "agencies": {
+            "title": "Lisanslı ajanslar",
+            "text": "Adayları seçen ve işe yerleştiren ajanslar."
+          },
+          "training": {
+            "title": "Eğitim merkezleri",
+            "text": "Dil ve mesleki becerileri geliştiren merkezler."
+          }
+        }
+      },
+      "imageAlt": "Ofiste çalışan bir çalışan"
+    },
+    "jobSeekers": {
+      "hero": {
+        "title": "İş arayanlar",
+        "text": "Size uygun ilanı bulun, mobil uygulamaya kaydolun ve işe yerleştirme sürecini takip edin.",
+        "alt": "Yurt dışında iş arayan genç bir adam"
+      },
+      "trust": {
+        "label": "Güvenilir ve güvenli",
+        "title": "Yurt dışında çalışmadan önce bilmeniz gerekenler",
+        "text": "Yurt dışından işçi alımında güvenilir ortaklık, doğrulanmış nitelikler ve net çalışma koşulları büyük önem taşır.",
+        "highlights": [
+          "Yalnızca lisanslı ajanslar",
+          "Nitelikleri doğrulanmış adaylar"
+        ],
+        "rows": {
+          "licensed": {
+            "title": "Lisanslı ajanslar",
+            "text": "Yalnızca geçerli lisansa sahip özel istihdam ajanslarıyla çalışıyoruz."
+          },
+          "skills": {
+            "title": "Doğrulanmış nitelik",
+            "text": "Adayların mesleki becerileri ve dil seviyesi işverenin gereksinimlerine göre kontrol edilir."
+          },
+          "terms": {
+            "title": "Net çalışma koşulları",
+            "text": "Maaş, çalışma saatleri, konaklama ve sözleşme süresi önceden belirlenir."
+          },
+          "coordination": {
+            "title": "Süreç koordinasyonu",
+            "text": "Koordinatörler çevrimiçi mülakatları ve belge hazırlığını yönetir."
+          }
+        }
+      }
+    },
+    "services": {
+      "hero": {
+        "title": "Hizmetlerimiz",
+        "text": "Yurt dışında çalışmak için belge hazırlığı, tercüme, noter onayı, sigorta ve mesleki hazırlık hizmetleri.",
+        "alt": "Belgeler üzerinde çalışan uzman"
+      },
+      "label": "Hizmetler",
+      "items": {
+        "documents": {
+          "title": "Sertifikalar ve belgeler",
+          "text": "İşe yerleşme için gereken belgelerin hazırlanması ve elektronik olarak yönetilmesi."
+        },
+        "translation": {
+          "title": "Tercüme hizmetleri",
+          "text": "Yurt dışında çalışmak için gereken belgelerin yabancı dillere çevrilmesi."
+        },
+        "notary": {
+          "title": "Noter hizmetleri",
+          "text": "Gerekli belgelerin noter onayı sürecinin düzenlenmesi."
+        },
+        "insurance": {
+          "title": "Sigorta hizmetleri",
+          "text": "Yurt dışında çalışmak için gereken sigortalardan yararlanma."
+        },
+        "courses": {
+          "title": "Dil ve meslek kursları",
+          "text": "Dil ve mesleki becerileri geliştiren kurslara kayıt."
+        },
+        "interview": {
+          "title": "Çevrimiçi mülakat ve takip",
+          "text": "İşverenle çevrimiçi mülakat ve başvuru durumunun takibi."
+        }
+      }
+    },
+    "vacancies": {
+      "hero": {
+        "title": "İş ilanları",
+        "text": "Yurt dışındaki iş fırsatlarını, gereksinimleri ve çalışma koşullarını inceleyin, size uygun ilanı seçin.",
+        "alt": "Yurt dışına giden işçiler"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "İletişim",
+        "text": "Sorunuz, öneriniz veya iş birliği talebiniz mi var? Bize yazın, ekibimiz ihtiyacınız olan bilgide size yardımcı olsun.",
+        "alt": "Bandlik koordinatörü"
+      }
     }
   },
   "legal": {
@@ -193,54 +455,54 @@
     "privacy": {
       "title": "Gizlilik politikası",
       "intro": "Bandlik.uz, kullanıcıların kişisel verilerinin korunmasına önem verir. Bu politika, verilerin nasıl toplandığını, kullanıldığını ve saklandığını açıklar.",
-      "sections": [
-        {
-          "h": "Hangi verileri topluyoruz",
-          "p": "Bir talep, başvuru veya mesaj gönderdiğinizde adınız, telefon numaranız, mesajınız ve başvuru için gerekli belgeler gibi bilgileri bize iletirsiniz. Siteyi kullanırken tarayıcı türü ve dil gibi teknik veriler de otomatik olarak toplanabilir."
+      "sections": {
+        "collected": {
+          "title": "Hangi verileri topluyoruz",
+          "text": "Bir talep, başvuru veya mesaj gönderdiğinizde adınız, telefon numaranız, mesajınız ve başvuru için gerekli belgeler gibi bilgileri bize iletirsiniz. Siteyi kullanırken tarayıcı türü ve dil gibi teknik veriler de otomatik olarak toplanabilir."
         },
-        {
-          "h": "Verilerinizi nasıl kullanıyoruz",
-          "p": "Verileriniz yalnızca talebinizi veya başvurunuzu incelemek, sizinle iletişime geçmek, platformu geliştirmek ve yasal gereklilikleri yerine getirmek için kullanılır."
+        "usage": {
+          "title": "Verilerinizi nasıl kullanıyoruz",
+          "text": "Verileriniz yalnızca talebinizi veya başvurunuzu incelemek, sizinle iletişime geçmek, platformu geliştirmek ve yasal gereklilikleri yerine getirmek için kullanılır."
         },
-        {
-          "h": "Verilerin paylaşılması",
-          "p": "Veriler, işverenler ve iş ortaklarıyla yalnızca talebinizin veya başvurunuzun işlenmesi için gereken ölçüde ve sizin bilginizle paylaşılır. Kişisel verileri satmayız."
+        "sharing": {
+          "title": "Verilerin paylaşılması",
+          "text": "Veriler, işverenler ve iş ortaklarıyla yalnızca talebinizin veya başvurunuzun işlenmesi için gereken ölçüde ve sizin bilginizle paylaşılır. Kişisel verileri satmayız."
         },
-        {
-          "h": "Saklama ve güvenlik",
-          "p": "Veriler bu amaçlar için gerekli olduğu süre boyunca saklanır ve yetkisiz erişime karşı teknik ve idari tedbirlerle korunur."
+        "security": {
+          "title": "Saklama ve güvenlik",
+          "text": "Veriler bu amaçlar için gerekli olduğu süre boyunca saklanır ve yetkisiz erişime karşı teknik ve idari tedbirlerle korunur."
         },
-        {
-          "h": "Haklarınız ve iletişim",
-          "p": "Verilerinize erişmeyi, düzeltilmesini veya silinmesini istediğiniz zaman talep edebilirsiniz. Bu sitedeki “İletişim” bölümü üzerinden bize yazın veya bizi arayın."
+        "rights": {
+          "title": "Haklarınız ve iletişim",
+          "text": "Verilerinize erişmeyi, düzeltilmesini veya silinmesini istediğiniz zaman talep edebilirsiniz. Bu sitedeki “İletişim” bölümü üzerinden bize yazın veya bizi arayın."
         }
-      ]
+      }
     },
     "terms": {
       "title": "Kullanım koşulları",
       "intro": "Bandlik.uz platformunu kullanarak aşağıdaki koşulları kabul etmiş olursunuz.",
-      "sections": [
-        {
-          "h": "Hizmet hakkında",
-          "p": "Bandlik.uz, işverenleri adaylarla buluşturan ve hazırlık kursları sunan bir platformdur. Platformun kendisi bir işveren değildir."
+      "sections": {
+        "service": {
+          "title": "Hizmet hakkında",
+          "text": "Bandlik.uz, işverenleri adaylarla buluşturan ve hazırlık kursları sunan bir platformdur. Platformun kendisi bir işveren değildir."
         },
-        {
-          "h": "Platformun kullanımı",
-          "p": "Doğru bilgi vermeyi, platformu kötüye kullanmamayı ve başkalarının verilerini onların izni olmadan göndermemeyi kabul edersiniz."
+        "usage": {
+          "title": "Platformun kullanımı",
+          "text": "Doğru bilgi vermeyi, platformu kötüye kullanmamayı ve başkalarının verilerini onların izni olmadan göndermemeyi kabul edersiniz."
         },
-        {
-          "h": "İlanlar ve bilgiler",
-          "p": "İlanlar, maaşlar ve çalışma koşulları, işverenlerin sağladığı şekilde ve önceden kontrol edilerek gösterilir. Ayrıntılar değişebilir; bu nedenle sözleşme imzalamadan önce nihai koşulları doğrulayın."
+        "vacancies": {
+          "title": "İlanlar ve bilgiler",
+          "text": "İlanlar, maaşlar ve çalışma koşulları, işverenlerin sağladığı şekilde ve önceden kontrol edilerek gösterilir. Ayrıntılar değişebilir; bu nedenle sözleşme imzalamadan önce nihai koşulları doğrulayın."
         },
-        {
-          "h": "Sorumluluk",
-          "p": "Platformun erişilebilir ve doğru olması için makul çabayı gösteririz; ancak kesintisiz çalışmayı veya belirli bir işe yerleşme sonucunu garanti etmeyiz."
+        "liability": {
+          "title": "Sorumluluk",
+          "text": "Platformun erişilebilir ve doğru olması için makul çabayı gösteririz; ancak kesintisiz çalışmayı veya belirli bir işe yerleşme sonucunu garanti etmeyiz."
         },
-        {
-          "h": "Değişiklikler ve iletişim",
-          "p": "Bu koşullar zaman zaman güncellenebilir; geçerli sürüm her zaman bu sayfadadır. Sorularınız için “İletişim” bölümünü kullanın."
+        "changes": {
+          "title": "Değişiklikler ve iletişim",
+          "text": "Bu koşullar zaman zaman güncellenebilir; geçerli sürüm her zaman bu sayfadadır. Sorularınız için “İletişim” bölümünü kullanın."
         }
-      ]
+      }
     }
   },
   "notFound": {

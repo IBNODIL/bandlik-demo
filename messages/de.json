@@ -9,75 +9,116 @@
     "requestWorkers": "Arbeitskräfte anfragen",
     "contactUs": "Kontaktieren Sie uns",
     "details": "Details",
-    "share": "Teilen"
+    "share": "Teilen",
+    "loading": "Wird geladen …",
+    "empty": "Noch nichts vorhanden",
+    "error": "Daten konnten nicht geladen werden",
+    "retry": "Erneut versuchen",
+    "login": "Anmelden",
+    "lookingForJob": "Ich suche Arbeit",
+    "needWorkers": "Ich brauche Fachkräfte",
+    "agency": "Ich bin eine Agentur",
+    "scrollDown": "Nach unten"
   },
-  "nav": [
-    "Startseite",
-    "Über uns",
-    "Für Arbeitgeber",
-    "Leistungen",
-    "Für Jobsuchende",
-    "Stellenangebote",
-    "Kontakt",
-    "FAQ"
-  ],
-  "footerNav": [
-    "Start",
-    "Über uns",
-    "Für Arbeitgeber",
-    "Leistungen",
-    "Stellenangebote",
-    "Kontakt"
-  ],
+  "nav": {
+    "home": {
+      "title": "Startseite",
+      "link": "/"
+    },
+    "about": {
+      "title": "Über uns",
+      "link": "/about"
+    },
+    "employers": {
+      "title": "Für Arbeitgeber",
+      "link": "/employers"
+    },
+    "jobSeekers": {
+      "title": "Für Arbeitsuchende",
+      "link": "/job-seekers"
+    },
+    "services": {
+      "title": "Leistungen",
+      "link": "/services"
+    },
+    "vacancies": {
+      "title": "Stellen",
+      "link": "/vacancies"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "link": "/contact"
+    }
+  },
   "hero": {
-    "alt": "Arbeitskräfte und internationale Chancen",
-    "text": "Arbeitskräfte für ausländische Arbeitgeber finden und geprüfte Stellenangebote für Kandidaten entdecken.",
+    "title": "Arbeiten im Ausland — sicher und zuverlässig",
+    "text": "Finden Sie über lizenzierte Arbeitsvermittlungen eine faire Stelle im Ausland. Verfolgen Sie Ihre Vermittlung transparent und arbeiten Sie legal.",
+    "alt": "Arbeitskräfte auf dem Weg ins Ausland und ein Flugzeug",
     "scrollDown": "Nach unten"
   },
   "about": {
     "label": "Für Arbeitgeber",
     "heading": "Legen Sie Beruf, Anzahl der Arbeitskräfte, Sprachniveau und Arbeitsbedingungen fest. Senden Sie Ihre Anfrage über die Bandlik-Plattform.",
-    "info": [
-      {
+    "info": {
+      "needs": {
         "title": "Personalbedarf festlegen",
         "body": "Geben Sie Angaben zu Unternehmen, gesuchtem Beruf, Anzahl der Arbeitskräfte, Sprachniveau und Arbeitsbedingungen an."
       },
-      {
+      "process": {
         "title": "Den Ablauf kennenlernen",
         "body": "Auf der Seite „Leistungen“ finden Sie die Einstellungsphasen, Verantwortlichen und durchschnittlichen Fristen."
       }
-    ],
-    "photoAlts": [
-      "Bauarbeiter",
-      "Koch",
-      "Lagermitarbeiter"
-    ]
+    },
+    "photoAlt": {
+      "worker": "Bauarbeiter",
+      "chef": "Koch",
+      "warehouse": "Lagermitarbeiter"
+    }
   },
+  "stats": {
+    "partners": {
+      "label": "Partneragenturen",
+      "text": "Private Arbeitsvermittlungen auf der Plattform"
+    },
+    "vacancies": {
+      "label": "Offene Stellen",
+      "text": "Derzeit verfügbare Stellen"
+    },
+    "countries": {
+      "label": "Länder",
+      "text": "Länder mit Stellenangeboten"
+    },
+    "placed": {
+      "label": "Vermittelt",
+      "text": "Kandidaten mit bestätigter Vermittlung"
+    }
+  },
+  "clients": "Partnerunternehmen",
   "process": {
     "label": "Von der Anfrage bis zur Vermittlung",
     "intro": "Verfolgen Sie den Prozess Schritt für Schritt – vom Bedarf des Arbeitgebers bis zur Vermittlung.",
-    "steps": [
-      {
+    "steps": {
+      "request": {
         "title": "Anfrage senden",
         "text": "Der Arbeitgeber gibt den gesuchten Beruf, die Anzahl der Arbeitskräfte und die Arbeitsbedingungen an."
       },
-      {
+      "requirements": {
         "title": "Anforderungen klären",
         "text": "Die Anforderungen des Arbeitgebers und die Kriterien für Kandidaten werden abgestimmt."
       },
-      {
+      "candidates": {
         "title": "Kandidaten auswählen",
         "text": "Geeignete Kandidaten werden anhand der festgelegten Anforderungen geprüft."
       },
-      {
+      "documents": {
         "title": "Dokumente vorbereiten",
         "text": "Die für die Beschäftigung erforderlichen Dokumente und Verfahren werden koordiniert."
       },
-      {
+      "departure": {
         "title": "Reisevorbereitung",
         "text": "Entsprechend den vereinbarten Arbeitsbedingungen werden die nötigen Formalitäten und Vorbereitungen erledigt."
       }
-    ]
+    }
   },
   "fullImages": {
     "man": "Ein junger Mann, der ins Ausland aufbricht",
@@ -87,103 +128,324 @@
     "label": "JOBMÖGLICHKEITEN",
     "heading": "Neueste Stellenangebote",
     "intro": "Entdecken Sie freie Stellen im Ausland und finden Sie die passende Chance.",
-    "cta": "Alle Stellenangebote ansehen",
+    "cta": "Alle Stellen ansehen",
     "card": {
       "salary": "Nettogehalt:",
       "type": "Beschäftigungsart:",
       "deadline": "Bewerbungsfrist:",
       "hired": "Eingestellt:",
       "applied": "Bewerber:"
-    }
+    },
+    "type": {
+      "fullTime": "Vollzeit",
+      "partTime": "Teilzeit",
+      "seasonal": "Saisonarbeit",
+      "contract": "Befristeter Vertrag"
+    },
+    "duration": {
+      "range": "{min}–{max} Monate",
+      "fixed": "{count} Monate",
+      "open": "Unbefristet"
+    },
+    "status": {
+      "closingSoon": "Läuft bald ab",
+      "filled": "Besetzt"
+    },
+    "salaryLocal": "(≈ {amount} UZS)",
+    "pageLabel": "Neueste Stellen"
   },
-  "benefits": {
-    "label": "PLATTFORM-FUNKTIONEN",
-    "tagline": "Für jeden Nutzer der passende Weg",
-    "speedTitle": "Der Start Ihrer Website dauert 5,1 Minuten.",
-    "speedText": "Blitzschnelle Lieferung ohne Qualitätseinbußen",
-    "allKicker": "VON 0 AUF 100 IN EINEM KLEINEN SCHRITT",
-    "allTitle": "Alles in einer\nPlattform",
-    "supportKicker": "VOLLZEIT-SUPPORT",
-    "supportText": "Ich habe eine eigene Anwendung für 24/6-Support, und Sie erhalten jederzeit Updates.",
-    "chatAlt": "Chat"
+  "app": {
+    "label": "PLATTFORMFUNKTIONEN",
+    "tagline": "Ein eigener Weg für jeden Nutzer",
+    "title": "Neue Chancen — einen Schritt näher.",
+    "text": "Finden Sie Stellen im Ausland, verwalten Sie Ihr Profil und verfolgen Sie Ihre Vermittlung in der mobilen App.",
+    "qr": "QR-Code für {store}",
+    "phoneAlt": "Mobile App von Bandlik"
   },
   "courses": {
     "label": "Vorbereitungskurse",
     "heading": "Bereiten Sie sich auf die Arbeit im Ausland vor.",
     "intro": "Entdecken Sie Sprach- und Berufsvorbereitungskurse und erwerben Sie neues Wissen und neue Fähigkeiten.",
-    "cta": "Alle Kurse"
+    "cta": "Alle Kurse",
+    "category": {
+      "interviewPrep": "Vorbereitung auf das Gespräch",
+      "language": "Sprachkurs",
+      "vocational": "Berufsausbildung",
+      "documents": "Unterlagen"
+    },
+    "free": "Kostenlos",
+    "price": "{amount} UZS",
+    "hours": "{count} Stunden",
+    "lessons": "{count} Lektionen",
+    "status": {
+      "almostFull": "Fast ausgebucht",
+      "full": "Ausgebucht"
+    }
   },
   "faq": {
     "label": "FAQ — häufig gestellte Fragen",
-    "items": [
-      {
-        "q": "Welche Leistungen bietet Bandlik.uz an?",
-        "a": "Die Plattform unterstützt Arbeitgeber bei der Suche nach Arbeitskräften für den gewünschten Beruf und Kandidaten bei der Bewerbung auf geprüfte Stellen im Ausland sowie bei Vorbereitungskursen."
+    "items": {
+      "services": {
+        "question": "Welche Leistungen bietet Bandlik.uz an?",
+        "answer": "Die Plattform unterstützt Arbeitgeber bei der Suche nach Arbeitskräften für den gewünschten Beruf und Kandidaten bei der Bewerbung auf geprüfte Stellen im Ausland sowie bei Vorbereitungskursen."
       },
-      {
-        "q": "Wie sende ich eine Arbeitskräfteanfrage?",
-        "a": "Klicken Sie auf „Arbeitskräfte anfragen“ und geben Sie Beruf, Anzahl der Arbeitskräfte, Sprachniveau und Arbeitsbedingungen an. Wir prüfen Ihre Anfrage und melden uns bei Ihnen."
+      "request": {
+        "question": "Wie sende ich eine Arbeitskräfteanfrage?",
+        "answer": "Klicken Sie auf „Arbeitskräfte anfragen“ und geben Sie Beruf, Anzahl der Arbeitskräfte, Sprachniveau und Arbeitsbedingungen an. Wir prüfen Ihre Anfrage und melden uns bei Ihnen."
       },
-      {
-        "q": "Was kosten die Leistungen?",
-        "a": "Der Preis richtet sich nach dem Umfang der Anfrage und den Arbeitsbedingungen. Den genauen Preis nennt Ihnen nach Ihrer Anfrage ein zuständiger Spezialist."
+      "price": {
+        "question": "Was kosten die Leistungen?",
+        "answer": "Der Preis richtet sich nach dem Umfang der Anfrage und den Arbeitsbedingungen. Den genauen Preis nennt Ihnen nach Ihrer Anfrage ein zuständiger Spezialist."
       },
-      {
-        "q": "Werden die Stellenangebote geprüft?",
-        "a": "Ja, jedes Stellenangebot auf der Plattform wird vorab hinsichtlich Arbeitgeber und Arbeitsbedingungen überprüft."
+      "verified": {
+        "question": "Werden die Stellenangebote geprüft?",
+        "answer": "Ja, jedes Stellenangebot auf der Plattform wird vorab hinsichtlich Arbeitgeber und Arbeitsbedingungen überprüft."
       },
-      {
-        "q": "Welche Stellenangebote gibt es?",
-        "a": "Es gibt Stellen im Ausland in der Gastronomie, im Bau, im Lager, in der Produktion und in vielen weiteren Bereichen. Die vollständige Liste finden Sie im Bereich „Stellenangebote“."
+      "available": {
+        "question": "Welche Stellenangebote gibt es?",
+        "answer": "Es gibt Stellen im Ausland in der Gastronomie, im Bau, im Lager, in der Produktion und in vielen weiteren Bereichen. Die vollständige Liste finden Sie im Bereich „Stellenangebote“."
       },
-      {
-        "q": "Wie bewerbe ich mich auf eine Stelle?",
-        "a": "Wählen Sie die gewünschte Stelle, klicken Sie auf „Details“ und reichen Sie Ihre Bewerbung mit den erforderlichen Unterlagen ein."
+      "apply": {
+        "question": "Wie bewerbe ich mich auf eine Stelle?",
+        "answer": "Wählen Sie die gewünschte Stelle, klicken Sie auf „Details“ und reichen Sie Ihre Bewerbung mit den erforderlichen Unterlagen ein."
       },
-      {
-        "q": "Wie melde ich mich für Sprach- und Berufskurse an?",
-        "a": "Wählen Sie im Bereich „Vorbereitungskurse“ einen passenden Kurs und registrieren Sie sich. Informationen zu den Unterrichtsstunden werden Ihnen zugesandt."
+      "courses": {
+        "question": "Wie melde ich mich für Sprach- und Berufskurse an?",
+        "answer": "Wählen Sie im Bereich „Vorbereitungskurse“ einen passenden Kurs und registrieren Sie sich. Informationen zu den Unterrichtsstunden werden Ihnen zugesandt."
       },
-      {
-        "q": "Wie kann ich Partner werden?",
-        "a": "Schreiben Sie uns oder rufen Sie uns über den Bereich „Kontakt“ an. Die Bedingungen der Zusammenarbeit besprechen wir gemeinsam."
+      "partner": {
+        "question": "Wie kann ich Partner werden?",
+        "answer": "Schreiben Sie uns oder rufen Sie uns über den Bereich „Kontakt“ an. Die Bedingungen der Zusammenarbeit besprechen wir gemeinsam."
       }
-    ]
+    }
   },
   "contact": {
     "badge": "KONTAKT",
     "heading": "Kontaktieren Sie uns",
-    "intro": "Haben Sie Fragen oder Vorschläge? Senden Sie uns eine Nachricht, wir melden uns bei Ihnen.",
-    "phone": "Kontakt per Telefon",
-    "telegram": "Anfrage über Telegram",
-    "formTitle": "Senden Sie uns Ihre Nachricht",
-    "name": "Ihr Name *",
-    "phoneField": "Ihre Telefonnummer *",
-    "message": "Ihre Nachricht *",
-    "send": "Nachricht senden →",
-    "sent": "Gesendet ✓"
+    "intro": "Haben Sie Fragen oder Anregungen? Kontaktieren Sie uns.",
+    "byPhone": "Kontakt per Telefon",
+    "byTelegram": "Nachricht über Telegram",
+    "form": {
+      "title": "Firmendaten",
+      "company": "Firmenname",
+      "tin": "Steuernummer (STIR)",
+      "address": "Adresse",
+      "phone": "Ihre Telefonnummer *",
+      "send": "Nachricht senden →",
+      "sent": "Gesendet ✓"
+    },
+    "map": "Taschkent auf der Karte",
+    "openMap": "In Karten öffnen"
+  },
+  "cta": {
+    "title": "Starten Sie Ihre Chancen im Ausland noch heute",
+    "text": "Wählen Sie die passende Richtung und machen Sie den nächsten Schritt."
   },
   "footer": {
-    "heading": "Gemeinsam neue\n*Chancen* schaffen",
-    "tagline": "Internationale Beschäftigungsmöglichkeiten für Arbeitgeber und Kandidaten",
-    "mobileApp": "Laden Sie die App herunter",
+    "about": "Eine Plattform, die die Arbeitsvermittlung ins Ausland digital, bequem und transparent macht.",
+    "platform": "Plattform",
+    "users": "Für Nutzer",
+    "contact": "Kontakt",
+    "links": {
+      "home": "Startseite",
+      "about": "Über uns",
+      "services": "Leistungen",
+      "vacancies": "Stellen",
+      "candidates": "Für Kandidaten",
+      "employers": "Für Arbeitgeber",
+      "agencies": "Für Agenturen",
+      "faq": "FAQ"
+    },
+    "city": "Taschkent, Usbekistan",
+    "copyright": "© 2026 Private Arbeitsvermittlung GmbH. Alle Rechte vorbehalten.",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
     "backToTop": "Nach oben"
   },
-  "content": {
-    "job": {
-      "title": "Koch",
-      "place": "Bratislava, Slowakei",
-      "salaryLocal": "(≈ 23.500.000 UZS)",
-      "type": "Vollzeit • 6–12 Monate"
+  "journey": {
+    "label": "Ablauf",
+    "badge": "In 5 Schritten",
+    "title": "Wie funktioniert die Vermittlung ins Ausland?",
+    "text": "Verfolgen Sie Schritt für Schritt den Weg von der Stellenwahl bis zum Arbeitsbeginn. Lizenzierte private Arbeitsvermittlungen koordinieren die Vermittlung der Kandidaten.",
+    "imageAlt": "Eine Kandidatin verfolgt ihre Vermittlung"
+  },
+  "pages": {
+    "about": {
+      "hero": {
+        "title": "Über uns",
+        "text": "Bandlik.uz ist eine Plattform, die die Zusammenarbeit von Kandidaten, Arbeitgebern und lizenzierten privaten Arbeitsvermittlungen digital koordiniert.",
+        "alt": "Bandlik-Flagge vor Gebäuden"
+      },
+      "approach": {
+        "label": "Unser Ansatz",
+        "kicker": "Verlässliche Zusammenarbeit mit lizenzierten Agenturen",
+        "text": "Die Plattform hilft, die Arbeit mit Stellen, Dokumenten und Anfragen digital zu koordinieren. Die Vermittlung ins Ausland selbst übernehmen private Arbeitsvermittlungen mit der erforderlichen Lizenz.",
+        "alt": "Büro der Bandlik-Plattform"
+      },
+      "problem": {
+        "label": "Das Problem",
+        "title": "Bei der Arbeitssuche im Ausland zählen Vertrauen und Transparenz.",
+        "text": "Wer im Ausland Arbeit sucht, kann auf illegale Vermittler, gefälschte Stellen und vorab nicht genannte Kosten stoßen. Das führt zu Misstrauen und Missverständnissen.",
+        "altA": "Reisepass und Flugzeug",
+        "altB": "Online-Bewerbung"
+      },
+      "solution": {
+        "label": "Unsere Lösung",
+        "title": "Wir bündeln die Vermittlungsprozesse auf einer digitalen Plattform.",
+        "text": "Die Plattform ermöglicht es, Stellen zu sichten, Kandidatendaten zu verwalten, den Dokumentenfluss zu koordinieren und die Vermittlung zu verfolgen. So entsteht für alle Beteiligten ein verständlicheres und transparenteres digitales Umfeld.",
+        "alt": "Reisefertige Koffer und Dokumente"
+      },
+      "mission": {
+        "label": "Unser Ziel",
+        "title": "Wir koordinieren Beschäftigung im Ausland in einem einzigen digitalen Umfeld.",
+        "text": "Bandlik.uz vereinfacht die Zusammenarbeit von Kandidaten, Arbeitgebern und lizenzierten privaten Arbeitsvermittlungen. Die Plattform ermöglicht es, Stellen zu sichten, Kandidatendaten zu verwalten, Dokumente zu koordinieren und Vermittlungen zu verfolgen.",
+        "alt": "Die Bandlik-Plattform"
+      }
     },
-    "course": {
-      "tag": "Vorbereitung auf das Gespräch",
-      "title": "Grundlegende Konversation und Grammatik auf Deutsch",
-      "price": "240.000 UZS",
-      "hours": "40 Stunden",
-      "lessons": "20 Lektionen"
+    "employers": {
+      "hero": {
+        "title": "Geprüfte Fachkräfte — über lizenzierte Agenturen.",
+        "text": "Finden Sie Arbeitskräfte mit den Qualifikationen und der Erfahrung, die Ihr Unternehmen braucht. Senden Sie eine Anfrage, unser Koordinator meldet sich innerhalb von 24 Stunden.",
+        "alt": "Treffen mit Arbeitgebern"
+      },
+      "workflow": {
+        "label": "Für Arbeitgeber",
+        "title": "Von der Anfrage bis zur Ankunft",
+        "text": "Bei jedem Schritt ist klar, wer verantwortlich ist und was als Nächstes passiert: Sie legen die Anforderungen fest, lizenzierte Agenturen koordinieren den Rest.",
+        "steps": {
+          "request": {
+            "title": "Anfrage senden",
+            "text": "Geben Sie Beruf, Anzahl der Arbeitskräfte, Sprachniveau, Gehalt und Unterkunft an."
+          },
+          "match": {
+            "title": "Kandidatenauswahl",
+            "text": "Lizenzierte Agenturen wählen passende Kandidaten aus und prüfen ihre Qualifikation."
+          },
+          "interview": {
+            "title": "Online-Interview",
+            "text": "Führen Sie Online-Interviews mit der Vorauswahl und treffen Sie die endgültige Wahl."
+          },
+          "arrival": {
+            "title": "Dokumente und Ankunft",
+            "text": "Verträge, Visa und Reisedokumente werden abgestimmt, die Arbeitskräfte kommen zum vereinbarten Termin."
+          }
+        }
+      },
+      "partners": {
+        "label": "Unsere Partner",
+        "title": "Verlässliche Partnerschaft — ein stabiles System.",
+        "text": "Zur Weiterentwicklung der Vermittlung arbeiten wir mit Banken und relevanten Organisationen zusammen.",
+        "highlights": [
+          "Finanzpartner",
+          "Dienstleister",
+          "Digitales Beschäftigungs-Ökosystem"
+        ],
+        "rows": {
+          "banks": {
+            "title": "Banken",
+            "text": "Partnerbanken für Gehaltszahlungen und internationale Überweisungen."
+          },
+          "insurance": {
+            "title": "Versicherungen",
+            "text": "Kranken- und Unfallversicherung für die Zeit der Arbeit im Ausland."
+          },
+          "documents": {
+            "title": "Übersetzungsbüros und Notare",
+            "text": "Übersetzung und notarielle Beglaubigung von Dokumenten."
+          },
+          "agencies": {
+            "title": "Lizenzierte Agenturen",
+            "text": "Agenturen, die Kandidaten auswählen und vermitteln."
+          },
+          "training": {
+            "title": "Schulungszentren",
+            "text": "Zentren, die Sprach- und Fachkenntnisse verbessern."
+          }
+        }
+      },
+      "imageAlt": "Mitarbeiter im Büro"
+    },
+    "jobSeekers": {
+      "hero": {
+        "title": "Arbeitsuchende",
+        "text": "Finden Sie eine passende Stelle, registrieren Sie sich in der mobilen App und verfolgen Sie Ihre Vermittlung.",
+        "alt": "Junger Mann sucht Arbeit im Ausland"
+      },
+      "trust": {
+        "label": "Zuverlässig und sicher",
+        "title": "Was Sie vor der Arbeit im Ausland wissen sollten",
+        "text": "Bei der Anwerbung aus dem Ausland zählen verlässliche Partner, geprüfte Qualifikationen und klare Arbeitsbedingungen.",
+        "highlights": [
+          "Nur lizenzierte Agenturen",
+          "Kandidaten mit geprüfter Qualifikation"
+        ],
+        "rows": {
+          "licensed": {
+            "title": "Lizenzierte Agenturen",
+            "text": "Wir arbeiten nur mit privaten Arbeitsvermittlungen mit gültiger Lizenz."
+          },
+          "skills": {
+            "title": "Geprüfte Qualifikation",
+            "text": "Fachkenntnisse und Sprachniveau werden anhand der Anforderungen des Arbeitgebers geprüft."
+          },
+          "terms": {
+            "title": "Klare Arbeitsbedingungen",
+            "text": "Gehalt, Arbeitszeit, Unterkunft und Vertragsdauer werden vorab festgelegt."
+          },
+          "coordination": {
+            "title": "Koordinierter Ablauf",
+            "text": "Koordinatoren betreuen Online-Interviews und die Vorbereitung der Dokumente."
+          }
+        }
+      }
+    },
+    "services": {
+      "hero": {
+        "title": "Unsere Leistungen",
+        "text": "Dokumentenvorbereitung, Übersetzung, Beglaubigung, Versicherung und berufliche Vorbereitung für die Arbeit im Ausland.",
+        "alt": "Fachkraft bearbeitet Dokumente"
+      },
+      "label": "Leistungen",
+      "items": {
+        "documents": {
+          "title": "Zertifikate und Dokumente",
+          "text": "Vorbereitung der für die Vermittlung nötigen Dokumente und ihre elektronische Verwaltung."
+        },
+        "translation": {
+          "title": "Übersetzungen",
+          "text": "Übersetzung der für die Arbeit im Ausland nötigen Dokumente in Fremdsprachen."
+        },
+        "notary": {
+          "title": "Notarielle Leistungen",
+          "text": "Organisation der notariellen Beglaubigung der erforderlichen Dokumente."
+        },
+        "insurance": {
+          "title": "Versicherungen",
+          "text": "Abschluss der für die Arbeit im Ausland nötigen Versicherungen."
+        },
+        "courses": {
+          "title": "Sprach- und Berufskurse",
+          "text": "Anmeldung zu Kursen, die Sprach- und Fachkenntnisse verbessern."
+        },
+        "interview": {
+          "title": "Online-Interviews und Verfolgung",
+          "text": "Online-Interview mit dem Arbeitgeber und Verfolgung des Bewerbungsstatus."
+        }
+      }
+    },
+    "vacancies": {
+      "hero": {
+        "title": "Stellen",
+        "text": "Sehen Sie sich Stellenangebote im Ausland, Anforderungen und Arbeitsbedingungen an und wählen Sie die passende Stelle.",
+        "alt": "Arbeitskräfte auf dem Weg ins Ausland"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Kontakt",
+        "text": "Haben Sie eine Frage, eine Anregung oder eine Partnerschaftsanfrage? Schreiben Sie uns — unser Team hilft Ihnen weiter.",
+        "alt": "Bandlik-Koordinatorin"
+      }
     }
   },
   "legal": {
@@ -193,54 +455,54 @@
     "privacy": {
       "title": "Datenschutzerklärung",
       "intro": "Bandlik.uz nimmt den Schutz der personenbezogenen Daten seiner Nutzer ernst. Diese Erklärung beschreibt, wie Daten erhoben, verwendet und gespeichert werden.",
-      "sections": [
-        {
-          "h": "Welche Daten wir erheben",
-          "p": "Wenn Sie eine Anfrage, eine Bewerbung oder eine Nachricht senden, teilen Sie uns Angaben wie Ihren Namen, Ihre Telefonnummer, Ihre Nachricht und die für eine Bewerbung nötigen Unterlagen mit. Bei der Nutzung der Website können außerdem technische Daten, etwa Browsertyp und Sprache, automatisch erfasst werden."
+      "sections": {
+        "collected": {
+          "title": "Welche Daten wir erheben",
+          "text": "Wenn Sie eine Anfrage, eine Bewerbung oder eine Nachricht senden, teilen Sie uns Angaben wie Ihren Namen, Ihre Telefonnummer, Ihre Nachricht und die für eine Bewerbung nötigen Unterlagen mit. Bei der Nutzung der Website können außerdem technische Daten, etwa Browsertyp und Sprache, automatisch erfasst werden."
         },
-        {
-          "h": "Wie wir Ihre Daten verwenden",
-          "p": "Ihre Daten werden ausschließlich verwendet, um Ihre Anfrage oder Bewerbung zu prüfen, Sie zu kontaktieren, die Plattform zu verbessern und gesetzliche Anforderungen zu erfüllen."
+        "usage": {
+          "title": "Wie wir Ihre Daten verwenden",
+          "text": "Ihre Daten werden ausschließlich verwendet, um Ihre Anfrage oder Bewerbung zu prüfen, Sie zu kontaktieren, die Plattform zu verbessern und gesetzliche Anforderungen zu erfüllen."
         },
-        {
-          "h": "Weitergabe von Daten",
-          "p": "Daten werden nur in dem Umfang an Arbeitgeber und Partner weitergegeben, der zur Bearbeitung Ihrer Anfrage oder Bewerbung nötig ist, und mit Ihrem Wissen. Wir verkaufen keine personenbezogenen Daten."
+        "sharing": {
+          "title": "Weitergabe von Daten",
+          "text": "Daten werden nur in dem Umfang an Arbeitgeber und Partner weitergegeben, der zur Bearbeitung Ihrer Anfrage oder Bewerbung nötig ist, und mit Ihrem Wissen. Wir verkaufen keine personenbezogenen Daten."
         },
-        {
-          "h": "Speicherung und Sicherheit",
-          "p": "Daten werden so lange gespeichert, wie es für diese Zwecke erforderlich ist, und durch technische und organisatorische Maßnahmen vor unbefugtem Zugriff geschützt."
+        "security": {
+          "title": "Speicherung und Sicherheit",
+          "text": "Daten werden so lange gespeichert, wie es für diese Zwecke erforderlich ist, und durch technische und organisatorische Maßnahmen vor unbefugtem Zugriff geschützt."
         },
-        {
-          "h": "Ihre Rechte und Kontakt",
-          "p": "Sie können jederzeit Auskunft über Ihre Daten sowie deren Berichtigung oder Löschung verlangen. Schreiben Sie uns oder rufen Sie uns über den Bereich „Kontakt“ dieser Website an."
+        "rights": {
+          "title": "Ihre Rechte und Kontakt",
+          "text": "Sie können jederzeit Auskunft über Ihre Daten sowie deren Berichtigung oder Löschung verlangen. Schreiben Sie uns oder rufen Sie uns über den Bereich „Kontakt“ dieser Website an."
         }
-      ]
+      }
     },
     "terms": {
       "title": "Nutzungsbedingungen",
       "intro": "Mit der Nutzung der Plattform Bandlik.uz erklären Sie sich mit den folgenden Bedingungen einverstanden.",
-      "sections": [
-        {
-          "h": "Über den Dienst",
-          "p": "Bandlik.uz ist eine Plattform, die Arbeitgeber mit Kandidaten zusammenbringt und Vorbereitungskurse anbietet. Die Plattform selbst ist kein Arbeitgeber."
+      "sections": {
+        "service": {
+          "title": "Über den Dienst",
+          "text": "Bandlik.uz ist eine Plattform, die Arbeitgeber mit Kandidaten zusammenbringt und Vorbereitungskurse anbietet. Die Plattform selbst ist kein Arbeitgeber."
         },
-        {
-          "h": "Nutzung der Plattform",
-          "p": "Sie verpflichten sich, korrekte Angaben zu machen, die Plattform nicht zu missbrauchen und keine Daten anderer Personen ohne deren Einwilligung zu übermitteln."
+        "usage": {
+          "title": "Nutzung der Plattform",
+          "text": "Sie verpflichten sich, korrekte Angaben zu machen, die Plattform nicht zu missbrauchen und keine Daten anderer Personen ohne deren Einwilligung zu übermitteln."
         },
-        {
-          "h": "Stellenangebote und Informationen",
-          "p": "Stellenangebote, Gehälter und Arbeitsbedingungen werden so angezeigt, wie sie von den Arbeitgebern angegeben und vorab geprüft wurden. Einzelheiten können sich ändern; klären Sie daher die endgültigen Bedingungen, bevor Sie einen Vertrag unterschreiben."
+        "vacancies": {
+          "title": "Stellenangebote und Informationen",
+          "text": "Stellenangebote, Gehälter und Arbeitsbedingungen werden so angezeigt, wie sie von den Arbeitgebern angegeben und vorab geprüft wurden. Einzelheiten können sich ändern; klären Sie daher die endgültigen Bedingungen, bevor Sie einen Vertrag unterschreiben."
         },
-        {
-          "h": "Haftung",
-          "p": "Wir bemühen uns in angemessener Weise um eine verfügbare und korrekte Plattform, garantieren jedoch weder einen unterbrechungsfreien Betrieb noch ein bestimmtes Vermittlungsergebnis."
+        "liability": {
+          "title": "Haftung",
+          "text": "Wir bemühen uns in angemessener Weise um eine verfügbare und korrekte Plattform, garantieren jedoch weder einen unterbrechungsfreien Betrieb noch ein bestimmtes Vermittlungsergebnis."
         },
-        {
-          "h": "Änderungen und Kontakt",
-          "p": "Diese Bedingungen können von Zeit zu Zeit aktualisiert werden; die aktuelle Fassung finden Sie stets auf dieser Seite. Bei Fragen nutzen Sie den Bereich „Kontakt“."
+        "changes": {
+          "title": "Änderungen und Kontakt",
+          "text": "Diese Bedingungen können von Zeit zu Zeit aktualisiert werden; die aktuelle Fassung finden Sie stets auf dieser Seite. Bei Fragen nutzen Sie den Bereich „Kontakt“."
         }
-      ]
+      }
     }
   },
   "notFound": {

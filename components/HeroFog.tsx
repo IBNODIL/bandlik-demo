@@ -21,8 +21,11 @@ function useMediaQuery(query: string) {
   return matches;
 }
 
-/** Unicorn Studio fog over the hero image. Like the original, desktop (>=1440px) only. */
-export default function HeroFog() {
+/**
+ * Unicorn Studio fog over a hero image. Like the original, desktop (>=1440px) only.
+ * `className` sets its strength (the home hero uses 70%, the inner-page heroes 30% like Framer).
+ */
+export default function HeroFog({ className = "opacity-70" }: { className?: string }) {
   const isDesktop = useMediaQuery("(min-width: 1440px)");
   const reduceMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
@@ -40,7 +43,7 @@ export default function HeroFog() {
   if (!isDesktop || reduceMotion) return null;
 
   return (
-    <div ref={setEl} aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-70 mix-blend-screen">
+    <div ref={setEl} aria-hidden="true" className={`pointer-events-none absolute inset-0 mix-blend-screen ${className}`}>
       <UnicornScene
         projectId={PROJECT_ID}
         sdkUrl={SDK_URL}
