@@ -309,25 +309,29 @@
         "alt": "İşverenlerle toplantı"
       },
       "workflow": {
-        "label": "İşverenler için",
-        "title": "Talepten işçilerin gelişine",
-        "text": "Her adımda sorumlunun kim olduğu ve sırada ne olduğu bellidir: siz gereksinimleri belirlersiniz, gerisini lisanslı ajanslar koordine eder.",
+        "label": "Süreç",
+        "title": "İşçi bulma — 5 net adımda.",
+        "text": "İşverenin taleplerinin belirlenmesinden adayların yolculuğa hazır olmasına kadar süreç.",
         "steps": {
           "request": {
-            "title": "Talep bırakın",
-            "text": "Meslek, işçi sayısı, dil seviyesi, maaş ve konaklama koşullarını belirtin."
+            "title": "İşçi Talebi Gönderin",
+            "text": "Şirket; meslek, işçi sayısı, dil seviyesi ve çalışma koşullarını belirten bir talep gönderir."
           },
-          "match": {
-            "title": "Aday seçimi",
-            "text": "Lisanslı ajanslar gereksinimlerinize uyan adayları seçer ve niteliklerini doğrular."
+          "requirements": {
+            "title": "Gereksinimleri Netleştirme",
+            "text": "Koordinatör işverenin taleplerini inceler ve adaylara aranan ölçütleri belirler."
+          },
+          "candidates": {
+            "title": "Adayları Seçme",
+            "text": "Belirlenen ölçütlere göre uygun adaylar seçilir ve işverene sunulur."
           },
           "interview": {
-            "title": "Çevrimiçi mülakat",
-            "text": "Seçilen adaylarla çevrimiçi mülakat yapın ve son kararı verin."
+            "title": "Görüşme ve Belgeler",
+            "text": "Seçilen adaylarla çevrimiçi görüşme yapılır, gerekli belgeler ve işlemler koordine edilir."
           },
-          "arrival": {
-            "title": "Belgeler ve varış",
-            "text": "Sözleşme, vize ve seyahat belgeleri koordine edilir, işçiler kararlaştırılan tarihte gelir."
+          "departure": {
+            "title": "Yolculuğa Hazırlık",
+            "text": "Kararlaştırılan çalışma koşullarına uygun olarak belgeler ve yolculuk hazırlıkları tamamlanır."
           }
         }
       },
@@ -397,7 +401,8 @@
             "text": "Koordinatörler çevrimiçi mülakatları ve belge hazırlığını yönetir."
           }
         }
-      }
+      },
+      "vacanciesLabel": "Son ilanlar"
     },
     "services": {
       "hero": {

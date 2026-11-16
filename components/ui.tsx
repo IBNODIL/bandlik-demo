@@ -94,12 +94,15 @@ export function SplitReveal({
   as: Tag = "h2",
   blueWords = [],
   indent = 0,
+  suffix,
 }: {
   text: string;
   className?: string;
   as?: "h1" | "h2" | "h3" | "p";
   blueWords?: string[];
   indent?: number;
+  /** appended after the last word (e.g. a superscript mark), outside the reveal */
+  suffix?: ReactNode;
 }) {
   const words = text.split(" ");
   const M = motion[Tag];
@@ -122,6 +125,7 @@ export function SplitReveal({
           {i < words.length - 1 && " "}
         </Fragment>
       ))}
+      {suffix}
     </M>
   );
 }

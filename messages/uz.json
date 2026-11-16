@@ -1,28 +1,28 @@
 {
   "meta": {
     "title": "Bandlik",
-    "description": "Xalqaro bandlik platformasi: iş beruvçilar uçun işçi sörovi, nomzodlar uçun tekşirilgan vakansiyalar va tayyorlov kurslari."
+    "description": "Xalqaro bandlik platformasi: ish beruvchilar uchun ishchi so‘rovi, nomzodlar uchun tekshirilgan vakansiyalar va tayyorlov kurslari."
   },
   "common": {
     "menu": "Menyu",
     "language": "Til",
-    "requestWorkers": "Işçi söraş",
-    "contactUs": "Biz bilan boğlaning",
+    "requestWorkers": "Ishchi so‘rash",
+    "contactUs": "Biz bilan bog‘laning",
     "details": "Batafsil",
-    "share": "Ulaşiş",
+    "share": "Ulashish",
     "loading": "Yuklanmoqda…",
-    "empty": "Hozirça maʼlumot yöq",
-    "error": "Maʼlumotni yuklab bölmadi",
-    "retry": "Qayta uriniş",
-    "login": "Kiriş",
-    "lookingForJob": "Iş qidiryapman",
-    "needWorkers": "Işçi kerak",
+    "empty": "Hozircha maʼlumot yo‘q",
+    "error": "Maʼlumotni yuklab bo‘lmadi",
+    "retry": "Qayta urinish",
+    "login": "Kirish",
+    "lookingForJob": "Ish qidiryapman",
+    "needWorkers": "Ishchi kerak",
     "agency": "Men agentlikman",
     "scrollDown": "Pastga"
   },
   "nav": {
     "home": {
-      "title": "Boş sahifa",
+      "title": "Bosh sahifa",
       "link": "/"
     },
     "about": {
@@ -30,11 +30,11 @@
       "link": "/about"
     },
     "employers": {
-      "title": "Iş beruvçilarga",
+      "title": "Ish beruvchilarga",
       "link": "/employers"
     },
     "jobSeekers": {
-      "title": "Iş qidiruvçilar uçun",
+      "title": "Ish qidiruvchilar uchun",
       "link": "/job-seekers"
     },
     "services": {
@@ -51,27 +51,27 @@
     }
   },
   "hero": {
-    "title": "Xorijda işlaş — xavfsiz va işonçli yöl bilan",
-    "text": "Litsenziyaga ega bandlik agentliklari orqali xorijda munosib iş toping. Işga joylaşiş jarayonini şaffof kuzating va qonuniy mehnat faoliyatini boşlang.",
-    "alt": "Xorijga işga ketayotgan işçilar va samolyot",
+    "title": "Xorijda ishlash — xavfsiz va ishonchli yo‘l bilan",
+    "text": "Litsenziyaga ega bandlik agentliklari orqali xorijda munosib ish toping. Ishga joylashish jarayonini shaffof kuzating va qonuniy mehnat faoliyatini boshlang.",
+    "alt": "Xorijga ishga ketayotgan ishchilar va samolyot",
     "scrollDown": "Pastga"
   },
   "about": {
-    "label": "Iş beruvçilar uçun",
-    "heading": "Kerakli kasb, işçilar soni, til darajasi va mehnat şartlarini belgilang. Bandlik platformasi orqali işçi sörovingizni yuboring.",
+    "label": "Ish beruvchilar uchun",
+    "heading": "Kerakli kasb, ishchilar soni, til darajasi va mehnat shartlarini belgilang. Bandlik platformasi orqali ishchi so‘rovingizni yuboring.",
     "info": {
       "needs": {
-        "title": "Işçi ehtiyojini belgilang",
-        "body": "Kompaniya, kerakli kasb, işçilar soni, til darajasi va iş şartlari haqida maʼlumot bering."
+        "title": "Ishchi ehtiyojini belgilang",
+        "body": "Kompaniya, kerakli kasb, ishchilar soni, til darajasi va ish shartlari haqida maʼlumot bering."
       },
       "process": {
-        "title": "Iş jarayoni bilan tanişing",
-        "body": "Xizmatlar sahifasida işga yollaş bosqiçlari, masʼul tomonlar va örtaça muddatlarni köring."
+        "title": "Ish jarayoni bilan tanishing",
+        "body": "Xizmatlar sahifasida ishga yollash bosqichlari, masʼul tomonlar va o‘rtacha muddatlarni ko‘ring."
       }
     },
     "photoAlt": {
-      "worker": "Quriliş işçisi",
-      "chef": "Oşpaz",
+      "worker": "Qurilish ishchisi",
+      "chef": "Oshpaz",
       "warehouse": "Ombor xodimi"
     }
   },
@@ -86,61 +86,61 @@
     },
     "countries": {
       "label": "Davlatlar",
-      "text": "Iş takliflari mavjud mamlakatlar"
+      "text": "Ish takliflari mavjud mamlakatlar"
     },
     "placed": {
-      "label": "Işga joylaştirilganlar",
-      "text": "Joylaştirilgani tasdiqlangan nomzodlar"
+      "label": "Ishga joylashtirilganlar",
+      "text": "Joylashtirilgani tasdiqlangan nomzodlar"
     }
   },
   "clients": "Hamkor kompaniyalar",
   "process": {
-    "label": "Sörovdan işga joylaşişgaça",
-    "intro": "Iş beruvçining ehtiyojidan boşlab işga joylaşişgaça bölgan jarayonni ketma-ket kuzating.",
+    "label": "So‘rovdan ishga joylashishgacha",
+    "intro": "Ish beruvchining ehtiyojidan boshlab ishga joylashishgacha bo‘lgan jarayonni ketma-ket kuzating.",
     "steps": {
       "request": {
-        "title": "Işçi sörovini yuboriş",
-        "text": "Iş beruvçi kerakli kasb, işçilar soni va iş şartlarini körsatadi."
+        "title": "Ishchi so‘rovini yuborish",
+        "text": "Ish beruvchi kerakli kasb, ishchilar soni va ish shartlarini ko‘rsatadi."
       },
       "requirements": {
-        "title": "Talablarni aniqlaştiriş",
-        "text": "Iş beruvçining talablari va nomzodlarga qöyiladigan mezonlar kelişiladi."
+        "title": "Talablarni aniqlashtirish",
+        "text": "Ish beruvchining talablari va nomzodlarga qo‘yiladigan mezonlar kelishiladi."
       },
       "candidates": {
-        "title": "Nomzodlarni tanlaş",
-        "text": "Belgilangan talablar asosida mos nomzodlar körib çiqiladi."
+        "title": "Nomzodlarni tanlash",
+        "text": "Belgilangan talablar asosida mos nomzodlar ko‘rib chiqiladi."
       },
       "documents": {
-        "title": "Hujjatlarni tayyorlaş",
-        "text": "Işga joylaşiş uçun zarur hujjatlar va tegişli jarayonlar muvofiqlaştiriladi."
+        "title": "Hujjatlarni tayyorlash",
+        "text": "Ishga joylashish uchun zarur hujjatlar va tegishli jarayonlar muvofiqlashtiriladi."
       },
       "departure": {
         "title": "Safarga tayyorgarlik",
-        "text": "Kelişilgan iş şartlariga muvofiq, zarur rasmiylaştiriş va tayyorgarlik işlari bajariladi."
+        "text": "Kelishilgan ish shartlariga muvofiq, zarur rasmiylashtirish va tayyorgarlik ishlari bajariladi."
       }
     }
   },
   "fullImages": {
-    "man": "Xorijga yöl olgan yigit",
-    "woman": "Xorijga yöl olgan qiz"
+    "man": "Xorijga yo‘l olgan yigit",
+    "woman": "Xorijga yo‘l olgan qiz"
   },
   "vacancies": {
-    "label": "IŞ IMKONIYATLARI",
-    "heading": "Sönggi vakansiyalar",
-    "intro": "Xorijdagi mavjud iş örinlari bilan tanişing va özingizga mos imkoniyatni toping.",
-    "cta": "Barça vakansiyalarni köriş",
+    "label": "ISH IMKONIYATLARI",
+    "heading": "So‘nggi vakansiyalar",
+    "intro": "Xorijdagi mavjud ish o‘rinlari bilan tanishing va o‘zingizga mos imkoniyatni toping.",
+    "cta": "Barcha vakansiyalarni ko‘rish",
     "card": {
-      "salary": "Qölga olinadigan maoş (Netto):",
-      "type": "Iş turi:",
-      "deadline": "Işga topşiriş muddati:",
-      "hired": "Işga qabul qilinganlar:",
-      "applied": "Vakansiyaga topşirganlar:"
+      "salary": "Qo‘lga olinadigan maosh (Netto):",
+      "type": "Ish turi:",
+      "deadline": "Ishga topshirish muddati:",
+      "hired": "Ishga qabul qilinganlar:",
+      "applied": "Vakansiyaga topshirganlar:"
     },
     "type": {
-      "fullTime": "Töliq stavka",
+      "fullTime": "To‘liq stavka",
       "partTime": "Yarim stavka",
       "seasonal": "Mavsumiy",
-      "contract": "Şartnoma asosida"
+      "contract": "Shartnoma asosida"
     },
     "duration": {
       "range": "{min}–{max} oy",
@@ -149,24 +149,24 @@
     },
     "status": {
       "closingSoon": "Tez orada yopiladi",
-      "filled": "Töldi"
+      "filled": "To‘ldi"
     },
-    "salaryLocal": "(≈ {amount} söm)",
+    "salaryLocal": "(≈ {amount} so‘m)",
     "pageLabel": "Oxirgi vakansiyalar"
   },
   "app": {
     "label": "PLATFORMA IMKONIYATLARI",
-    "tagline": "Har bir foydalanuvçi uçun öz yöli",
+    "tagline": "Har bir foydalanuvchi uchun o‘z yo‘li",
     "title": "Yangi imkoniyatlar — bir qadam yaqinroq.",
-    "text": "Xorijdagi vakansiyalarni toping, profilingizni boşqaring va işga joylaşiş jarayonini mobil ilovada kuzatib boring.",
-    "qr": "{store} uçun QR kod",
+    "text": "Xorijdagi vakansiyalarni toping, profilingizni boshqaring va ishga joylashish jarayonini mobil ilovada kuzatib boring.",
+    "qr": "{store} uchun QR kod",
     "phoneAlt": "Bandlik mobil ilovasi"
   },
   "courses": {
     "label": "Tayyorlov kurslari",
-    "heading": "Xorijda işlaşga tayyorlaning.",
-    "intro": "Til va kasb böyiça tayyorlov kurslari bilan tanişing, yangi bilim va könikmalarni egallang.",
-    "cta": "Barça kurslar",
+    "heading": "Xorijda ishlashga tayyorlaning.",
+    "intro": "Til va kasb bo‘yicha tayyorlov kurslari bilan tanishing, yangi bilim va ko‘nikmalarni egallang.",
+    "cta": "Barcha kurslar",
     "category": {
       "interviewPrep": "Suhbatga tayyorgarlik",
       "language": "Til kursi",
@@ -174,55 +174,55 @@
       "documents": "Hujjatlar"
     },
     "free": "Bepul",
-    "price": "{amount} söm",
+    "price": "{amount} so‘m",
     "hours": "{count} soat",
     "lessons": "{count} dars",
     "status": {
       "almostFull": "Joylar tugayapti",
-      "full": "Joylar yöq"
+      "full": "Joylar yo‘q"
     }
   },
   "faq": {
-    "label": "FAQ — köp beriladigan savollar",
+    "label": "FAQ — ko‘p beriladigan savollar",
     "items": {
       "services": {
         "question": "Bandlik.uz qanday xizmatlarni taqdim etadi?",
-        "answer": "Platforma iş beruvçilarga kerakli kasb böyiça işçi topişda, nomzodlarga esa xorijdagi tekşirilgan vakansiyalarga murojaat qilişda va tayyorlov kurslaridan ötişda yordam beradi."
+        "answer": "Platforma ish beruvchilarga kerakli kasb bo‘yicha ishchi topishda, nomzodlarga esa xorijdagi tekshirilgan vakansiyalarga murojaat qilishda va tayyorlov kurslaridan o‘tishda yordam beradi."
       },
       "request": {
-        "question": "Işçi sörovini qanday yuboraman?",
-        "answer": "“Işçi söraş” tugmasini bosing va kerakli kasb, işçilar soni, til darajasi hamda mehnat şartlarini körsating. Sörovingiz körib çiqilib, siz bilan boğlanamiz."
+        "question": "Ishchi so‘rovini qanday yuboraman?",
+        "answer": "“Ishchi so‘rash” tugmasini bosing va kerakli kasb, ishchilar soni, til darajasi hamda mehnat shartlarini ko‘rsating. So‘rovingiz ko‘rib chiqilib, siz bilan bog‘lanamiz."
       },
       "price": {
-        "question": "Xizmatlar narxi qança?",
-        "answer": "Xizmat narxi sörov hajmi va iş şartlariga qarab belgilanadi. Aniq narxni sörov yuborganingizdan söng masʼul mutaxassis aytib beradi."
+        "question": "Xizmatlar narxi qancha?",
+        "answer": "Xizmat narxi so‘rov hajmi va ish shartlariga qarab belgilanadi. Aniq narxni so‘rov yuborganingizdan so‘ng masʼul mutaxassis aytib beradi."
       },
       "verified": {
-        "question": "Vakansiyalar tekşiriladimi?",
-        "answer": "Ha, platformadagi har bir vakansiya iş beruvçi va mehnat şartlari böyiça oldindan tekşiriladi."
+        "question": "Vakansiyalar tekshiriladimi?",
+        "answer": "Ha, platformadagi har bir vakansiya ish beruvchi va mehnat shartlari bo‘yicha oldindan tekshiriladi."
       },
       "available": {
         "question": "Qanday vakansiyalar mavjud?",
-        "answer": "Oşpazlik, quriliş, ombor, işlab çiqariş va boşqa köplab yönalişlarda xorijdagi iş örinlari mavjud. Töliq röyxat “Vakansiyalar” bölimida."
+        "answer": "Oshpazlik, qurilish, ombor, ishlab chiqarish va boshqa ko‘plab yo‘nalishlarda xorijdagi ish o‘rinlari mavjud. To‘liq ro‘yxat “Vakansiyalar” bo‘limida."
       },
       "apply": {
         "question": "Vakansiyaga qanday murojaat qilaman?",
-        "answer": "Kerakli vakansiyani tanlang, “Batafsil” tugmasini bosing va talab qilingan hujjatlar bilan ariza topşiring."
+        "answer": "Kerakli vakansiyani tanlang, “Batafsil” tugmasini bosing va talab qilingan hujjatlar bilan ariza topshiring."
       },
       "courses": {
         "question": "Til va kasb kurslariga qanday yozilaman?",
-        "answer": "“Tayyorlov kurslari” bölimidan mos kursni tanlab, röyxatdan öting. Darslar haqida maʼlumot sizga yuboriladi."
+        "answer": "“Tayyorlov kurslari” bo‘limidan mos kursni tanlab, ro‘yxatdan o‘ting. Darslar haqida maʼlumot sizga yuboriladi."
       },
       "partner": {
-        "question": "Hamkor sifatida qanday qöşiliş mumkin?",
-        "answer": "“Aloqa” bölimi orqali bizga yozing yoki qönğiroq qiling. Hamkorlik şartlarini birgalikda muhokama qilamiz."
+        "question": "Hamkor sifatida qanday qo‘shilish mumkin?",
+        "answer": "“Aloqa” bo‘limi orqali bizga yozing yoki qo‘ng‘iroq qiling. Hamkorlik shartlarini birgalikda muhokama qilamiz."
       }
     }
   },
   "contact": {
     "badge": "ALOQA",
-    "heading": "Biz bilan boğlaning",
-    "intro": "Savollaringiz yoki takliflaringiz bormi? Biz bilan boğlaning.",
+    "heading": "Biz bilan bog‘laning",
+    "intro": "Savollaringiz yoki takliflaringiz bormi? Biz bilan bog‘laning.",
     "byPhone": "Telefon orqali aloqa",
     "byTelegram": "Telegram orqali murojaat",
     "form": {
@@ -231,150 +231,154 @@
       "tin": "STIR",
       "address": "Manzil",
       "phone": "Telefon raqamingiz *",
-      "send": "Xabarni yuboriş →",
+      "send": "Xabarni yuborish →",
       "sent": "Yuborildi ✓"
     },
-    "map": "Toşkent xaritada",
-    "openMap": "Xaritada oçiş"
+    "map": "Toshkent xaritada",
+    "openMap": "Xaritada ochish"
   },
   "cta": {
-    "title": "Xorijdagi imkoniyatlaringizni bugun boşlang",
-    "text": "Sizga mos yönalişni tanlang va keyingi qadamni qöying."
+    "title": "Xorijdagi imkoniyatlaringizni bugun boshlang",
+    "text": "Sizga mos yo‘nalishni tanlang va keyingi qadamni qo‘ying."
   },
   "footer": {
-    "about": "Xorijda işga joylaşiş jarayonlarini raqamli muhitda qulay va şaffof taşkil etiş platformasi.",
+    "about": "Xorijda ishga joylashish jarayonlarini raqamli muhitda qulay va shaffof tashkil etish platformasi.",
     "platform": "Platforma",
-    "users": "Foydalanuvçilar uçun",
+    "users": "Foydalanuvchilar uchun",
     "contact": "Aloqa",
     "links": {
-      "home": "Boş sahifa",
+      "home": "Bosh sahifa",
       "about": "Biz haqimizda",
       "services": "Xizmatlar",
       "vacancies": "Vakansiyalar",
-      "candidates": "Nomzodlar uçun",
-      "employers": "Iş beruvçilar uçun",
-      "agencies": "Agentliklar uçun",
+      "candidates": "Nomzodlar uchun",
+      "employers": "Ish beruvchilar uchun",
+      "agencies": "Agentliklar uchun",
       "faq": "FAQ"
     },
-    "city": "Toşkent, Özbekiston",
-    "copyright": "© 2026 Xususiy Bandlik Agentligi MÇJ. Barça huquqlar himoyalangan.",
+    "city": "Toshkent, O‘zbekiston",
+    "copyright": "© 2026 Xususiy Bandlik Agentligi MChJ. Barcha huquqlar himoyalangan.",
     "privacy": "Maxfiylik siyosati",
-    "terms": "Foydalaniş şartlari",
-    "backToTop": "Yuqoriga qaytiş"
+    "terms": "Foydalanish shartlari",
+    "backToTop": "Yuqoriga qaytish"
   },
   "journey": {
-    "label": "Iş jarayoni",
-    "badge": "5 bosqiçda",
-    "title": "Xorijda işga joylaşiş jarayoni qanday işlaydi?",
-    "text": "Vakansiyani tanlaşdan işga joylaşişgaça bölgan jarayonni bosqiçma-bosqiç kuzating. Litsenziyali xususiy bandlik agentliklari nomzodlarni işga joylaştiriş jarayonini muvofiqlaştiradi.",
-    "imageAlt": "Işga joylaşiş jarayonini kuzatayotgan nomzod"
+    "label": "Ish jarayoni",
+    "badge": "5 bosqichda",
+    "title": "Xorijda ishga joylashish jarayoni qanday ishlaydi?",
+    "text": "Vakansiyani tanlashdan ishga joylashishgacha bo‘lgan jarayonni bosqichma-bosqich kuzating. Litsenziyali xususiy bandlik agentliklari nomzodlarni ishga joylashtirish jarayonini muvofiqlashtiradi.",
+    "imageAlt": "Ishga joylashish jarayonini kuzatayotgan nomzod"
   },
   "pages": {
     "about": {
       "hero": {
         "title": "Biz haqimizda",
-        "text": "Bandlik.uz — nomzodlar, iş beruvçilar va litsenziyali xususiy bandlik agentliklari örtasidagi hamkorlikni raqamli muhitda muvofiqlaştiruvçi platforma.",
-        "alt": "Bandlik bayroği binolar fonida"
+        "text": "Bandlik.uz — nomzodlar, ish beruvchilar va litsenziyali xususiy bandlik agentliklari o‘rtasidagi hamkorlikni raqamli muhitda muvofiqlashtiruvchi platforma.",
+        "alt": "Bandlik bayrog‘i binolar fonida"
       },
       "approach": {
-        "label": "Bizning yondaşuvimiz",
-        "kicker": "Litsenziyali agentliklar bilan işonçli hamkorlik",
-        "text": "Platforma vakansiyalar, hujjatlar va murojaatlar bilan işlaş jarayonlarini raqamli muhitda muvofiqlaştirişga yordam beradi. Xorijda işga joylaştiriş esa tegişli litsenziyaga ega xususiy bandlik agentliklari tomonidan amalga oşiriladi.",
+        "label": "Bizning yondashuvimiz",
+        "kicker": "Litsenziyali agentliklar bilan ishonchli hamkorlik",
+        "text": "Platforma vakansiyalar, hujjatlar va murojaatlar bilan ishlash jarayonlarini raqamli muhitda muvofiqlashtirishga yordam beradi. Xorijda ishga joylashtirish esa tegishli litsenziyaga ega xususiy bandlik agentliklari tomonidan amalga oshiriladi.",
         "alt": "Bandlik platformasi ofisi"
       },
       "problem": {
         "label": "Muammo",
-        "title": "Xorijda işga joylaşiş jarayonida işonç va şaffoflik muhim.",
-        "text": "Xorijda iş izlayotgan fuqarolar noqonuniy vositaçilar, soxta vakansiyalar va oldindan aniq belgilanmagan xarajatlar kabi muammolarga duç kelişi mumkin. Bu esa işga joylaşiş jarayonida işonçsizlik va tuşunmovçiliklarni keltirib çiqaradi.",
+        "title": "Xorijda ishga joylashish jarayonida ishonch va shaffoflik muhim.",
+        "text": "Xorijda ish izlayotgan fuqarolar noqonuniy vositachilar, soxta vakansiyalar va oldindan aniq belgilanmagan xarajatlar kabi muammolarga duch kelishi mumkin. Bu esa ishga joylashish jarayonida ishonchsizlik va tushunmovchiliklarni keltirib chiqaradi.",
         "altA": "Pasport va samolyot",
-        "altB": "Onlayn ariza topşiriş"
+        "altB": "Onlayn ariza topshirish"
       },
       "solution": {
-        "label": "Bizning yeçim",
-        "title": "Bandlik jarayonlarini yagona raqamli platformada birlaştiramiz.",
-        "text": "Platforma vakansiyalar bilan tanişiş, nomzodlar haqidagi maʼlumotlarni boşqariş, hujjatlar oqimini muvofiqlaştiriş va işga joylaşiş jarayonini kuzatiş imkoniyatlarini taqdim etadi. Natijada barça iştirokçilar uçun yanada tuşunarli va şaffof raqamli muhit şakllanadi.",
+        "label": "Bizning yechim",
+        "title": "Bandlik jarayonlarini yagona raqamli platformada birlashtiramiz.",
+        "text": "Platforma vakansiyalar bilan tanishish, nomzodlar haqidagi maʼlumotlarni boshqarish, hujjatlar oqimini muvofiqlashtirish va ishga joylashish jarayonini kuzatish imkoniyatlarini taqdim etadi. Natijada barcha ishtirokchilar uchun yanada tushunarli va shaffof raqamli muhit shakllanadi.",
         "alt": "Safarga tayyor jomadonlar va hujjatlar"
       },
       "mission": {
         "label": "Maqsadimiz",
-        "title": "Xorijda bandlik jarayonlarini yagona raqamli muhitda muvofiqlaştiramiz.",
-        "text": "Bandlik.uz nomzodlar, iş beruvçilar va litsenziyali xususiy bandlik agentliklari örtasidagi hamkorlikni soddalaştiradi. Platforma vakansiyalar bilan tanişiş, nomzodlar maʼlumotlarini boşqariş, hujjatlar oqimini muvofiqlaştiriş va işga joylaşiş jarayonlarini kuzatiş imkonini beradi.",
+        "title": "Xorijda bandlik jarayonlarini yagona raqamli muhitda muvofiqlashtiramiz.",
+        "text": "Bandlik.uz nomzodlar, ish beruvchilar va litsenziyali xususiy bandlik agentliklari o‘rtasidagi hamkorlikni soddalashtiradi. Platforma vakansiyalar bilan tanishish, nomzodlar maʼlumotlarini boshqarish, hujjatlar oqimini muvofiqlashtirish va ishga joylashish jarayonlarini kuzatish imkonini beradi.",
         "alt": "Bandlik platformasi"
       }
     },
     "employers": {
       "hero": {
-        "title": "Tekşirilgan işçilar — litsenziyali XBA'lar orqali.",
-        "text": "Kompaniyangiz uçun kerakli malaka va tajribaga ega işçilarni toping. Sörov qoldiring, koordinatorimiz 24 soat içida siz bilan boğlanadi.",
-        "alt": "Iş beruvçilar bilan uçraşuv"
+        "title": "Tekshirilgan ishchilar — litsenziyali XBA'lar orqali.",
+        "text": "Kompaniyangiz uchun kerakli malaka va tajribaga ega ishchilarni toping. So‘rov qoldiring, koordinatorimiz 24 soat ichida siz bilan bog‘lanadi.",
+        "alt": "Ish beruvchilar bilan uchrashuv"
       },
       "workflow": {
-        "label": "Iş beruvçilar uçun",
-        "title": "Sörovdan işçilar kelişigaça",
-        "text": "Har bir bosqiçda masʼul tomon va keyingi qadam oldindan maʼlum: siz faqat talablarni belgilaysiz, qolganini litsenziyali agentliklar muvofiqlaştiradi.",
+        "label": "Jarayon",
+        "title": "Ishchi jalb qilish — 5 aniq bosqichda.",
+        "text": "Ish beruvchining talablarini aniqlashdan nomzodlarning safarga tayyorligigacha bo‘lgan jarayon.",
         "steps": {
           "request": {
-            "title": "Sörov qoldiring",
-            "text": "Kasb, işçilar soni, til darajasi, maoş va turar joy şartlarini körsating."
+            "title": "Ishchi So‘rovini Yuborish",
+            "text": "Kompaniya kerakli kasb, ishchilar soni, til darajasi va mehnat shartlari haqida so‘rov yuboradi."
           },
-          "match": {
-            "title": "Nomzodlar tanlovi",
-            "text": "Litsenziyali agentliklar talablaringizga mos nomzodlarni saralab, malakasini tekşiradi."
+          "requirements": {
+            "title": "Talablarni Aniqlashtirish",
+            "text": "Koordinator ish beruvchining talablarini o‘rganadi va nomzodlarga qo‘yiladigan mezonlarni kelishadi."
+          },
+          "candidates": {
+            "title": "Nomzodlarni Tanlash",
+            "text": "Belgilangan mezonlar asosida mos nomzodlar saralanadi va ish beruvchiga taqdim etiladi."
           },
           "interview": {
-            "title": "Onlayn suhbat",
-            "text": "Saralangan nomzodlar bilan onlayn suhbat ötkazing va yakuniy tanlovni qiling."
+            "title": "Suhbat Va Hujjatlarni Tayyorlash",
+            "text": "Tanlangan nomzodlar bilan onlayn suhbat o‘tkaziladi, zarur hujjatlar va rasmiylashtirish jarayonlari muvofiqlashtiriladi."
           },
-          "arrival": {
-            "title": "Hujjatlar va kelib tuşiş",
-            "text": "Şartnoma, viza va safar hujjatlari muvofiqlaştiriladi, işçilar kelişilgan muddatda yetib keladi."
+          "departure": {
+            "title": "Safarga Tayyorgarlik",
+            "text": "Kelishilgan ish shartlariga muvofiq, zarur hujjatlar va safarga tayyorgarlik ishlari yakunlanadi."
           }
         }
       },
       "partners": {
         "label": "Bizning hamkorlar",
-        "title": "Işonçli hamkorlik — mustahkam tizim.",
-        "text": "Bandlik jarayonlarini rivojlantiriş uçun banklar va tegişli taşkilotlar bilan hamkorlik qilamiz.",
+        "title": "Ishonchli hamkorlik — mustahkam tizim.",
+        "text": "Bandlik jarayonlarini rivojlantirish uchun banklar va tegishli tashkilotlar bilan hamkorlik qilamiz.",
         "highlights": [
           "Moliyaviy hamkorlar",
-          "Xizmat körsatuvçi taşkilotlar",
+          "Xizmat ko‘rsatuvchi tashkilotlar",
           "Raqamli bandlik ekotizimi"
         ],
         "rows": {
           "banks": {
             "title": "Banklar",
-            "text": "Maoş tölovlari va xalqaro pul ötkazmalari uçun hamkor banklar."
+            "text": "Maosh to‘lovlari va xalqaro pul o‘tkazmalari uchun hamkor banklar."
           },
           "insurance": {
-            "title": "Suğurta kompaniyalari",
-            "text": "Xorijda işlaş davrida tibbiy va baxtsiz hodisalardan suğurta."
+            "title": "Sug‘urta kompaniyalari",
+            "text": "Xorijda ishlash davrida tibbiy va baxtsiz hodisalardan sug‘urta."
           },
           "documents": {
             "title": "Tarjima va notarial idoralar",
-            "text": "Hujjatlarni tarjima qiliş va notarial tasdiqlaş xizmatlari."
+            "text": "Hujjatlarni tarjima qilish va notarial tasdiqlash xizmatlari."
           },
           "agencies": {
             "title": "Litsenziyali XBA'lar",
-            "text": "Nomzodlarni tanlaş va işga joylaştirişni amalga oşiradigan agentliklar."
+            "text": "Nomzodlarni tanlash va ishga joylashtirishni amalga oshiradigan agentliklar."
           },
           "training": {
             "title": "Tayyorlov markazlari",
-            "text": "Til va kasbiy könikmalarni oşiruvçi öquv markazlari."
+            "text": "Til va kasbiy ko‘nikmalarni oshiruvchi o‘quv markazlari."
           }
         }
       },
-      "imageAlt": "Ofisda işlayotgan xodim"
+      "imageAlt": "Ofisda ishlayotgan xodim"
     },
     "jobSeekers": {
       "hero": {
-        "title": "Iş qidiruvçilar",
-        "text": "Özingizga mos vakansiyani toping, mobil ilovada röyxatdan öting va işga joylaşiş jarayonini kuzating.",
-        "alt": "Xorijda iş qidirayotgan yigit"
+        "title": "Ish qidiruvchilar",
+        "text": "O‘zingizga mos vakansiyani toping, mobil ilovada ro‘yxatdan o‘ting va ishga joylashish jarayonini kuzating.",
+        "alt": "Xorijda ish qidirayotgan yigit"
       },
       "trust": {
-        "label": "Işonçli va xavfsiz",
-        "title": "Xorijda işlaşdan oldin muhim maʼlumotlar",
-        "text": "Xorijdan işçi jalb qiliş jarayonida işonçli hamkorlik, tasdiqlangan malaka va aniq mehnat şartlari muhim ahamiyatga ega.",
+        "label": "Ishonchli va xavfsiz",
+        "title": "Xorijda ishlashdan oldin muhim maʼlumotlar",
+        "text": "Xorijdan ishchi jalb qilish jarayonida ishonchli hamkorlik, tasdiqlangan malaka va aniq mehnat shartlari muhim ahamiyatga ega.",
         "highlights": [
           "Faqat litsenziyali agentliklar",
           "Malakasi tasdiqlangan nomzodlar"
@@ -386,128 +390,129 @@
           },
           "skills": {
             "title": "Tasdiqlangan malaka",
-            "text": "Nomzodlarning kasbiy malakasi va til darajasi iş beruvçi talablariga muvofiq tekşiriladi."
+            "text": "Nomzodlarning kasbiy malakasi va til darajasi ish beruvchi talablariga muvofiq tekshiriladi."
           },
           "terms": {
-            "title": "Aniq mehnat şartlari",
-            "text": "Maoş, iş vaqti, turar joy va şartnoma muddati oldindan belgilanadi."
+            "title": "Aniq mehnat shartlari",
+            "text": "Maosh, ish vaqti, turar joy va shartnoma muddati oldindan belgilanadi."
           },
           "coordination": {
-            "title": "Jarayon muvofiqlaştiruvi",
-            "text": "Koordinatorlar, onlayn suhbat va hujjatlarni tayyorlaş jarayonlari boşqariladi."
+            "title": "Jarayon muvofiqlashtiruvi",
+            "text": "Koordinatorlar, onlayn suhbat va hujjatlarni tayyorlash jarayonlari boshqariladi."
           }
         }
-      }
+      },
+      "vacanciesLabel": "Oxirgi vakansiyalar"
     },
     "services": {
       "hero": {
         "title": "Xizmatlarimiz",
-        "text": "Xorijda işlaş uçun hujjatlarni tayyorlaş, tarjima, notarial tasdiqlaş, suğurta va kasbiy tayyorgarlik xizmatlari bilan tanişing.",
-        "alt": "Hujjatlar ustida işlayotgan mutaxassis"
+        "text": "Xorijda ishlash uchun hujjatlarni tayyorlash, tarjima, notarial tasdiqlash, sug‘urta va kasbiy tayyorgarlik xizmatlari bilan tanishing.",
+        "alt": "Hujjatlar ustida ishlayotgan mutaxassis"
       },
       "label": "Xizmatlar",
       "items": {
         "documents": {
           "title": "Sertifikatlar va hujjatlar",
-          "text": "Işga joylaşiş uçun zarur hujjatlarni tayyorlaş va elektron şaklda boşqariş."
+          "text": "Ishga joylashish uchun zarur hujjatlarni tayyorlash va elektron shaklda boshqarish."
         },
         "translation": {
           "title": "Tarjima xizmatlari",
-          "text": "Xorijda işlaş uçun kerakli hujjatlarni xorijiy tillarga tarjima qiliş."
+          "text": "Xorijda ishlash uchun kerakli hujjatlarni xorijiy tillarga tarjima qilish."
         },
         "notary": {
           "title": "Notarius xizmatlari",
-          "text": "Talab etiladigan hujjatlarni notarial tasdiqlaş jarayonini taşkil etiş."
+          "text": "Talab etiladigan hujjatlarni notarial tasdiqlash jarayonini tashkil etish."
         },
         "insurance": {
-          "title": "Suğurta xizmatlari",
-          "text": "Xorijda mehnat faoliyati uçun zarur suğurta xizmatlaridan foydalaniş."
+          "title": "Sug‘urta xizmatlari",
+          "text": "Xorijda mehnat faoliyati uchun zarur sug‘urta xizmatlaridan foydalanish."
         },
         "courses": {
           "title": "Til va kasb kurslari",
-          "text": "Til va kasbiy könikmalarni oşiriş uçun tayyorlov kurslariga yoziliş."
+          "text": "Til va kasbiy ko‘nikmalarni oshirish uchun tayyorlov kurslariga yozilish."
         },
         "interview": {
           "title": "Onlayn suhbat va kuzatuv",
-          "text": "Iş beruvçi bilan onlayn suhbat ötkaziş va ariza holatini kuzatiş."
+          "text": "Ish beruvchi bilan onlayn suhbat o‘tkazish va ariza holatini kuzatish."
         }
       }
     },
     "vacancies": {
       "hero": {
         "title": "Vakansiyalar",
-        "text": "Xorijdagi iş imkoniyatlarini körib çiqing, talablar va mehnat şartlari bilan tanişing. Özingizga mos vakansiyani tanlang.",
-        "alt": "Xorijga işga ketayotgan işçilar"
+        "text": "Xorijdagi ish imkoniyatlarini ko‘rib chiqing, talablar va mehnat shartlari bilan tanishing. O‘zingizga mos vakansiyani tanlang.",
+        "alt": "Xorijga ishga ketayotgan ishchilar"
       }
     },
     "contact": {
       "hero": {
         "title": "Aloqa",
-        "text": "Savollaringiz, takliflaringiz yoki hamkorlik böyiça murojaatingiz bormi? Bizga yozing. Jamoamiz sizga kerakli maʼlumot va yönaliş böyiça yordam beradi.",
+        "text": "Savollaringiz, takliflaringiz yoki hamkorlik bo‘yicha murojaatingiz bormi? Bizga yozing. Jamoamiz sizga kerakli maʼlumot va yo‘nalish bo‘yicha yordam beradi.",
         "alt": "Bandlik koordinatori"
       }
     }
   },
   "legal": {
-    "back": "Boş sahifaga qaytiş",
-    "updated": "Oxirgi yangilaniş:",
+    "back": "Bosh sahifaga qaytish",
+    "updated": "Oxirgi yangilanish:",
     "date": "30.10.2026",
     "privacy": {
       "title": "Maxfiylik siyosati",
-      "intro": "Bandlik.uz platformasi foydalanuvçilarning şaxsiy maʼlumotlarini himoya qilişga jiddiy yondaşadi. Uşbu siyosat maʼlumotlar qanday yiğilişi, işlatilişi va saqlanişini tuşuntiradi.",
+      "intro": "Bandlik.uz platformasi foydalanuvchilarning shaxsiy maʼlumotlarini himoya qilishga jiddiy yondashadi. Ushbu siyosat maʼlumotlar qanday yig‘ilishi, ishlatilishi va saqlanishini tushuntiradi.",
       "sections": {
         "collected": {
-          "title": "Qanday maʼlumotlar yiğiladi",
-          "text": "Siz sörov, ariza yoki xabar yuborganingizda ismingiz, telefon raqamingiz, xabaringiz va ariza uçun zarur hujjatlar kabi maʼlumotlarni taqdim etasiz. Şuningdek, saytdan foydalanişda texnik maʼlumotlar (brauzer turi, til) avtomatik yiğilişi mumkin."
+          "title": "Qanday maʼlumotlar yig‘iladi",
+          "text": "Siz so‘rov, ariza yoki xabar yuborganingizda ismingiz, telefon raqamingiz, xabaringiz va ariza uchun zarur hujjatlar kabi maʼlumotlarni taqdim etasiz. Shuningdek, saytdan foydalanishda texnik maʼlumotlar (brauzer turi, til) avtomatik yig‘ilishi mumkin."
         },
         "usage": {
           "title": "Maʼlumotlardan qanday foydalanamiz",
-          "text": "Maʼlumotlaringiz faqat sörov yoki arizangizni körib çiqiş, siz bilan boğlaniş, platformani yaxşilaş va qonuniy talablarni bajariş uçun işlatiladi."
+          "text": "Maʼlumotlaringiz faqat so‘rov yoki arizangizni ko‘rib chiqish, siz bilan bog‘lanish, platformani yaxshilash va qonuniy talablarni bajarish uchun ishlatiladi."
         },
         "sharing": {
-          "title": "Maʼlumotlarni uzatiş",
-          "text": "Maʼlumotlar iş beruvçilar va hamkorlarga faqat sörov yoki arizangizni körib çiqiş uçun zarur doirada va sizning xabaringiz bilan uzatiladi. Şaxsiy maʼlumotlar sotilmaydi."
+          "title": "Maʼlumotlarni uzatish",
+          "text": "Maʼlumotlar ish beruvchilar va hamkorlarga faqat so‘rov yoki arizangizni ko‘rib chiqish uchun zarur doirada va sizning xabaringiz bilan uzatiladi. Shaxsiy maʼlumotlar sotilmaydi."
         },
         "security": {
-          "title": "Saqlaş va xavfsizlik",
-          "text": "Maʼlumotlar yuqoridagi maqsadlar uçun zarur muddat davomida saqlanadi va ruxsatsiz kirişdan texnik hamda taşkiliy çoralar bilan himoyalanadi."
+          "title": "Saqlash va xavfsizlik",
+          "text": "Maʼlumotlar yuqoridagi maqsadlar uchun zarur muddat davomida saqlanadi va ruxsatsiz kirishdan texnik hamda tashkiliy choralar bilan himoyalanadi."
         },
         "rights": {
           "title": "Huquqlaringiz va aloqa",
-          "text": "Maʼlumotlaringizni köriş, tuzatiş yoki öçirişni istalgan vaqtda söraşingiz mumkin. Buning uçun saytdagi “Aloqa” bölimi orqali bizga yozing yoki qönğiroq qiling."
+          "text": "Maʼlumotlaringizni ko‘rish, tuzatish yoki o‘chirishni istalgan vaqtda so‘rashingiz mumkin. Buning uchun saytdagi “Aloqa” bo‘limi orqali bizga yozing yoki qo‘ng‘iroq qiling."
         }
       }
     },
     "terms": {
-      "title": "Foydalaniş şartlari",
-      "intro": "Bandlik.uz platformasidan foydalaniş orqali siz quyidagi şartlarga rozilik bildirasiz.",
+      "title": "Foydalanish shartlari",
+      "intro": "Bandlik.uz platformasidan foydalanish orqali siz quyidagi shartlarga rozilik bildirasiz.",
       "sections": {
         "service": {
           "title": "Xizmat haqida",
-          "text": "Bandlik.uz iş beruvçilarni nomzodlar bilan boğlaydigan va tayyorlov kurslarini taklif qiladigan platformadir. Platformaning özi iş beruvçi hisoblanmaydi."
+          "text": "Bandlik.uz ish beruvchilarni nomzodlar bilan bog‘laydigan va tayyorlov kurslarini taklif qiladigan platformadir. Platformaning o‘zi ish beruvchi hisoblanmaydi."
         },
         "usage": {
-          "title": "Platformadan foydalaniş",
-          "text": "Siz töğri maʼlumot taqdim etişga, platformadan notöğri maqsadda foydalanmaslikka va boşqalarning maʼlumotlarini ularning roziligisiz yubormaslikka rozilik bildirasiz."
+          "title": "Platformadan foydalanish",
+          "text": "Siz to‘g‘ri maʼlumot taqdim etishga, platformadan noto‘g‘ri maqsadda foydalanmaslikka va boshqalarning maʼlumotlarini ularning roziligisiz yubormaslikka rozilik bildirasiz."
         },
         "vacancies": {
           "title": "Vakansiyalar va maʼlumotlar",
-          "text": "Vakansiyalar, maoş va mehnat şartlari iş beruvçilar taqdim etgan holda va oldindan tekşirilib körsatiladi. Şartlar özgarişi mumkin, şuning uçun şartnoma imzolaşdan oldin yakuniy şartlarni aniqlaştiring."
+          "text": "Vakansiyalar, maosh va mehnat shartlari ish beruvchilar taqdim etgan holda va oldindan tekshirilib ko‘rsatiladi. Shartlar o‘zgarishi mumkin, shuning uchun shartnoma imzolashdan oldin yakuniy shartlarni aniqlashtiring."
         },
         "liability": {
           "title": "Javobgarlik",
-          "text": "Platformaning uzluksiz va aniq işlaşi uçun örinli harakat qilamiz, ammo uzluksiz işlaş yoki muayyan işga joylaşiş natijasini kafolatlamaymiz."
+          "text": "Platformaning uzluksiz va aniq ishlashi uchun o‘rinli harakat qilamiz, ammo uzluksiz ishlash yoki muayyan ishga joylashish natijasini kafolatlamaymiz."
         },
         "changes": {
-          "title": "Özgarişlar va aloqa",
-          "text": "Uşbu şartlar vaqti-vaqti bilan yangilanişi mumkin; amaldagi tahrir doim şu sahifada böladi. Savollar uçun “Aloqa” bölimidan foydalaning."
+          "title": "O‘zgarishlar va aloqa",
+          "text": "Ushbu shartlar vaqti-vaqti bilan yangilanishi mumkin; amaldagi tahrir doim shu sahifada bo‘ladi. Savollar uchun “Aloqa” bo‘limidan foydalaning."
         }
       }
     }
   },
   "notFound": {
     "title": "Sahifa topilmadi",
-    "text": "Siz izlayotgan sahifa mavjud emas yoki köçirilgan.",
-    "home": "Boş sahifaga qaytiş"
+    "text": "Siz izlayotgan sahifa mavjud emas yoki ko‘chirilgan.",
+    "home": "Bosh sahifaga qaytish"
   }
 }

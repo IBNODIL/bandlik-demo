@@ -3,7 +3,8 @@
 import AboutStory from "./AboutStory";
 import Contact from "./Contact";
 import FAQ from "./FAQ";
-import FeatureList from "./FeatureList";
+import EmployersPartners from "./EmployersPartners";
+import JobSeekersTrust from "./JobSeekersTrust";
 import FullImage from "./FullImage";
 import { useI18n } from "./I18nProvider";
 import Journey from "./Journey";
@@ -36,10 +37,9 @@ export function EmployersPage() {
       <PageHero long title={t.hero.title} text={t.hero.text} image={MEDIA.employers.hero} alt={t.hero.alt}>
         <PillButton href={localizedHref(lang, "/contact")}>{dict.common.requestWorkers}</PillButton>
       </PageHero>
+      <EmployersPartners />
       <Workflow />
-      <FeatureList {...t.partners} />
       <FullImage src={MEDIA.employers.parallax} alt={t.imageAlt} />
-      <Journey />
       <FAQ />
     </PageShell>
   );
@@ -50,8 +50,8 @@ export function JobSeekersPage() {
   return (
     <PageShell>
       <PageHero title={t.hero.title} text={t.hero.text} image={MEDIA.jobSeekers.hero} alt={t.hero.alt} />
-      <FeatureList {...t.trust} />
-      <Vacancies limit={10} />
+      <JobSeekersTrust />
+      <Vacancies limit={10} inset cta={false} label={t.vacanciesLabel} />
       <Journey />
       <FAQ />
     </PageShell>

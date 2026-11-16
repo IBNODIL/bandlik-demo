@@ -309,25 +309,29 @@
         "alt": "Meeting with employers"
       },
       "workflow": {
-        "label": "For employers",
-        "title": "From request to arrival",
-        "text": "At every step you know who is responsible and what happens next: you set the requirements, licensed agencies coordinate the rest.",
+        "label": "Process",
+        "title": "Hiring workers — in 5 clear steps.",
+        "text": "The process from defining the employer's requirements to the candidates' readiness for travel.",
         "steps": {
           "request": {
-            "title": "Leave a request",
-            "text": "Specify the profession, number of workers, language level, salary and housing conditions."
+            "title": "Submit a Worker Request",
+            "text": "The company submits a request specifying the profession, number of workers, language level and working conditions."
           },
-          "match": {
-            "title": "Candidate selection",
-            "text": "Licensed agencies shortlist candidates who match your requirements and verify their skills."
+          "requirements": {
+            "title": "Clarify Requirements",
+            "text": "The coordinator studies the employer's requirements and agrees the criteria candidates must meet."
+          },
+          "candidates": {
+            "title": "Select Candidates",
+            "text": "Suitable candidates are shortlisted against the agreed criteria and presented to the employer."
           },
           "interview": {
-            "title": "Online interview",
-            "text": "Interview the shortlisted candidates online and make the final choice."
+            "title": "Interview and Document Preparation",
+            "text": "Online interviews are held with the selected candidates, and the required documents and formalities are coordinated."
           },
-          "arrival": {
-            "title": "Documents and arrival",
-            "text": "Contracts, visas and travel documents are coordinated, and workers arrive on the agreed date."
+          "departure": {
+            "title": "Travel Preparation",
+            "text": "In line with the agreed working conditions, the required documents and travel preparations are completed."
           }
         }
       },
@@ -397,7 +401,8 @@
             "text": "Coordinators manage online interviews and the preparation of documents."
           }
         }
-      }
+      },
+      "vacanciesLabel": "Recent vacancies"
     },
     "services": {
       "hero": {

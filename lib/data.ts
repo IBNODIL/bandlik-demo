@@ -25,7 +25,8 @@ export const MEDIA = {
   },
   employers: {
     hero: `${F}/ish-beruvchilarga/hero.png`,
-    steps: [1, 2, 3, 4].map((n) => `${F}/ish-beruvchilarga/step-${n}.jpeg`),
+    steps: [`${F}/ish-beruvchilarga/step-1.avif`, `${F}/ish-beruvchilarga/step-2.avif`, `${F}/ish-beruvchilarga/step-3.avif`, `${F}/ish-beruvchilarga/step-4.avif`, `${F}/ish-beruvchilarga/step-5.avif`],
+    logos: [`${F}/shared/partner-logo-1.svg`, `${F}/shared/partner-logo-2.svg`, `${F}/shared/partner-logo-3.svg`, `${F}/shared/partner-logo-4.svg`, `${F}/ish-beruvchilarga/partner-logo-5.svg`],
     parallax: `${F}/ish-beruvchilarga/parallax-office.png`,
   },
   jobSeekers: { hero: `${F}/ish-qidiruvchilar/hero.jpg` },

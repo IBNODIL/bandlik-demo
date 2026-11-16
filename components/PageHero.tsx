@@ -118,8 +118,14 @@ export default function PageHero({
         </>
       ) : (
         <>
-          <div className="absolute inset-0 bg-[#090909]/55" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#090909] via-[#090909]/40 to-transparent" />
+          {/* light overlay: the photo stays bright at the top and darkens only toward the text at the bottom */}
+          <div
+            className="absolute inset-0 bg-[#090909]"
+            style={{
+              maskImage: "linear-gradient(rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.78) 100%)",
+              WebkitMaskImage: "linear-gradient(rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.78) 100%)",
+            }}
+          />
         </>
       )}
       {fog && (

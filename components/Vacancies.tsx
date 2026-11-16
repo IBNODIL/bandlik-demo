@@ -19,7 +19,33 @@ const ICON = "/framer/icons";
  * on its last line. An optional second value line (the so'm amount) hangs under the value without widening
  * its column, so the label keeps its room; its background hides the end of the leader behind it.
  */
-function Row({ icon, label, value, sub }: { icon: string; label: string; value: React.ReactNode; sub?: string }) {
+function Row({
+  icon,
+  label,
+  value,
+  sub,
+  compact = false,
+}: {
+  icon: string;
+  label: string;
+  value: React.ReactNode;
+  sub?: string;
+  /** narrow five-column card (job-seekers page): no leader, nothing wraps except the salary label */
+  compact?: boolean;
+}) {
+  if (compact) {
+    return (
+      <div className={`flex items-start gap-[10px] whitespace-nowrap font-gilroy text-[13px] font-medium leading-5 ${sub ? "min-h-[40px]" : ""}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={`${ICON}/${icon}.svg`} alt="" className="mt-[1px] size-[18px] shrink-0" />
+        <span className={`text-slate ${sub ? "w-[118px] whitespace-normal" : "shrink-0"}`}>{label}</span>
+        <span className={`relative text-ink ${sub ? "ml-auto" : "-ml-[8px] shrink-0"}`}>
+          {value}
+          {sub && <span className="absolute right-0 top-full whitespace-nowrap text-[11px] leading-[18px] text-slate">{sub}</span>}
+        </span>
+      </div>
+    );
+  }
   return (
     <div className={`flex items-start gap-[10px] font-gilroy text-[14px] font-medium leading-5 ${sub ? "min-h-[38px]" : ""}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -44,7 +70,7 @@ const spaced = (n: number) =>
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
-export function JobCard({ vacancy, i = 0 }: { vacancy: Vacancy; i?: number }) {
+export function JobCard({ vacancy, i = 0, compact = false }: { vacancy: Vacancy; i?: number; compact?: boolean }) {
   const { lang, dict } = useI18n();
   const t = dict.vacancies;
   const text = { title: vacancy.title[lang], place: vacancy.place[lang] };
@@ -62,7 +88,7 @@ export function JobCard({ vacancy, i = 0 }: { vacancy: Vacancy; i?: number }) {
       viewport={{ once: true, margin: "-6% 0px" }}
       transition={{ duration: 0.9, ease: EASE, delay: (i % 4) * 0.07 }}
     >
-      <div className="flex h-[60px] items-center gap-[10px] rounded-[20px] bg-mist px-[10px]">
+      <div className={`flex ${compact ? "h-[55px]" : "h-[60px]"} items-center gap-[10px] rounded-[20px] bg-mist px-[10px]`}>
         <CountryFlag code={vacancy.countryCode} size={30} />
         <div className="min-w-0 flex-1 font-gilroy">
           <h3 title={text.title} className="truncate text-[16px] font-semibold leading-[22px] text-ink">
@@ -78,16 +104,18 @@ export function JobCard({ vacancy, i = 0 }: { vacancy: Vacancy; i?: number }) {
         </span>
       </div>
 
-      <div className="mt-[6px] flex-1 space-y-[13px] rounded-[20px] bg-mist px-[20px] py-[16px]">
+      <div className={`mt-[6px] flex-1 rounded-[20px] bg-mist px-[20px] ${compact ? "space-y-[11px] py-[10px]" : "space-y-[13px] py-[16px]"}`}>
         <Row
+          compact={compact}
           icon="cash-gray"
           label={t.card.salary}
           value={`$${formatNumber(lang, vacancy.salaryNetUsd)}`}
           sub={vacancy.salaryLocalUzs ? fill(t.salaryLocal, { amount: spaced(vacancy.salaryLocalUzs) }) : undefined}
         />
-        <Row icon="briefcase" label={t.card.type} value={`${t.type[vacancy.employmentType]} • ${duration}`} />
-        {vacancy.deadline && <Row icon="clock-vacancy" label={t.card.deadline} value={formatDate(vacancy.deadline)} />}
+        <Row compact={compact} icon="briefcase" label={t.card.type} value={`${t.type[vacancy.employmentType]} • ${duration}`} />
+        {vacancy.deadline && <Row compact={compact} icon="clock-vacancy" label={t.card.deadline} value={formatDate(vacancy.deadline)} />}
         <Row
+          compact={compact}
           icon="users-group"
           label={t.card.hired}
           value={
@@ -97,7 +125,7 @@ export function JobCard({ vacancy, i = 0 }: { vacancy: Vacancy; i?: number }) {
           }
         />
         {/* Framer shows this one label without a colon */}
-        <Row icon="check-list" label={t.card.applied.replace(/:$/, "")} value={formatNumber(lang, vacancy.applied)} />
+        <Row compact={compact} icon="check-list" label={t.card.applied.replace(/:$/, "")} value={formatNumber(lang, vacancy.applied)} />
       </div>
 
       <div className="mt-[6px] flex items-center gap-[6px]">
@@ -123,27 +151,43 @@ export function JobCard({ vacancy, i = 0 }: { vacancy: Vacancy; i?: number }) {
  * Vacancy grid. On the home page it has the big "Latest vacancies" heading and shows the first rows;
  * the vacancies page shows every vacancy under a plain caption.
  */
-export default function Vacancies({ limit, heading = true }: { limit?: number; heading?: boolean }) {
+export default function Vacancies({
+  limit,
+  heading = true,
+  label,
+  cta = !!limit,
+  inset = false,
+}: {
+  limit?: number;
+  heading?: boolean;
+  /** caption override (the job-seekers page says "Oxirgi vakansiyalar") */
+  label?: string;
+  /** "all vacancies" button under the heading */
+  cta?: boolean;
+  /** job-seekers layout: 75px side inset, smaller heading and five cards per row */
+  inset?: boolean;
+}) {
   const { lang, dict } = useI18n();
   const t = dict.vacancies;
   const res = useResource(getVacancies);
   const items = res.status === "ready" ? (limit ? res.data.slice(0, limit) : res.data) : [];
+  const gutter = inset ? "px-[clamp(20px,5.2vw,75px)]" : "px-[clamp(20px,2.8vw,40px)]";
   return (
     <section id="vacancies" className="relative z-20 overflow-hidden bg-white pt-[clamp(70px,6vw,120px)]">
       <BgShade flip />
-      <PlusRule />
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pt-[28px]">
-        <SectionHead label={heading ? t.label : t.pageLabel} />
+      <PlusRule className={inset ? "!mx-[clamp(20px,5.2vw,75px)]" : undefined} />
+      <div className={`mx-auto max-w-[1920px] pt-[28px] ${gutter}`}>
+        <SectionHead label={label ?? (heading ? t.label : t.pageLabel)} noteEnd={inset} />
         {heading && (
           <div className="mt-[60px] flex flex-col items-center text-center">
             <SplitReveal
-              className="text-[clamp(48px,7.6vw,110px)] font-semibold leading-[0.82] tracking-[-0.03em] text-[#1e1e1e]"
+              className={`${inset ? "text-[clamp(36px,4.65vw,67px)]" : "text-[clamp(48px,7.6vw,110px)]"} font-semibold leading-[0.82] tracking-[-0.03em] text-[#1e1e1e]`}
               text={t.heading}
             />
             <FadeUp delay={0.15}>
               <p className="mt-[30px] max-w-[800px] text-[18px] leading-6 text-soft">{t.intro}</p>
             </FadeUp>
-            {limit && (
+            {cta && (
               <FadeUp delay={0.25} className="mt-[30px]">
                 <PillButton href={localizedHref(lang, "/vacancies")}>{t.cta}</PillButton>
               </FadeUp>
@@ -151,13 +195,19 @@ export default function Vacancies({ limit, heading = true }: { limit?: number; h
           </div>
         )}
       </div>
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,6vw,110px)] pt-[clamp(40px,4vw,60px)]">
+      <div className={`mx-auto max-w-[1920px] pb-[clamp(70px,6vw,110px)] pt-[clamp(40px,4vw,60px)] ${gutter}`}>
         {res.status !== "ready" || items.length === 0 ? (
           <ResourceState state={res.status === "ready" ? "empty" : res.status} onRetry={res.status === "error" ? res.reload : () => {}} />
         ) : (
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,300px),1fr))] gap-x-4 gap-y-[34px]">
+          <div
+            className={
+              inset
+                ? "grid grid-cols-1 gap-x-[15px] gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+                : "grid grid-cols-[repeat(auto-fill,minmax(min(100%,300px),1fr))] gap-x-4 gap-y-[34px]"
+            }
+          >
             {items.map((v, i) => (
-              <JobCard key={v.id} vacancy={v} i={i} />
+              <JobCard key={v.id} vacancy={v} i={i} compact={inset} />
             ))}
           </div>
         )}

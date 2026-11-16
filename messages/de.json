@@ -309,25 +309,29 @@
         "alt": "Treffen mit Arbeitgebern"
       },
       "workflow": {
-        "label": "Für Arbeitgeber",
-        "title": "Von der Anfrage bis zur Ankunft",
-        "text": "Bei jedem Schritt ist klar, wer verantwortlich ist und was als Nächstes passiert: Sie legen die Anforderungen fest, lizenzierte Agenturen koordinieren den Rest.",
+        "label": "Ablauf",
+        "title": "Arbeitskräfte gewinnen — in 5 klaren Schritten.",
+        "text": "Der Weg von der Klärung der Anforderungen des Arbeitgebers bis zur Reisebereitschaft der Kandidaten.",
         "steps": {
           "request": {
             "title": "Anfrage senden",
-            "text": "Geben Sie Beruf, Anzahl der Arbeitskräfte, Sprachniveau, Gehalt und Unterkunft an."
+            "text": "Das Unternehmen sendet eine Anfrage mit Beruf, Anzahl der Arbeitskräfte, Sprachniveau und Arbeitsbedingungen."
           },
-          "match": {
-            "title": "Kandidatenauswahl",
-            "text": "Lizenzierte Agenturen wählen passende Kandidaten aus und prüfen ihre Qualifikation."
+          "requirements": {
+            "title": "Anforderungen klären",
+            "text": "Der Koordinator prüft die Anforderungen des Arbeitgebers und stimmt die Kriterien für Kandidaten ab."
+          },
+          "candidates": {
+            "title": "Kandidaten auswählen",
+            "text": "Passende Kandidaten werden nach den vereinbarten Kriterien ausgewählt und dem Arbeitgeber vorgestellt."
           },
           "interview": {
-            "title": "Online-Interview",
-            "text": "Führen Sie Online-Interviews mit der Vorauswahl und treffen Sie die endgültige Wahl."
+            "title": "Gespräch und Unterlagen",
+            "text": "Mit den ausgewählten Kandidaten werden Online-Gespräche geführt, erforderliche Unterlagen und Formalitäten koordiniert."
           },
-          "arrival": {
-            "title": "Dokumente und Ankunft",
-            "text": "Verträge, Visa und Reisedokumente werden abgestimmt, die Arbeitskräfte kommen zum vereinbarten Termin."
+          "departure": {
+            "title": "Reisevorbereitung",
+            "text": "Gemäß den vereinbarten Arbeitsbedingungen werden Unterlagen und Reisevorbereitungen abgeschlossen."
           }
         }
       },
@@ -397,7 +401,8 @@
             "text": "Koordinatoren betreuen Online-Interviews und die Vorbereitung der Dokumente."
           }
         }
-      }
+      },
+      "vacanciesLabel": "Aktuelle Stellen"
     },
     "services": {
       "hero": {
