@@ -59,11 +59,11 @@ export function PillButton({
 }
 
 /** Section caption row: blue-square label on the left, "©2026" (or another note) on the right. */
-export function SectionHead({ label, note = "©2026", noteEnd = false, className = "" }: { label: ReactNode; note?: ReactNode; /** push the note to the far right edge */ noteEnd?: boolean; className?: string }) {
+export function SectionHead({ label, note = "©2026", className = "" }: { label: ReactNode; note?: ReactNode; /** push the note to the far right edge */ noteEnd?: boolean; className?: string }) {
   return (
     <div className={`flex flex-col justify-between gap-3 sm:flex-row sm:items-start ${className}`}>
       <Label>{label}</Label>
-      <span className={`text-[18px] leading-[26px] text-[#29292b] ${noteEnd ? "sm:text-right" : "sm:w-[31%] sm:text-left"}`}>{note}</span>
+      <span className={`text-[18px] leading-[26px] text-[#29292b] sm:text-right`}>{note}</span>
     </div>
   );
 }
@@ -116,7 +116,7 @@ export function SplitReveal({
       {indent > 0 && <span className="hidden lg:inline-block" style={{ width: indent }} />}
       {words.map((w, i) => (
         <Fragment key={i}>
-          <span className="inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] align-top">
+          <span className="inline-block overflow-hidden pb-[0.28em] pt-[0.08em] -mb-[0.28em] -mt-[0.08em] align-top">
             <motion.span custom={i} variants={wordV} className={`inline-block ${blueWords.includes(w) ? "text-blue" : ""}`}>
               {w}
             </motion.span>

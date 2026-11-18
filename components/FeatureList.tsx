@@ -38,7 +38,7 @@ export default function FeatureList({
 }) {
   return (
     <section className="relative z-20 bg-card">
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] py-[40px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] py-[40px]">
         <SectionHead label={label} />
         <div className="grid gap-12 pb-[clamp(30px,4vw,80px)] pt-[clamp(40px,5.6vw,80px)] lg:grid-cols-[minmax(0,640px)_minmax(0,1fr)]">
           <div>

@@ -13,13 +13,13 @@ export default function ServiceCards() {
   return (
     <section className="relative z-20 bg-white pt-[clamp(70px,6vw,120px)]">
       <PlusRule />
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,6vw,120px)] pt-[28px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,6vw,120px)] pt-[28px]">
         <SectionHead label={t.label} noteEnd />
         <ul className="mt-[50px] grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((s, i) => (
             <motion.li
               key={s.title}
-              className="group relative aspect-[434/560] overflow-hidden rounded-[14px] bg-card"
+              className="group relative aspect-[587/560] overflow-hidden rounded-[40px] bg-card"
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-8% 0px" }}
@@ -30,17 +30,17 @@ export default function ServiceCards() {
                 alt=""
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.06]"
+                className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/10 transition-opacity duration-700 group-hover:opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent to-[62%] transition-opacity duration-700 group-hover:opacity-90" />
               <div className="relative flex h-full flex-col justify-between p-[clamp(22px,2.5vw,36px)]">
-                <span className="text-[22px] font-medium leading-[35px] tracking-[-0.045em] text-black">{String(i + 1).padStart(2, "0")}</span>
-                <div className="pr-8">
-                  <h3 className="max-w-[300px] text-[clamp(34px,3.3vw,48px)] font-semibold leading-[1.08] tracking-[-0.025em] text-black">{s.title}</h3>
-                  <p className="mt-3 max-w-[300px] text-[clamp(17px,1.5vw,22px)] font-medium leading-[1.55] tracking-[-0.045em] text-black/80">{s.text}</p>
+                <span className="text-[24px] font-medium leading-[35px] tracking-[-0.045em] text-white">{String(i + 1).padStart(2, "0")}</span>
+                <div className="pr-[70px]">
+                  <h3 className="text-[clamp(28px,2.4vw,38px)] font-semibold leading-[1.1] tracking-[-0.045em] text-white">{s.title}</h3>
+                  <p className="mt-[14px] text-[clamp(17px,1.35vw,22px)] font-medium leading-[1.6] tracking-[-0.045em] text-white/90">{s.text}</p>
                 </div>
               </div>
-              <span className="absolute bottom-[clamp(22px,2.5vw,36px)] right-[clamp(22px,2.5vw,36px)] grid size-9 place-items-center rounded-full bg-black text-white transition-transform duration-500 group-hover:-rotate-45" aria-hidden>
+              <span className="absolute bottom-[clamp(22px,2.5vw,36px)] right-[clamp(22px,2.5vw,36px)] grid size-[52px] place-items-center rounded-full border border-white/80 text-white transition-[transform,background-color,color] duration-500 group-hover:-rotate-45 group-hover:bg-white group-hover:text-black" aria-hidden>
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
                   <path d="M11.9 9.85H2.85v-1.7h9.04L7.78 4.05 9 2.85 15.15 9 9 15.15l-1.22-1.2Z" fill="currentColor" />
                 </svg>

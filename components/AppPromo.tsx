@@ -16,7 +16,7 @@ export default function AppPromo() {
   return (
     <section className="relative z-20 bg-white pt-[clamp(70px,6vw,120px)]">
       <PlusRule />
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pt-[28px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] pt-[28px]">
         <SectionHead label={t.label} note={t.tagline} />
         <div className="grid items-center gap-12 pb-[clamp(40px,4vw,70px)] pt-[clamp(50px,6vw,90px)] lg:grid-cols-[minmax(0,1fr)_minmax(0,42%)] lg:pl-[clamp(0px,1.4vw,24px)]">
           <div>

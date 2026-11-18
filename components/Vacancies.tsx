@@ -171,13 +171,13 @@ export default function Vacancies({
   const t = dict.vacancies;
   const res = useResource(getVacancies);
   const items = res.status === "ready" ? (limit ? res.data.slice(0, limit) : res.data) : [];
-  const gutter = inset ? "px-[clamp(20px,5.2vw,75px)]" : "px-[clamp(20px,2.8vw,40px)]";
+  const gutter = inset ? "px-[clamp(20px,2.8vw,40px)]" : "px-[clamp(20px,2.8vw,40px)]";
   return (
     <section id="vacancies" className="relative z-20 overflow-hidden bg-white pt-[clamp(70px,6vw,120px)]">
       <BgShade flip />
-      <PlusRule className={inset ? "!mx-[clamp(20px,5.2vw,75px)]" : undefined} />
-      <div className={`mx-auto max-w-[1920px] pt-[28px] ${gutter}`}>
-        <SectionHead label={label ?? (heading ? t.label : t.pageLabel)} noteEnd={inset || !heading} />
+      <PlusRule className={inset ? "!mx-[clamp(20px,2.8vw,40px)]" : undefined} />
+      <div className={`mx-auto max-w-[2240px] pt-[28px] ${gutter}`}>
+        <SectionHead label={label ?? (heading ? t.label : t.pageLabel)} />
         {heading && (
           <div className="mt-[60px] flex flex-col items-center text-center">
             <SplitReveal
@@ -195,7 +195,7 @@ export default function Vacancies({
           </div>
         )}
       </div>
-      <div className={`mx-auto max-w-[1920px] pb-[clamp(70px,6vw,110px)] pt-[clamp(40px,4vw,60px)] ${gutter}`}>
+      <div className={`mx-auto max-w-[2240px] pb-[clamp(70px,6vw,110px)] pt-[clamp(40px,4vw,60px)] ${gutter}`}>
         {res.status !== "ready" || items.length === 0 ? (
           <ResourceState state={res.status === "ready" ? "empty" : res.status} onRetry={res.status === "error" ? res.reload : () => {}} />
         ) : (

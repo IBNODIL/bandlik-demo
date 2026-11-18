@@ -20,7 +20,7 @@ function Dots({ step }: { step: number }) {
 }
 
 /**
- * "How it works — in 5 steps" (Framer's "Experience" section, measured at 1440px): centered badge, 72px heading and
+ * "How it works — in 5 steps" (Framer's "Experience" section, measured at 2240px): centered badge, 72px heading and
  * intro, then 435×307 warm-grey step cards (number + progress dots on top, title and text at the bottom) in a
  * 3-column grid, with a photo card in the sixth cell.
  */
@@ -31,7 +31,7 @@ export default function Journey() {
   return (
     <section className="relative z-20 bg-white pt-[clamp(70px,8.4vw,120px)]">
       <PlusRule className="!mx-[clamp(20px,2.8vw,40px)]" />
-      <div className="mx-auto max-w-[1425px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,8.4vw,120px)] pt-[34px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,8.4vw,120px)] pt-[34px]">
         <SectionHead label={t.label} noteEnd />
         <div className="mt-11 flex flex-col items-center text-center">
           <FadeUp>

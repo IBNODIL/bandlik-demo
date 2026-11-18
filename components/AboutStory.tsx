@@ -10,7 +10,7 @@ import { useI18n } from "./I18nProvider";
 import { FadeUp, Label, PlusRule } from "./ui";
 
 /*
- * About page story, rebuilt from the Framer page measured at 1440px:
+ * About page story, rebuilt from the Framer page measured at 2240px:
  * label column 377px | content 968px, four text blocks with a 1–3 of 4 progress row, photos 1345×720 (pair 662×600).
  * Photos sit in fixed rounded frames; the picture inside each frame zooms out while the frame scrolls in.
  */
@@ -82,7 +82,7 @@ export default function AboutStory() {
     <section className="relative z-20 overflow-hidden bg-white pt-[100px]">
       <BgShade />
       <PlusRule className="!mx-[clamp(20px,2.8vw,40px)]" />
-      <div className="relative mx-auto max-w-[1425px] px-[clamp(20px,2.8vw,40px)]">
+      <div className="relative mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)]">
         {/* our approach: stars + kicker between two thin rules */}
         <Row label={t.approach.label} className="pt-[50px]">
           <div className="border-y border-[#eaeaea] py-10">

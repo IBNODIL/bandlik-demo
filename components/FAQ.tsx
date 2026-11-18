@@ -20,7 +20,7 @@ function PlusIcon({ open }: { open: boolean }) {
 }
 
 /**
- * FAQ as on the Framer site (measured at 1440px): a plain rule, the label in a 457px column, and an 888px list of
+ * FAQ as on the Framer site (measured at 2240px): a plain rule, the label in a 457px column, and an 888px list of
  * 71px rows — number, question 285px further, thin plus on the right — all collapsed until clicked.
  */
 export default function FAQ() {
@@ -28,7 +28,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
     <section id="faq" className="relative z-20 bg-white">
-      <div className="mx-auto max-w-[1425px] px-[clamp(20px,2.8vw,40px)] pb-[120px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] pb-[120px]">
         <div className="h-px bg-[#eaeaea]" />
         <div className="grid gap-6 lg:grid-cols-[457px_minmax(0,1fr)] lg:gap-0">
           <div className="pt-[51px] lg:sticky lg:top-[100px] lg:self-start">

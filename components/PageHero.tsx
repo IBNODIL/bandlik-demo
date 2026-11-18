@@ -136,7 +136,7 @@ export default function PageHero({
       <div className="absolute inset-x-0 top-0 z-[3] h-[6px] bg-blue" />
 
       {stacked ? (
-        <div className="relative z-[2] flex h-full flex-col justify-end px-[clamp(20px,2.4vw,34px)] pb-[clamp(28px,2.4vw,34px)]">
+        <div className="relative z-[2] flex h-full flex-col justify-end px-[max(clamp(20px,2.4vw,34px),calc((100%-2240px)/2+34px))] pb-[clamp(28px,2.4vw,34px)]">
           <LetterTitle text={title} ready={ready} />
           <motion.div
             className="mt-6 h-px w-full max-w-[830px] origin-left bg-[#eaeaea]/15"
@@ -158,7 +158,7 @@ export default function PageHero({
           </motion.div>
         </div>
       ) : (
-      <div className="relative z-[2] flex h-full flex-col justify-end px-[clamp(20px,2.4vw,34px)] pb-[clamp(28px,2.5vw,36px)]">
+      <div className="relative z-[2] flex h-full flex-col justify-end px-[max(clamp(20px,2.4vw,34px),calc((100%-2240px)/2+34px))] pb-[clamp(28px,2.5vw,36px)]">
         <motion.p
           className="text-[clamp(20px,2.1vw,30px)] font-bold leading-[1.15] tracking-[-0.03em] text-[#f9f9f9]"
           initial={{ opacity: 0, y: 16 }}

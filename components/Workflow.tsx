@@ -16,7 +16,7 @@ function PathIcon() {
 }
 
 /**
- * "Jarayon" on the employers page, from the Framer page measured at 1440px: a pinned intro on the left, and five
+ * "Jarayon" on the employers page, from the Framer page measured at 2240px: a pinned intro on the left, and five
  * steps on the right hanging off a thin vertical line — big blue number on the line, title, text, 594×281 photo.
  */
 export default function Workflow() {
@@ -24,7 +24,7 @@ export default function Workflow() {
   const steps = Object.values(t.steps);
   return (
     <section className="relative z-20 bg-[#f9f9f9]">
-      <div className="mx-auto grid max-w-[1440px] gap-12 px-[clamp(20px,6.5vw,94px)] pb-[60px] pt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,692px)] lg:gap-0 lg:pb-[88px] lg:pr-[clamp(20px,6.5vw,94px)]">
+      <div className="mx-auto grid max-w-[2240px] gap-12 px-[clamp(20px,2.8vw,40px)] pb-[60px] pt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,692px)] lg:gap-0 lg:pb-[88px] lg:pr-[clamp(20px,6.5vw,94px)]">
         <div className="lg:sticky lg:top-[195px] lg:self-start lg:pr-10">
           <div className="flex items-center gap-2 text-[18px] leading-[26px] text-[#4a5ec9]">
             <PathIcon />

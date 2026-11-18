@@ -17,7 +17,7 @@ function PlusDot({ open }: { open: boolean }) {
 }
 
 /**
- * Warm-grey "Awards" block of the Framer site (employers and job-seekers pages, measured at 1440px): caption row,
+ * Warm-grey "Awards" block of the Framer site (employers and job-seekers pages, measured at 2240px): caption row,
  * big heading, intro and plus-tabs on the left; partner row cards (logo tile, name, description, pill) on the right.
  * A tab narrows the list to its group; clicking it again shows all rows.
  */
@@ -48,7 +48,7 @@ export default function PartnerBlock({
   const visible = tab === null ? items : items.filter((it) => it.group === tab);
   return (
     <section className="relative z-20 bg-card">
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] py-[40px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] py-[40px]">
         <SectionHead label={label} noteEnd />
         <div
           className="grid gap-12 pb-[clamp(60px,6vw,86px)] pt-[clamp(40px,5.2vw,74px)] lg:justify-between lg:[grid-template-columns:minmax(0,var(--l))_minmax(0,var(--r))]"

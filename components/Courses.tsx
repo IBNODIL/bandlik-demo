@@ -75,7 +75,7 @@ export default function Courses({ limit = 10 }: { limit?: number }) {
     <section id="courses" className="relative z-20 overflow-hidden bg-white pt-[clamp(70px,6vw,120px)]">
       <BgShade />
       <PlusRule />
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pt-[28px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] pt-[28px]">
         <SectionHead label={t.label} />
         <div className="mt-[50px] flex flex-col items-center text-center">
           <SplitReveal
@@ -90,7 +90,7 @@ export default function Courses({ limit = 10 }: { limit?: number }) {
           </FadeUp>
         </div>
       </div>
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,6vw,110px)] pt-[50px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,6vw,110px)] pt-[50px]">
         {res.status !== "ready" || items.length === 0 ? (
           <ResourceState state={res.status === "ready" ? "empty" : res.status} onRetry={res.status === "error" ? res.reload : () => {}} />
         ) : (

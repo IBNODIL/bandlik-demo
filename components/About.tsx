@@ -67,9 +67,9 @@ export default function About() {
 
       <PlusRule className="relative top-[2px]" />
 
-      <div className="relative w-full px-[clamp(20px,2.6vw,38px)] pt-[28px]">
+      <div className="relative mx-auto w-full max-w-[2240px] px-[clamp(20px,2.6vw,38px)] pt-[28px]">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[26.4vw_1fr]">
-          <Label className="pt-[10px]">{t.label}</Label>
+          <Label className="self-start pt-[10px]">{t.label}</Label>
           <div className="lg:pr-[40px]">
             <SplitReveal
               as="p"

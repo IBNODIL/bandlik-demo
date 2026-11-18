@@ -10,7 +10,7 @@ export default function Process() {
   return (
     <section id="process" className="relative z-20 bg-white pb-[clamp(60px,6vw,120px)] pt-[clamp(90px,8vw,150px)]">
       <PlusRule />
-      <div className="mx-auto max-w-[1441px] px-[38px] pt-[28px]">
+      <div className="mx-auto max-w-[2240px] px-[38px] pt-[28px]">
         <div className="flex flex-col justify-between gap-4 sm:flex-row">
           <Label>{dict.process.label}</Label>
           <FadeUp>

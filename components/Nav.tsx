@@ -4,7 +4,7 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { LOGIN_URL, MEDIA } from "@/lib/data";
+import { MEDIA } from "@/lib/data";
 import { isCurrentPage, localizedHref } from "@/lib/i18n";
 import { useI18n } from "./I18nProvider";
 import LangSwitcher from "./LangSwitcher";
@@ -35,7 +35,8 @@ export default function Nav({ ready }: { ready: boolean }) {
     else if (prev - y > DELTA) setCompact(false);
   });
 
-  const NAV = Object.entries(dict.nav).map(([key, { title, link }]) => ({
+  const contactHref = localizedHref(lang, dict.nav.contact.link);
+  const NAV = Object.entries(dict.nav).filter(([key]) => key !== "contact").map(([key, { title, link }]) => ({
     key,
     title,
     href: localizedHref(lang, link),
@@ -64,7 +65,7 @@ export default function Nav({ ready }: { ready: boolean }) {
           className={`flex items-center transition-all ${ease} ${
             compact
               ? "mx-[max(10px,calc((100%-1505px)/2))] h-[66px] rounded-[80px] bg-white/[0.78] px-[clamp(14px,1.3vw,24px)] shadow-[0_6px_30px_rgba(9,9,9,0.08)] backdrop-blur-[18px]"
-              : "mx-0 h-[84px] rounded-none bg-black/10 px-[clamp(16px,2.1vw,40px)] shadow-none backdrop-blur-[24px] backdrop-saturate-150"
+              : "mx-0 h-[84px] rounded-none bg-transparent px-[max(clamp(16px,2.1vw,40px),calc((100%-2240px)/2+40px))] shadow-none backdrop-blur-[18px]"
           }`}
         >
           <Link href={`/${lang}`} aria-label="Bandlik" className="shrink-0">
@@ -106,7 +107,7 @@ export default function Nav({ ready }: { ready: boolean }) {
             <LangSwitcher />
             {/* hidden on phones (it is in the menu there); the wrapper avoids fighting the pill's own display class */}
             <div className="hidden sm:block">
-              <PillButton href={LOGIN_URL}>{dict.common.login}</PillButton>
+              <PillButton href={contactHref}>{dict.nav.contact.title}</PillButton>
             </div>
             <button
               type="button"
@@ -148,9 +149,9 @@ export default function Nav({ ready }: { ready: boolean }) {
             <ArrowRight />
           </Link>
         ))}
-        <a href={LOGIN_URL} className="mt-4 flex h-[54px] items-center justify-center rounded-full bg-blue text-[17px] font-semibold text-white">
-          {dict.common.login}
-        </a>
+        <Link href={contactHref} className="mt-4 flex h-[54px] items-center justify-center rounded-full bg-blue text-[17px] font-semibold text-white">
+          {dict.nav.contact.title}
+        </Link>
       </motion.div>
     </>
   );

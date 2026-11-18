@@ -53,7 +53,7 @@ export default function Hero() {
           {/* thin brand line along the top edge, as on the Framer heroes */}
           <div className="absolute inset-x-0 top-0 z-[3] h-[6px] bg-blue" />
 
-          <div className="absolute inset-x-[clamp(20px,2.8vw,40px)] bottom-[clamp(48px,5.5vw,80px)] z-[2]">
+          <div className="absolute inset-x-[max(clamp(20px,2.8vw,40px),calc((100%-2240px)/2+40px))] bottom-[clamp(48px,5.5vw,80px)] z-[2]">
             <h1 className="max-w-[10.6em] font-sans text-[clamp(44px,6vw,86px)] font-medium leading-[1.08] tracking-[-0.035em] text-[#f2efea]">
               {words.map((w, i) => (
                 <Fragment key={i}>

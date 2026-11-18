@@ -38,7 +38,7 @@ function Column({ title, children }: { title: string; children: ReactNode }) {
 }
 
 /**
- * Dark footer as on the Framer site (measured at 1440px): brand and blurb on the left, three link columns,
+ * Dark footer as on the Framer site (measured at 2240px): brand and blurb on the left, three link columns,
  * a giant faint "Bandlik" wordmark across the full width, a thin divider and the centered copyright.
  */
 export default function Footer() {
@@ -47,7 +47,7 @@ export default function Footer() {
   const to = (link: string) => localizedHref(lang, link);
   return (
     <footer className="relative z-20 overflow-hidden bg-night font-mona text-[#f2f2f2]">
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pb-10 pt-10">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] pb-10 pt-10">
         {/* 652 | 208 | 263 | 162 with 20px gaps = the Framer column starts at 712 / 940 / 1223 */}
         <div className="grid gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-[652fr_208fr_263fr_162fr]">
           <div className="sm:col-span-3 lg:col-span-1">

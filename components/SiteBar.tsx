@@ -8,7 +8,7 @@ import LangSwitcher from "./LangSwitcher";
 export default function SiteBar() {
   const { lang } = useI18n();
   return (
-    <header className="mx-auto flex h-[68px] max-w-[1441px] items-center justify-between px-[34px] xl:px-[58px]">
+    <header className="mx-auto flex h-[68px] max-w-[2240px] items-center justify-between px-[34px] xl:px-[58px]">
       <a href={`/${lang}`} className="flex items-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={MEDIA.logo} alt="Bandlik" className="h-[28px] w-auto" />

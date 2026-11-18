@@ -34,7 +34,7 @@ export default function Contact({ page = false }: { page?: boolean }) {
     <section id="contact" className={`relative z-20 bg-white ${page ? "pt-[clamp(70px,6vw,120px)]" : "pt-[clamp(40px,4vw,64px)]"}`}>
       {page && <PlusRule />}
       <div
-        className={`mx-auto grid max-w-[1920px] gap-14 px-[clamp(20px,3.65vw,52px)] lg:grid-cols-[minmax(0,600px)_minmax(0,550px)] lg:justify-between ${
+        className={`mx-auto grid max-w-[2240px] gap-14 px-[clamp(20px,3.65vw,52px)] lg:grid-cols-[minmax(0,600px)_minmax(0,550px)] lg:justify-between ${
           page ? "pt-[clamp(60px,8vw,130px)]" : ""
         }`}
       >
@@ -104,7 +104,7 @@ export default function Contact({ page = false }: { page?: boolean }) {
       </div>
 
       {/* Google's embed draws its own "Open in Maps" link in the corner */}
-      <div className="mx-auto max-w-[1920px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,7vw,140px)] pt-[50px]">
+      <div className="mx-auto max-w-[2240px] px-[clamp(20px,2.8vw,40px)] pb-[clamp(70px,7vw,140px)] pt-[50px]">
         <FadeUp className="relative h-[260px] overflow-hidden rounded-[10px] bg-card">
           <iframe
             title={t.map}
